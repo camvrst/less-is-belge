@@ -38,10 +38,26 @@ $texte-bouton-pc : 20px;
 $secondary-font : 'ITC Garamond Std Bold Narrow';
 $main-font : 'TT Chocolates';
 
-$font-weight-bold : bold;
-$font-weight-extra-bold : 800;
-$font-weight-demi-bold : 600;
-$font-weight-light: 300;
-$font-weight-regular : normal;
+$bold : bold;
+$extra-bold : 800;
+$demi-bold : 600;
+$light-weight: 300;
+$regular-weight : normal;
 
 
+/* BOX SHADOWS */
+
+$shadow-lightrose-sm : 4px 4px #FFE7E7 ;
+$shadow-lightrose-md : 8px 8px #FFE7E7;
+
+$shadow-rose-sm : 4px 4px #E5B0A4 ;
+$shadow-rose-md : 8px 8px #E5B0A4 ;
+
+$shadow-darkgreen-sm : 4px 4px #1E3B2C ;
+$shadow-darkgreen-md : 8px 8px #1E3B2C ;
+
+$shadow-green-sm : 4px 4px #C0D1BF ;
+$shadow-green-md : 8px 8px #C0D1BF;
+
+
+/* MARGIN ET PADDING */

@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 /* FLEX PROPERTIES */
 
 .d-block {
@@ -219,6 +221,8 @@
   }
 }
 
+/* MARGIN - PADDING */
+
 /* LINKS */
 
 a {
@@ -226,7 +230,16 @@ a {
 }
 
 /* SOCIAL ICONS */
-
+.social-icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social-icon {
+    color : $vert-fonce;
+    font-size: 24px;
+    margin : 8px;
+}
 
 /* H1 -> H6 */
 

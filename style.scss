@@ -3,6 +3,11 @@
 @import "@fortawesome/fontawesome-free/css/all.css";
 // @import "node_modules/bootstrap/scss/bootstrap";
 
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
 
 /* NAVBAR */
 
@@ -18,4 +23,75 @@
     width: 359px;
     border-radius: 57px;
     background-color: $beige;
+}
+
+.footer > div {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footer {
+    background-color: $vert-moyen;
+    max-height : 550px;
+    min-height: 350px;
+    position: relative;
+}
+
+.footer-nav {
+    font-family: $main-font;
+    font-size: $texte-footer;
+    color: $noir;
+}
+
+.footer-nav > ul > a > li {
+    color: $noir;
+}
+
+.bold {
+    font-weight: $bold;
+}
+
+.logo-footer {
+    width: 80%;
+    height: auto;
+}
+
+.vertical-line {
+    height : 250px;
+    width : 10px;
+    background-color: $rose-clair;
+}
+
+.copyright {
+    font-family: $main-font;
+    font-size: 14px;
+    position: absolute;
+    bottom : 5px;
+}
+
+p.copyright {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* BTN GO UP */
+
+.btn-up {
+    background-color: $rose-clair;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    box-shadow: $shadow-rose-sm;
+    position: relative;
+}
+
+div.btn-up > a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    color: white;
+    position: absolute;
+    left : 18%;
+    top: 22%;
 }

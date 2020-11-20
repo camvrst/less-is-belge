@@ -1,4 +1,21 @@
+@use "variables" as *;
+@use "framework" as *;
 @import "@fortawesome/fontawesome-free/css/all.css";
 // @import "node_modules/bootstrap/scss/bootstrap";
 
-@use "variables" as *;
+
+/* NAVBAR */
+
+
+
+
+
+
+/* FOOTER */
+
+.footer-cat-articles {
+    height : 348px;
+    width: 359px;
+    border-radius: 57px;
+    background-color: $beige;
+}

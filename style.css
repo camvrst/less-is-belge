@@ -1,8 +1,12 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+/***** COULEURS *****/
+/***** FONT-SIZE *****/
+/***** FONTS & FONT WEIGHT *****/
 /* FLEX PROPERTIES */
-
 .d-block {
   display: block;
 }
+
 .d-flex {
   display: flex;
 }
@@ -23,11 +27,11 @@
   .lg-justify-start {
     justify-content: flex-start;
   }
+
   .lg-justify-end {
     justify-content: flex-end;
   }
 }
-
 .justify-between {
   justify-content: space-between;
 }
@@ -71,42 +75,52 @@
 .self-start {
   align-self: flex-start;
 }
+
 .self-end {
   align-self: flex-end;
 }
 
 /* WIDTH */
-
 .w-full {
   width: 100%;
 }
+
 .w-10 {
   width: 10%;
 }
+
 .w-20 {
   width: 20%;
 }
+
 .w-25 {
   width: 25%;
 }
+
 .w-30 {
   width: 30%;
 }
+
 .w-40 {
   width: 40%;
 }
+
 .w-50 {
   width: 50%;
 }
+
 .w-60 {
   width: 60%;
 }
+
 .w-70 {
   width: 70%;
 }
+
 .w-80 {
   width: 80%;
 }
+
 .w-90 {
   width: 90%;
 }
@@ -115,70 +129,88 @@
   .lg-w-full {
     width: 100%;
   }
+
   .lg-w-10 {
     width: 10%;
   }
+
   .lg-w-20 {
     width: 20%;
   }
+
   .lg-w-25 {
     width: 25%;
   }
+
   .lg-w-30 {
     width: 30%;
   }
+
   .lg-w-40 {
     width: 40%;
   }
+
   .lg-w-50 {
     width: 50%;
   }
+
   .lg-w-60 {
     width: 60%;
   }
+
   .lg-w-70 {
     width: 70%;
   }
+
   .lg-w-80 {
     width: 80%;
   }
+
   .lg-w-90 {
     width: 90%;
   }
 }
-
 /* HEIGHT */
-
 .h-full {
   width: 100%;
 }
+
 .h-10 {
   width: 10%;
 }
+
 .h-20 {
   width: 20%;
 }
+
 .h-25 {
   width: 25%;
 }
+
 .h-30 {
   width: 30%;
 }
+
 .h-40 {
   width: 40%;
 }
+
 .h-50 {
   width: 50%;
 }
+
 .h-60 {
   width: 60%;
 }
+
 .h-70 {
   width: 70%;
 }
+
 .h-80 {
   width: 80%;
 }
+
 .h-90 {
   width: 90%;
 }
@@ -187,65 +219,74 @@
   .lg-h-full {
     width: 100%;
   }
+
   .lg-h-10 {
     width: 10%;
   }
+
   .lg-h-20 {
     width: 20%;
   }
+
   .lg-h-25 {
     width: 25%;
   }
+
   .lg-h-30 {
     width: 30%;
   }
+
   .lg-h-40 {
     width: 40%;
   }
+
   .lg-h-50 {
     width: 50%;
   }
+
   .lg-h-60 {
     width: 60%;
   }
+
   .lg-h-70 {
     width: 70%;
   }
+
   .lg-h-80 {
     width: 80%;
   }
+
   .lg-h-90 {
     width: 90%;
   }
 }
-
 /* LINKS */
-
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 /* SOCIAL ICONS */
-
-
 /* H1 -> H6 */
-
-
 /* LISTS */
-
 ul, ol {
-    list-style: none;
+  list-style: none;
 }
 
 /* POSITION */
-
-
-
 /* TRANSPARENT TEXT WITH CONTOUR */
-
 .txt-only-stroke {
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: black;
-    color: transparent;
-  }
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+  color: transparent;
+}
 
+/* NAVBAR */
+/* FOOTER */
+.footer-cat-articles {
+  height: 348px;
+  width: 359px;
+  border-radius: 57px;
+  background-color: #ECEAD5;
+}
+
+/*# sourceMappingURL=style.css.map */

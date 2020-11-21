@@ -3,95 +3,201 @@
 @import "@fortawesome/fontawesome-free/css/all.css";
 // @import "node_modules/bootstrap/scss/bootstrap";
 
-*{
-    margin : 0;
-    padding : 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $couleur-fond;
+}
+
+/* TITRES ET PARAGRAPHES */
+
+h4 {
+  font-size: $titre-pc-moyen;
+  font-family: $secondary-font;
 }
 
 /* NAVBAR */
 
+/* FOOTER MAGAZINE */
 
+.section-mag {
+  background-color: $beige;
+  min-height: 450px;
+}
 
+.sm-horizontal-line {
+  height: 3px;
+  background-color: $vert-fonce;
+}
 
+.section-mag-title {
+  padding-top: 20px;
+}
 
+.footer-fiches {
+  background-color: $vert-clair;
+}
+
+.footer-lexique {
+  background-color: $rose-fonce;
+}
+
+.footer-art-info {
+  background-color: $rose-clair;
+}
+
+.footer-marque {
+  background-color: $vert-fonce;
+}
+
+.section-articles {
+  margin-top: 20px;
+}
+
+.footer-cat-articles {
+  height: 309px;
+  width: 319px;
+  border-radius: 50px;
+  margin: 20px;
+}
+
+@media only screen and (max-width: 860px) {
+  .footer-cat-articles {
+    margin: 20px auto 20px auto;
+    width: 289px;
+    height: 279px;
+  }
+}
+
+.last-cat {
+  margin-bottom: 50px;
+}
+
+.cat-articles-title {
+  border: none;
+  height: 60px;
+  width: 220px;
+  background-color: $couleur-fond;
+  margin: 38% 18%;
+  text-align: center;
+  font-family: $main-font;
+  font-size: $texte-footer;
+  font-weight: $regular-weight;
+}
 
 /* FOOTER */
 
-.footer-cat-articles {
-    height : 348px;
-    width: 359px;
-    border-radius: 57px;
-    background-color: $beige;
-}
-
 .footer > div {
-    padding-top: 40px;
-    padding-bottom: 40px;
+  padding-top: 60px;
+  padding-bottom: 40px;
 }
 
 .footer {
-    background-color: $vert-moyen;
-    max-height : 550px;
-    min-height: 350px;
-    position: relative;
+  background-color: $vert-moyen;
+  min-height: 350px;
+  position: relative;
 }
 
 .footer-nav {
-    font-family: $main-font;
-    font-size: $texte-footer;
-    color: $noir;
+  font-family: $main-font;
+  font-size: $texte-footer;
+  color: $noir;
 }
 
 .footer-nav > ul > a > li {
-    color: $noir;
+  color: $noir;
+}
+
+.footer-nav > ul > a > li:first-child {
+  margin-right: 10px;
 }
 
 .bold {
-    font-weight: $bold;
-}
-
-.logo-footer {
-    width: 80%;
-    height: auto;
+  font-weight: $bold;
 }
 
 .vertical-line {
-    height : 250px;
-    width : 10px;
-    background-color: $rose-clair;
+  width: 10px;
+  height: auto;
+  background-color: $rose-clair;
+  margin-right: 25px;
+}
+
+@media only screen and (max-width: 860px) {
+  .vertical-line {
+    display: none;
+  }
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.social-icon {
+  color: $vert-fonce;
+  font-size: 24px;
+  margin: 8px;
+}
+
+@media only screen and (max-width: 860px) {
+  .social-icon {
+    color: $vert-fonce;
+    font-size: 36px;
+    margin: 8px;
+  }
+  .social-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
 .copyright {
-    font-family: $main-font;
-    font-size: 14px;
-    position: absolute;
-    bottom : 5px;
+  font-family: $main-font;
+  font-size: 14px;
+  position: absolute;
+  bottom: 15px;
 }
 
 p.copyright {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 /* BTN GO UP */
 
 .btn-up {
-    background-color: $rose-clair;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    box-shadow: $shadow-rose-sm;
-    position: relative;
+  background-color: $rose-clair;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: $shadow-rose-sm;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
 }
 
 div.btn-up > a {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 35px;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    color: white;
-    position: absolute;
-    left : 18%;
-    top: 22%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  color: white;
+  position: absolute;
+  left: 18%;
+  top: 22%;
+}
+
+/* DEBUG*/
+
+.test-div {
+  height: 1200px;
+  width: 100%;
+  background-color: burlywood;
 }

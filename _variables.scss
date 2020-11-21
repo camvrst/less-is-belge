@@ -1,63 +1,61 @@
 /***** COULEURS *****/
 
-$couleur-fond : #ECEAD5;
-$rose-clair: #FFE7E7;
-$rose-fonce: #E5B0A4;
-$vert-clair: #D6FFC0;
-$vert-moyen: #C0D1BF;
-$vert-fonce: #1E3B2C;
-$noir : #0C0B0B;
-$beige : #ECEAD5;
-$gris-fonce : #464343;
+$couleur-fond: #f6f3f6;
+$rose-clair: #ffe7e7;
+$rose-fonce: #e5b0a4;
+$vert-clair: #d6ffc0;
+$vert-moyen: #c0d1bf;
+$vert-fonce: #1e3b2c;
+$noir: #0c0b0b;
+$beige: #ecead5;
+$gris-fonce: #464343;
 
 /***** FONT-SIZE *****/
 
 // titres pour les pages contact, newsletter + dans le footer "le magazine"
-$titre-pc-moyen : 40px; 
+$titre-pc-moyen: 40px;
 
 //texte footer
-$texte-footer : 22px;
+$texte-footer: 22px;
 
 //texte nav
-$texte-nav-pc : 30px;
+$texte-nav-pc: 30px;
 
 // textes pour les paragraphes des articles
-$texte-paragraphe-pc : 26px;
+$texte-paragraphe-pc: 26px;
 
 // tous les titres des articles version PC, les textes en évidence (fiches pratiques, etc)
-$titre-pc-large : 60px;
+$titre-pc-large: 60px;
 
 // pour indiquer des infos comme le nombre de commentaires, etc
-$mini-texte-pc : 22px;
+$mini-texte-pc: 22px;
 
 // texte à l'intérieur des boutons version PC
-$texte-bouton-pc : 20px;
+$texte-bouton-pc: 20px;
 
 /***** FONTS & FONT WEIGHT *****/
 
-$secondary-font : 'ITC Garamond Std Bold Narrow';
-$main-font : 'TT Chocolates';
+$secondary-font: "ITC Garamond Std Bold Narrow";
+$main-font: "TT Chocolates";
 
-$bold : bold;
-$extra-bold : 800;
-$demi-bold : 600;
+$bold: bold;
+$extra-bold: 800;
+$demi-bold: 600;
 $light-weight: 300;
-$regular-weight : normal;
-
+$regular-weight: normal;
 
 /* BOX SHADOWS */
 
-$shadow-lightrose-sm : 4px 4px #FFE7E7 ;
-$shadow-lightrose-md : 8px 8px #FFE7E7;
+$shadow-lightrose-sm: 4px 4px #ffe7e7;
+$shadow-lightrose-md: 8px 8px #ffe7e7;
 
-$shadow-rose-sm : 4px 4px #E5B0A4 ;
-$shadow-rose-md : 8px 8px #E5B0A4 ;
+$shadow-rose-sm: 4px 4px #e5b0a4;
+$shadow-rose-md: 8px 8px #e5b0a4;
 
-$shadow-darkgreen-sm : 4px 4px #1E3B2C ;
-$shadow-darkgreen-md : 8px 8px #1E3B2C ;
+$shadow-darkgreen-sm: 4px 4px #1e3b2c;
+$shadow-darkgreen-md: 8px 8px #1e3b2c;
 
-$shadow-green-sm : 4px 4px #C0D1BF ;
-$shadow-green-md : 8px 8px #C0D1BF;
-
+$shadow-green-sm: 4px 4px #c0d1bf;
+$shadow-green-md: 8px 8px #c0d1bf;
 
 /* MARGIN ET PADDING */

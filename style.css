@@ -399,6 +399,38 @@ h4 {
 }
 
 /* NAVBAR */
+/* SEARCH BAR */
+.search-section {
+  width: 300px;
+}
+
+.search-bar {
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  padding: 5px;
+  height: 40px;
+  outline: none;
+  background: #f6f3f6;
+  color: #1e3b2c;
+  font-family: "TT Chocolates";
+  font-size: 16px;
+}
+
+.search-btn {
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #d6ffc0;
+  text-align: center;
+  color: #1e3b2c;
+  cursor: pointer;
+}
+
 /* FOOTER MAGAZINE */
 .section-mag {
   background-color: #ecead5;

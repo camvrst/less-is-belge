@@ -59,3 +59,24 @@ $shadow-green-sm: 4px 4px #c0d1bf;
 $shadow-green-md: 8px 8px #c0d1bf;
 
 /* MARGIN ET PADDING */
+
+/* BUTTON */
+
+.btn-pages {
+  border: none;
+  padding: 16px 50px;
+  font-family: $main-font;
+  font-size: 16px;
+}
+
+/* PARAGRAPHS */
+
+p {
+  font-family: $main-font;
+}
+
+/* TITLES */
+
+h1 {
+  font-family: $secondary-font;
+}

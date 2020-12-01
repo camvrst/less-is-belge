@@ -7,31 +7,109 @@
 </head>
 
 <body>
+    <!--NAV BAR-->
     <header >
         <nav class="nav-bar d-flex justify-around items-center w-full">
-            <img class="nav-logo w-10 lg-margin-top" src="static/logo/logo-less-is-belge-big.png" alt="Logo Less is Belge">
-            <ul class="w-50 d-flex justify-around">
-                <li>annuaire</li>
-                <li>articles</li>
-                <li>contact</li>
-                <li>à propos</li>
+            <img class="nav-logo lg-margin-top" src="static/logo/logo-less-is-belge-big.png" alt="Logo Less is Belge">
+            <img class="nav-logo-sm lg-margin-top" src="static/logo/less-is-belge-small-logo-eye.png" alt="Logo Less is Belge">
+            <ul class="w-50 d-flex justify-around nav-links">
+                <li><a href="" class="nav-text">annuaire</a></li>
+                <li><a href="" class="nav-text dropdown-article">articles</a>
+                        <ul class="dropdown-sm">
+                         <a href=""><li>fiches pratiques</li></a>
+                         <a href=""><li>lexique des matières</li></a>
+                         <a href=""><li>articles informatifs</li></a>
+                         <a href=""><li>les marques belges</li></a>
+                        </ul>
+                </li>
+                <li><a href="" class="nav-text">contact</a></li>
+                <li><a href="" class="nav-text">à propos</a></li>
             </ul>
+            <div class="burger-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </nav>
+        <div class="dropdown-article-pc">
+            <section class="section-mag">
+                <div class="section-mag-title d-flex items-center justify-around align-baseline">
+                    <div class="lg-w-30 w-10 sm-horizontal-line"></div>
+                    <div>
+                        <h4>Le magazine</h4>
+                    </div>
+                    <div class="lg-w-30 w-10 sm-horizontal-line"></div>
+                </div>
+                <div class="section-articles d-flex justify-around w-full sm-flex-column flex-wrap">
+                    <div class="footer-cat-articles w-20 footer-fiches">
+                        <button class="cat-articles-title">fiches pratiques</button>
+                    </div>
+                    <div class="footer-cat-articles w-20 footer-lexique">
+                        <button class="cat-articles-title">lexique des matières</button>
+                    </div>
+                    <div class="footer-cat-articles w-20 footer-art-info">
+                        <button class="cat-articles-title">articles informatifs</button>
+                    </div>
+                    <div class="footer-cat-articles last-cat w-20 footer-marque">
+                        <button class="cat-articles-title">les marques belges</button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
     </header>
     <main>
         <!-- BTN GO UP-->
         <div class="btn-up txt-only-stroke sticky"><a href="#" >UP</a></div>
-        
-        <div class="test-div">
-              <!-- SEARCH BAR -->
-        <div class="search-section">
-            <div class="search-bar d-flex">
-               <input type="text" class="search-input" placeholder="Retrouver une marque, un article, ...">
-               <button type="submit" class="search-btn">
-                 <i class="fa fa-search"></i>
-              </button>
+        <!-- HOMEPAGE -->
+        <section class="homepage-section lg-d-flex">
+            <div class="homepage-img">
+                <img src="./static/img/ampoule.jpg" alt="Ampoule">
             </div>
-         </div>
+            <div class= "homepage-right">
+                <div class="homepage-intro">
+                    <h1>La mode éthique, c'est quoi ?</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi, impedit quia. Labore, sed eius asperiores unde aut nostrum iste animi ratione accusamus quas, recusandae porro laborum consequuntur, aliquid beatae quis!</p>
+                    <button class="btn-pages btn-homepage-read">lire la suite</button>
+                </div>
+              <!-- SEARCH BAR -->
+                <div class="homepage-search">
+                    <h2>Un article, un magasin, une marque éco-responsable ... <br/>
+                    On a tout en stock !</h2>
+                    <div class="search-section">
+                        <div class="search-bar d-flex">
+                            <input type="text" class="search-input" placeholder="Retrouver une marque, un article, ...">
+                            <button type="submit" class="search-btn">
+                            <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <img class="w-10 arrow" src="./static/arrow1.png" alt="Flèche">
+            </div>
+        </section>
+        <div class="newsletter">
+            <h2>La mode <strong>belge</strong> et <strong>éco-responsable</strong> vous tient à coeur ? <br/> 
+            Inscrivez-vous à notre <em>newsletter</em> !</h2>
+            <form action="" method="POST">
+                <div class="d-flex justify-between w-full flex-wrap">
+                    <div class="d-flex flex-column lg-w-40">
+                        <label for="nom-newsletter">Nom </label>
+                        <input type="text" name="nom-newsletter" id="nom-newsletter">
+                    </div>
+                    <div class="d-flex flex-column lg-w-40">
+                        <label for="prenom-newsletter">Prénom </label>
+                        <input type="text" name="prenom-newsletter" id="prenom-newsletter">
+                    </div>
+                </div>
+                <div class="d-flex justify-between items-end flex-wrap">
+                    <div class="d-flex flex-column lg-w-60">
+                        <label for="email-newsletter">Email </label>
+                            <input type="email" name="email-newsletter" id="email-newsletter">
+                    </div>
+                    <button class="btn-pages" type="submit">s'inscrire</button>
+                </div>
+            </form>
         </div>
 
      

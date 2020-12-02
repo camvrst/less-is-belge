@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Annuaire des marques belges éco-responsables</title>
+  </head>
+
+  <body>
+    <section class="annuaire">
+      <h1>Annuaire des marques belges et éco-responsables</h1>
+      <div class="hr-rose"></div>
+      <section class="inside-annuaire lg-d-flex">
+        <!--SECTION MARQUES -->
+        <section class="section-marques w-full lg-w-50">
+          <p class="w-80">
+            Retrouvez toutes les marques de chez nous, choisies pour leurs
+            qualités éthiques, écologiques et durables.
+          </p>
+          <div class="d-flex items-center">
+            <h3>Afficher la carte</h3>
+            <!-- A VERIFIER SCRIPT -->
+            <button type="checkbox" class="show-map radio-btn"></button>
+          </div>
+          <!-- SEARCH BAR -->
+          <div class="bg-green">
+            <div class="search-section">
+              <div class="search-bar d-flex">
+                <input
+                  type="text"
+                  class="search-input"
+                  placeholder="Retrouver une marque, un article, ..."
+                />
+                <button type="submit" class="search-btn">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- FILTERS -->
+          <h3>Filtrer la recherche</h3>
+          <section class="filters d-flex justify-between w-full">
+            <div class="filters-left lg-w-50 w-full">
+              <div class="d-flex items-center">
+                <p>Femmes</p>
+                <!-- A VERIFIER SCRIPT -->
+                <button type="checkbox" class="show-femme radio-btn"></button>
+              </div>
+              <div class="d-flex items-center">
+                <p>Hommes</p>
+                <!-- A VERIFIER SCRIPT -->
+                <button type="checkbox" class="show-homme radio-btn"></button>
+              </div>
+              <div class="d-flex items-center">
+                <p>Enfants</p>
+                <!-- A VERIFIER SCRIPT -->
+                <button type="checkbox" class="show-enfant radio-btn"></button>
+              </div>
+            </div>
+            <div class="filters-right lg-w-50 w-full">
+              <div class="d-flex items-center">
+                <p>Magasin propre</p>
+                <!-- A VERIFIER SCRIPT -->
+                <button type="checkbox" class="show-maga radio-btn"></button>
+              </div>
+              <div class="d-flex items-center">
+                <p>Multimarques</p>
+                <!-- A VERIFIER SCRIPT -->
+                <button type="checkbox" class="show-multi radio-btn"></button>
+              </div>
+              <div class="d-flex items-center">
+                <p>Seconde-main</p>
+                <!-- A VERIFIER SCRIPT -->
+                <button type="checkbox" class="show-seconde radio-btn"></button>
+              </div>
+            </div>
+          </section>
+          <section class="all-marques d-flex">
+            <div class="w-50">
+              <a href="">
+                <img
+                  class="img-marque"
+                  src="./static/marques/mardieditions.jpg"
+                  alt="Mardi Editions"
+                />
+                <h3>MARDI EDITIONS</h3>
+              </a>
+            </div>
+            <div class="w-50">
+              <a href="">
+                <img
+                  class="img-marque"
+                  src="./static/marques/mardieditions.jpg"
+                  alt="Mardi Editions"
+                />
+                <h3>MARDI EDITIONS</h3>
+              </a>
+            </div>
+          </section>
+        </section>
+        <!--SECTION MAP -->
+        <section class="section-map lg-w-50 w-full">
+          <div class="bg-rose">
+            <div id="map" class="map-section"></div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <script src="annuaire.js"></script>
+  </body>
+</html>

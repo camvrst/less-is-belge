@@ -1,0 +1,1299 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+/***** COULEURS *****/
+/***** FONT-SIZE *****/
+/***** FONTS & FONT WEIGHT *****/
+/* BOX SHADOWS */
+/* MARGIN ET PADDING */
+/* BUTTON */
+.btn-pages {
+  border: none;
+  padding: 16px 50px;
+  font-family: "TT Chocolates";
+  font-size: 16px;
+}
+
+/* PARAGRAPHS */
+p {
+  font-family: "TT Chocolates";
+}
+
+/* TITLES */
+h1 {
+  font-family: "ITC Garamond Std Bold Narrow";
+}
+
+/* FLEX PROPERTIES */
+.d-block {
+  display: block;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+@media only screen and (min-width: 990px) {
+  .lg-justify-start {
+    justify-content: flex-start;
+  }
+
+  .lg-justify-end {
+    justify-content: flex-end;
+  }
+
+  .lg-d-flex {
+    display: flex;
+  }
+}
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.content-end {
+  align-content: flex-end;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.self-center {
+  align-self: center;
+}
+
+.self-start {
+  align-self: flex-start;
+}
+
+.self-end {
+  align-self: flex-end;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 860px) {
+  .sm-flex-column {
+    flex-direction: column;
+  }
+
+  .sm-justify-center {
+    justify-content: center;
+  }
+
+  .sm-justify-around {
+    justify-content: space-around;
+  }
+
+  .sm-align-center {
+    align-items: center;
+  }
+
+  .sm-d-flex {
+    display: flex;
+  }
+
+  .sm-self-center {
+    align-self: center;
+  }
+}
+/* TEXT ALIGN */
+.txt-center {
+  text-align: center;
+}
+
+@media only screen and (max-width: 860px) {
+  .sm-txt-center {
+    text-align: center;
+  }
+}
+.txt-end {
+  text-align: end;
+}
+
+.txt-justify {
+  text-align: justify;
+}
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+/* LINE HEIGHT */
+.line-h-75 {
+  line-height: 175%;
+}
+
+@media only screen and (max-width: 860px) {
+  .line-h-75 {
+    line-height: 200%;
+  }
+}
+/* WIDTH */
+.w-full {
+  width: 100%;
+}
+
+.w-5 {
+  width: 5%;
+}
+
+.w-10 {
+  width: 10%;
+}
+
+.w-20 {
+  width: 20%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-30 {
+  width: 30%;
+}
+
+.w-40 {
+  width: 40%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-60 {
+  width: 60%;
+}
+
+.w-70 {
+  width: 70%;
+}
+
+.w-80 {
+  width: 80%;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+@media only screen and (min-width: 860px) {
+  .lg-w-full {
+    width: 100%;
+  }
+
+  .lg-w-5 {
+    width: 5%;
+  }
+
+  .lg-w-10 {
+    width: 10%;
+  }
+
+  .lg-w-20 {
+    width: 20%;
+  }
+
+  .lg-w-25 {
+    width: 25%;
+  }
+
+  .lg-w-30 {
+    width: 30%;
+  }
+
+  .lg-w-40 {
+    width: 40%;
+  }
+
+  .lg-w-50 {
+    width: 50%;
+  }
+
+  .lg-w-60 {
+    width: 60%;
+  }
+
+  .lg-w-70 {
+    width: 70%;
+  }
+
+  .lg-w-80 {
+    width: 80%;
+  }
+
+  .lg-w-90 {
+    width: 90%;
+  }
+}
+/* HEIGHT */
+.h-full {
+  height: 100%;
+}
+
+.h-10 {
+  height: 10%;
+}
+
+.h-20 {
+  height: 20%;
+}
+
+.h-25 {
+  height: 25%;
+}
+
+.h-30 {
+  height: 30%;
+}
+
+.h-40 {
+  height: 40%;
+}
+
+.h-50 {
+  height: 50%;
+}
+
+.h-60 {
+  height: 60%;
+}
+
+.h-70 {
+  height: 70%;
+}
+
+.h-80 {
+  height: 80%;
+}
+
+.h-90 {
+  height: 90%;
+}
+
+@media only screen and (min-height: 860px) {
+  .lg-h-full {
+    height: 100%;
+  }
+
+  .lg-h-10 {
+    height: 10%;
+  }
+
+  .lg-h-20 {
+    height: 20%;
+  }
+
+  .lg-h-25 {
+    height: 25%;
+  }
+
+  .lg-h-30 {
+    height: 30%;
+  }
+
+  .lg-h-40 {
+    height: 40%;
+  }
+
+  .lg-h-50 {
+    height: 50%;
+  }
+
+  .lg-h-60 {
+    height: 60%;
+  }
+
+  .lg-h-70 {
+    height: 70%;
+  }
+
+  .lg-h-80 {
+    height: 80%;
+  }
+
+  .lg-h-90 {
+    height: 90%;
+  }
+}
+/* MARGIN - PADDING */
+margin-auto {
+  margin: auto;
+}
+
+padding-auto {
+  padding: auto;
+}
+
+.lg-margin-top {
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 860px) {
+  .sm-margin-top {
+    margin-top: 20px;
+  }
+}
+/* LINKS */
+a {
+  text-decoration: none;
+}
+
+/* H1 -> H6 */
+/* LISTS */
+ul,
+ol {
+  list-style: none;
+}
+
+/* POSITION */
+.sticky {
+  position: sticky;
+  position: -webkit-sticky;
+}
+
+/* TRANSPARENT TEXT WITH CONTOUR */
+.txt-only-stroke {
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: #0c0b0b;
+  color: transparent;
+}
+
+/* ABOUT */
+.about-logo {
+  margin: 80px 0;
+  height: 60vh;
+}
+.about-logo img {
+  margin-bottom: auto;
+}
+
+.camille-img,
+.fanny-img,
+.ayaan-img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.camille-img img {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin-top: auto;
+}
+
+.team-section {
+  background-color: #c0d1bf;
+  padding: 50px 0px;
+}
+.team-section h2 {
+  font-family: "ITC Garamond Std Bold Narrow";
+  font-size: 40px;
+  color: #0c0b0b;
+  margin-left: 120px;
+}
+
+.team {
+  background-color: #c0d1bf;
+  padding: 100px 0;
+}
+.team h3 {
+  font-family: "ITC Garamond Std Bold Narrow";
+  font-size: 40px;
+  transform: translateY(-70%) translateX(-30%);
+}
+.team h4 {
+  font-family: "ITC Garamond Std Bold Narrow";
+  font-size: 50px;
+  transform: translateY(-70%);
+  color: #0c0b0b;
+}
+.team p {
+  font-size: 22px;
+}
+
+.nav-fiches ul li {
+  color: #1e3b2c;
+  font-family: "TT Chocolates";
+  font-size: 30px;
+}
+.nav-fiches ul .afficher {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.premiere-fiche .premiere-section {
+  margin-top: 60px;
+  margin-left: 250px;
+}
+.premiere-fiche .premiere-section img {
+  width: 300px;
+}
+.premiere-fiche .premiere-section .para {
+  margin-top: 80px;
+  width: 700px;
+  margin-left: 100px;
+}
+.premiere-fiche .premiere-section .para .hr-vert {
+  background-color: #d6ffc0;
+  transform: translateX(-20%);
+  width: 120%;
+  height: 3%;
+}
+.premiere-fiche .premiere-section .para div .date {
+  padding: 5px;
+  color: #464343;
+  font-style: "TT Chocolates";
+  font-size: small;
+}
+.premiere-fiche .premiere-section .para div .date i {
+  padding: 5px;
+}
+.premiere-fiche .premiere-section .para div .petit-hr-vert {
+  background-color: #d6ffc0;
+  width: 5%;
+  height: 10%;
+}
+.premiere-fiche .premiere-section .para div .comments {
+  padding: 5px;
+  color: #464343;
+  font-style: "TT Chocolates";
+  font-size: small;
+}
+.premiere-fiche .premiere-section .para div .comments i {
+  padding: 5px;
+}
+.premiere-fiche .premiere-section .para h4 {
+  font-style: "TT Chocolates";
+  font-size: 40px;
+  color: #1e3b2c;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.premiere-fiche .premiere-section .para p {
+  font-style: "TT Chocolates";
+  font-size: 22px;
+  color: #0c0b0b;
+  margin-top: 20px;
+}
+.premiere-fiche .premiere-section .para .btnsuite-vert {
+  font-style: "TT Chocolates";
+  font-size: small;
+  font-weight: 600;
+  color: #1e3b2c;
+  background-color: #d6ffc0;
+  padding: 10px;
+  margin-left: 80%;
+  margin-top: 5%;
+}
+
+.deuxieme-fiche .deuxieme-section {
+  margin-top: 100px;
+  margin-left: 100px;
+  margin-bottom: 100px;
+}
+.deuxieme-fiche .deuxieme-section .art1 {
+  width: 350px;
+  height: 550px;
+  background-color: white;
+}
+.deuxieme-fiche .deuxieme-section .art1 img {
+  width: 100%;
+  height: 50%;
+}
+.deuxieme-fiche .deuxieme-section .art1 h5 {
+  font-style: "TT Chocolates";
+  font-size: 40px;
+  color: #1e3b2c;
+  margin-top: 20px;
+  font-weight: 600;
+  padding: 30px;
+}
+.deuxieme-fiche .deuxieme-section .art1 p {
+  padding: 30px;
+}
+.deuxieme-fiche .deuxieme-section .art2 {
+  width: 350px;
+  height: 550px;
+  background-color: white;
+}
+.deuxieme-fiche .deuxieme-section .art2 img {
+  width: 100%;
+  height: 50%;
+}
+.deuxieme-fiche .deuxieme-section .art2 h5 {
+  font-style: "TT Chocolates";
+  font-size: 40px;
+  color: #1e3b2c;
+  margin-top: 20px;
+  font-weight: 600;
+  padding: 30px;
+}
+.deuxieme-fiche .deuxieme-section .art2 p {
+  padding: 30px;
+}
+.deuxieme-fiche .deuxieme-section .art3 {
+  width: 500px;
+  height: 550px;
+  background-color: white;
+}
+.deuxieme-fiche .deuxieme-section .art3 img {
+  width: 100%;
+  height: 50%;
+}
+.deuxieme-fiche .deuxieme-section .art3 h5 {
+  font-style: "TT Chocolates";
+  font-size: 40px;
+  color: #1e3b2c;
+  margin-top: 20px;
+  font-weight: 600;
+  padding: 30px;
+}
+.deuxieme-fiche .deuxieme-section .art3 p {
+  padding: 30px;
+}
+
+.hr-rose {
+  background-color: #ffe7e7;
+  transform: translateX(-20%);
+  width: 120%;
+  height: 3%;
+}
+
+.btnsuite-rose {
+  font-style: "TT Chocolates";
+  font-size: small;
+  font-weight: 600;
+  color: #1e3b2c;
+  background-color: #ffe7e7;
+  padding: 10px;
+  margin-left: 80%;
+  margin-top: 5%;
+}
+
+.hr-vertmoyen {
+  background-color: #c0d1bf;
+  transform: translateX(-20%);
+  width: 120%;
+  height: 3%;
+}
+
+.btnsuite-vertmoyen {
+  font-style: "TT Chocolates";
+  font-size: small;
+  font-weight: 600;
+  color: #1e3b2c;
+  background-color: #c0d1bf;
+  padding: 10px;
+  margin-left: 80%;
+  margin-top: 5%;
+}
+
+.hr-rosefonce {
+  background-color: #e5b0a4;
+  transform: translateX(-20%);
+  width: 120%;
+  height: 3%;
+}
+
+.btnsuite-rosefonce {
+  font-style: "TT Chocolates";
+  font-size: small;
+  font-weight: 600;
+  color: #1e3b2c;
+  background-color: #e5b0a4;
+  padding: 10px;
+  margin-left: 80%;
+  margin-top: 5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f6f3f6;
+}
+
+/* TITRES ET PARAGRAPHES */
+h4 {
+  font-size: 40px;
+  font-family: "ITC Garamond Std Bold Narrow";
+}
+
+/* NAVBAR */
+.nav-bar {
+  background-color: #f6f3f6;
+  z-index: 10;
+}
+.nav-bar .nav-logo {
+  width: 10%;
+  margin-left: 50px;
+}
+.nav-bar .nav-logo-sm {
+  display: none;
+}
+.nav-bar ul {
+  margin-left: auto;
+}
+.nav-bar ul li a {
+  font-family: "TT Chocolates";
+  font-size: 22px;
+  color: #0c0b0b;
+}
+
+.burger-menu {
+  display: none;
+}
+
+.dropdown-sm {
+  display: none;
+}
+
+.dropdown-article-pc {
+  display: none;
+  z-index: 5;
+}
+
+.dropdown-article {
+  position: relative;
+}
+
+.nav-links li a.dropdown-article:hover .dropdown-article-pc {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+}
+
+.dropdown-article:hover .dropdown-article-pc {
+  display: block;
+  position: absolute;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 720px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .nav-bar .nav-logo {
+    display: none;
+  }
+  .nav-bar .nav-logo-sm {
+    display: block;
+    width: 15%;
+    margin-left: 10px;
+    z-index: 3;
+  }
+
+  .burger-menu {
+    cursor: pointer;
+    margin-right: 15px;
+    margin-left: auto;
+    z-index: 4;
+  }
+  .burger-menu .line1,
+.burger-menu .line2,
+.burger-menu .line3 {
+    width: 30px;
+    height: 3px;
+    background-color: #1e3b2c;
+    margin: 5px;
+    border-radius: 12px;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    top: 7vh;
+    height: 90%;
+    width: 100%;
+    background-color: #f6f3f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+    display: none;
+  }
+
+  .nav-text {
+    font-weight: 600;
+  }
+
+  .dropdown-article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dropdown-sm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+}
+.toggle div.line1 {
+  transform: rotate(-45deg) translateY(11px);
+}
+.toggle div.line2 {
+  opacity: 0;
+}
+.toggle div.line3 {
+  transform: rotate(45deg) translateY(-11px);
+}
+.toggle div {
+  transition: all 0.1s ease;
+}
+
+/********** PAGES **********/
+/***** HOMEPAGE ******/
+.homepage-right {
+  width: 50%;
+  height: 100%;
+}
+
+.homepage-img {
+  margin: 30px 80px;
+  width: 40%;
+}
+.homepage-img img {
+  width: 100%;
+}
+
+.homepage-intro {
+  height: auto;
+  width: 600px;
+  background-color: #ffe7e7;
+  box-shadow: 8px 8px #e5b0a4;
+  padding: 60px;
+  margin-top: 80px;
+  transform: translateX(-20%);
+}
+.homepage-intro h1 {
+  font-size: 30px;
+  width: 80%;
+}
+.homepage-intro p {
+  margin: 16px 0;
+  width: 80%;
+}
+.homepage-intro button {
+  background-color: #d6ffc0;
+  box-shadow: 4px 4px #e5b0a4;
+  margin-left: 65%;
+  margin-top: 15px;
+}
+
+.homepage-search {
+  height: 250px;
+  width: 600px;
+  background-color: #d6ffc0;
+  box-shadow: 8px 8px #c0d1bf;
+  padding: 60px;
+  margin-left: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.homepage-search h2 {
+  font-size: 28px;
+}
+
+.homepage-right {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 990px) {
+  .homepage-img {
+    width: 80vw;
+    margin: 30px auto;
+  }
+  .homepage-img img {
+    width: 100%;
+  }
+
+  .homepage-right {
+    width: 100%;
+  }
+
+  .homepage-intro {
+    width: 90%;
+    height: auto;
+    padding: 60px;
+    margin: 40px auto;
+    transform: translateX(0%) translateY(-30%);
+  }
+  .homepage-intro h1 {
+    font-size: 30px;
+  }
+  .homepage-intro p {
+    margin: 16px 0;
+  }
+  .homepage-intro button {
+    background-color: #d6ffc0;
+    box-shadow: 4px 4px #e5b0a4;
+    margin-left: 50%;
+    margin-top: 15px;
+    padding: 10px 16px;
+  }
+
+  .homepage-search {
+    height: auto;
+    width: 90vw;
+    background-color: #d6ffc0;
+    box-shadow: 8px 8px #c0d1bf;
+    padding: 60px;
+    margin: 0px auto 100px auto;
+  }
+  .homepage-search h2 {
+    font-size: 28px;
+  }
+}
+/* SEARCH BAR */
+.search-section {
+  width: 100%;
+  margin-top: 20px;
+  margin-left: auto;
+}
+
+.search-bar {
+  width: 100%;
+}
+
+.search-input {
+  width: 100%;
+  border: none;
+  padding: 5px;
+  height: 40px;
+  outline: none;
+  background: #f6f3f6;
+  color: #1e3b2c;
+  font-family: "TT Chocolates";
+  font-size: 16px;
+}
+
+.search-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  padding: 5px;
+  border: none;
+  background: #f6f3f6;
+  text-align: center;
+  color: #1e3b2c;
+  cursor: pointer;
+}
+
+.arrow {
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+/* NEWSLETTER */
+.newsletter {
+  background-color: #c0d1bf;
+  width: 50%;
+  padding: 60px;
+  box-shadow: 8px 8px #1e3b2c;
+  margin: 100px auto;
+  font-family: "TT Chocolates";
+}
+.newsletter strong {
+  font-weight: 600;
+}
+.newsletter em {
+  font-style: normal;
+  border-bottom: 15px solid #ffe7e7;
+}
+.newsletter h2 {
+  font-size: 26px;
+  font-weight: 300;
+}
+.newsletter label {
+  font-size: 16px;
+  margin: 15px 0;
+}
+.newsletter input {
+  border: none;
+  height: 40px;
+}
+.newsletter button {
+  background-color: #d6ffc0;
+  box-shadow: 4px 4px #e5b0a4;
+  padding: 10px 20px;
+  margin-top: 15px;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 990px) {
+  .newsletter {
+    width: 80%;
+  }
+  .newsletter label {
+    font-size: 16px;
+    margin: 20px 0;
+  }
+
+  .arrow {
+    margin-right: 50px;
+  }
+}
+/***** ANNUAIRE *****/
+.annuaire {
+  margin: 20px 50px;
+  z-index: 2;
+}
+.annuaire .hr-rose {
+  width: 100%;
+  height: 10px;
+  background-color: #e5b0a4;
+  margin-bottom: 20px;
+}
+.annuaire h1 {
+  font-size: 30px;
+  margin: 15px 0;
+}
+
+.section-marques p {
+  font-size: 16px;
+  margin: 30px 0;
+}
+.section-marques h3 {
+  font-family: "TT Chocolates";
+  font-size: 22px;
+  font-weight: 600px;
+}
+
+.radio-btn {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #d6ffc0;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid #1e3b2c;
+  margin-left: auto;
+  margin-right: 25px;
+}
+
+.filters {
+  margin: 20px 0;
+}
+
+.filters-left div p {
+  margin: 0;
+  padding: 10px 0px;
+}
+
+.filters-right div p {
+  margin: 0;
+  padding: 10px 0px;
+}
+
+.radio-filled {
+  background-color: #1e3b2c;
+}
+
+.bg-green {
+  background-color: #c0d1bf;
+  width: 100%;
+  height: 80px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+}
+
+.all-marques div {
+  margin: 5px;
+}
+.all-marques div a {
+  color: #0c0b0b;
+}
+.all-marques div .img-marque {
+  width: 100%;
+  height: 70%;
+  margin: 10px 0;
+}
+.all-marques div h3 {
+  border-left: 5px solid #1e3b2c;
+  padding: 0 5px;
+}
+
+.bg-rose {
+  background-color: #ffe7e7;
+  position: relative;
+  width: 120%;
+  transform: translateX(-10%);
+  opacity: 80%;
+  height: 850px;
+  z-index: -99;
+  padding-top: 50px;
+}
+.bg-rose .map-section {
+  height: 70%;
+  width: 80%;
+  margin: auto;
+  background-color: #f6f3f6;
+}
+
+@media only screen and (max-width: 720px) {
+  .bg-rose {
+    background-color: #ffe7e7;
+    position: relative;
+    width: 100%;
+    transform: translateX(0%);
+  }
+
+  .map-section {
+    width: 100%;
+    margin: 0;
+  }
+
+  .annuaire {
+    margin: 50px 0;
+  }
+}
+/* FOOTER MAGAZINE */
+.section-mag {
+  background-color: #ecead5;
+  min-height: 450px;
+}
+
+.sm-horizontal-line {
+  height: 3px;
+  background-color: #1e3b2c;
+}
+
+.section-mag-title {
+  padding-top: 20px;
+}
+
+.footer-fiches {
+  background-color: #d6ffc0;
+  background-image: url("./static/nav-articles/bulb.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.footer-lexique {
+  background-color: #e5b0a4;
+  background-image: url("./static/nav-articles/coton.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.footer-art-info {
+  background-color: #ffe7e7;
+  background-image: url("./static/nav-articles/infobig.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+}
+
+.footer-marque {
+  background-color: #c0d1bf;
+  background-image: url("./static/nav-articles/atomium.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.section-articles {
+  margin-top: 20px;
+}
+
+.footer-cat-articles {
+  height: 309px;
+  width: 319px;
+  border-radius: 50px;
+  margin: 20px;
+}
+
+@media only screen and (max-width: 860px) {
+  .footer-cat-articles {
+    margin: 20px auto 20px auto;
+    width: 289px;
+    height: 279px;
+  }
+}
+.last-cat {
+  margin-bottom: 50px;
+}
+
+.cat-articles-title {
+  border: none;
+  height: 60px;
+  width: 220px;
+  background-color: #f6f3f6;
+  margin: 38% 18%;
+  text-align: center;
+  font-family: "TT Chocolates";
+  font-size: 22px;
+  font-weight: normal;
+}
+
+/* FOOTER */
+.footer > div {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.footer {
+  background-color: #c0d1bf;
+  min-height: 350px;
+  position: relative;
+}
+
+.footer-nav {
+  font-family: "TT Chocolates";
+  font-size: 22px;
+  color: #0c0b0b;
+}
+
+.footer-nav > ul > a > li {
+  color: #0c0b0b;
+}
+
+.footer-nav > ul > a > li:first-child {
+  margin-right: 10px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.vertical-line {
+  width: 10px;
+  height: auto;
+  background-color: #ffe7e7;
+  margin-right: 25px;
+}
+
+@media only screen and (max-width: 860px) {
+  .vertical-line {
+    display: none;
+  }
+}
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icon {
+  color: #1e3b2c;
+  font-size: 24px;
+  margin: 8px;
+}
+
+@media only screen and (max-width: 860px) {
+  .social-icon {
+    color: #1e3b2c;
+    font-size: 36px;
+    margin: 8px;
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.copyright {
+  font-family: "TT Chocolates";
+  font-size: 14px;
+  position: absolute;
+  bottom: 15px;
+}
+
+p.copyright {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* BTN GO UP */
+.btn-up {
+  background-color: #ffe7e7;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: 4px 4px #e5b0a4;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 7;
+}
+
+div.btn-up > a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 35px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  color: white;
+  position: absolute;
+  left: 18%;
+  top: 22%;
+}
+
+/* DEBUG*/
+
+/*# sourceMappingURL=style.css.map */

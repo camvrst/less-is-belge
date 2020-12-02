@@ -1,4 +1,4 @@
-import './static/style.scss';
+import './style.scss';
 
 const radioBtn = document.querySelectorAll('.radio-btn');
 

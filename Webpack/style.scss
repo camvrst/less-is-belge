@@ -1,7 +1,7 @@
-@use "./static/styles/variables" as *;
-@use "./static/styles/framework" as *;
-@use "./static/styles/apropos" as *;
-@use "./static/styles/articlesgeneral" as *;
+@use "./styles/variables" as *;
+@use "./styles/framework" as *;
+@use "./styles/apropos" as *;
+@use "./styles/articlesgeneral" as *;
 @import "@fortawesome/fontawesome-free/css/all.css";
 // @import "node_modules/bootstrap/scss/bootstrap";
 
@@ -511,7 +511,7 @@ h4 {
 
 .footer-fiches {
   background-color: $vert-clair;
-  background-image: url("./static/nav-articles/bulb.png");
+  background-image: url("./static/assets/nav-articles/bulb.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -519,7 +519,7 @@ h4 {
 
 .footer-lexique {
   background-color: $rose-fonce;
-  background-image: url("./static/nav-articles/coton.png");
+  background-image: url("./static/assets/nav-articles/coton.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -527,7 +527,7 @@ h4 {
 
 .footer-art-info {
   background-color: $rose-clair;
-  background-image: url("./static/nav-articles/infobig.png");
+  background-image: url("./static/assets/nav-articles/infobig.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
@@ -535,7 +535,7 @@ h4 {
 
 .footer-marque {
   background-color: $vert-moyen;
-  background-image: url("./static/nav-articles/atomium.png");
+  background-image: url("./static/assets/nav-articles/atomium.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

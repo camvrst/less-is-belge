@@ -1,0 +1,208 @@
+@use "variables" as *;
+@use "framework" as *;
+
+// bare nav articles
+.nav-fiches {
+  ul {
+    li {
+      color: $vert-fonce;
+      font-family: $main-font;
+      font-size: $texte-nav-pc;
+    }
+    .afficher {
+      font-size: $titre-pc-moyen;
+      font-weight: $bold;
+      text-align: center;
+    }
+  }
+}
+
+// section fiches articles
+.premiere-fiche {
+  .premiere-section {
+    margin-top: 60px;
+    margin-left: 250px;
+    img {
+      width: 300px;
+    }
+    .para {
+      margin-top: 80px;
+      width: 700px;
+      margin-left: 100px;
+      .hr-vert {
+        background-color: $vert-clair;
+        transform: translateX(-20%);
+        width: 120%;
+        height: 3%;
+      }
+      div {
+        .date {
+          padding: 5px;
+          color: $gris-fonce;
+          font-style: $main-font;
+          font-size: small;
+          i {
+            padding: 5px;
+          }
+        }
+        .petit-hr-vert {
+          background-color: $vert-clair;
+          width: 5%;
+          height: 10%;
+        }
+        .comments {
+          padding: 5px;
+          color: $gris-fonce;
+          font-style: $main-font;
+          font-size: small;
+          i {
+            padding: 5px;
+          }
+        }
+      }
+      h4 {
+        font-style: $main-font;
+        font-size: $titre-pc-moyen;
+        color: $vert-fonce;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-style: $main-font;
+        font-size: $mini-texte-pc;
+        color: $noir;
+        margin-top: 20px;
+      }
+      .btnsuite-vert {
+        font-style: $main-font;
+        font-size: small;
+        font-weight: $demi-bold;
+        color: $vert-fonce;
+        background-color: $vert-clair;
+        padding: 10px;
+        margin-left: 80%;
+        margin-top: 5%;
+      }
+    }
+  }
+}
+
+.deuxieme-fiche {
+  .deuxieme-section {
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-bottom: 100px;
+    .art1 {
+      width: 350px;
+      height: 550px;
+      background-color: white;
+      img {
+        width: 100%;
+        height: 50%;
+      }
+
+      h5 {
+        font-style: $main-font;
+        font-size: $titre-pc-moyen;
+        color: $vert-fonce;
+        margin-top: 20px;
+        font-weight: $demi-bold;
+        padding: 30px;
+      }
+      p {
+        padding: 30px;
+      }
+    }
+    .art2 {
+      width: 350px;
+      height: 550px;
+      background-color: white;
+      img {
+        width: 100%;
+        height: 50%;
+      }
+      h5 {
+        font-style: $main-font;
+        font-size: $titre-pc-moyen;
+        color: $vert-fonce;
+        margin-top: 20px;
+        font-weight: $demi-bold;
+        padding: 30px;
+      }
+      p {
+        padding: 30px;
+      }
+    }
+    .art3 {
+      width: 500px;
+      height: 550px;
+      background-color: white;
+      img {
+        width: 100%;
+        height: 50%;
+      }
+      h5 {
+        font-style: $main-font;
+        font-size: $titre-pc-moyen;
+        color: $vert-fonce;
+        margin-top: 20px;
+        font-weight: $demi-bold;
+        padding: 30px;
+      }
+      p {
+        padding: 30px;
+      }
+    }
+  }
+}
+// lexique matiéres
+.hr-rose {
+  background-color: $rose-clair;
+  transform: translateX(-20%);
+  width: 120%;
+  height: 3%;
+}
+.btnsuite-rose {
+  font-style: $main-font;
+  font-size: small;
+  font-weight: $demi-bold;
+  color: $vert-fonce;
+  background-color: $rose-clair;
+  padding: 10px;
+  margin-left: 80%;
+  margin-top: 5%;
+}
+// articles informatifs
+.hr-vertmoyen {
+  background-color: $vert-moyen;
+  transform: translateX(-20%);
+  width: 120%;
+  height: 3%;
+}
+.btnsuite-vertmoyen {
+  font-style: $main-font;
+  font-size: small;
+  font-weight: $demi-bold;
+  color: $vert-fonce;
+  background-color: $vert-moyen;
+  padding: 10px;
+  margin-left: 80%;
+  margin-top: 5%;
+}
+// les marques belges
+.hr-rosefonce {
+  background-color: $rose-fonce;
+  transform: translateX(-20%);
+  width: 120%;
+  height: 3%;
+}
+.btnsuite-rosefonce {
+  font-style: $main-font;
+  font-size: small;
+  font-weight: $demi-bold;
+  color: $vert-fonce;
+  background-color: $rose-fonce;
+  padding: 10px;
+  margin-left: 80%;
+  margin-top: 5%;
+}

@@ -761,7 +761,7 @@ h4 {
 
 .section-marques p {
   font-size: 16px;
-  margin-bottom: 20px;
+  margin: 30px 0;
 }
 .section-marques h3 {
   font-family: "TT Chocolates";
@@ -779,6 +779,10 @@ h4 {
   border: 2px solid #1e3b2c;
   margin-left: auto;
   margin-right: 25px;
+}
+
+.filters {
+  margin: 20px 0;
 }
 
 .filters-left div p {
@@ -802,7 +806,7 @@ h4 {
   position: relative;
   display: flex;
   justify-content: space-around;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 
 .all-marques div {
@@ -829,6 +833,13 @@ h4 {
   opacity: 80%;
   height: 650px;
   z-index: -99;
+}
+
+.map-section {
+  height: 500px;
+  width: 80%;
+  margin: 20px auto;
+  background-color: #f6f3f6;
 }
 
 /* FOOTER MAGAZINE */
@@ -986,6 +997,7 @@ p.copyright {
   position: fixed;
   bottom: 25px;
   right: 25px;
+  z-index: 7;
 }
 
 div.btn-up > a {

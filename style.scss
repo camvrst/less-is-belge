@@ -1,5 +1,6 @@
 @use "variables" as *;
 @use "framework" as *;
+@use "apropos" as *;
 @import "@fortawesome/fontawesome-free/css/all.css";
 // @import "node_modules/bootstrap/scss/bootstrap";
 
@@ -384,7 +385,7 @@ h4 {
 .section-marques {
   p {
     font-size: 16px;
-    margin-bottom: 20px;
+    margin: 30px 0;
   }
   h3 {
     font-family: $main-font;
@@ -402,6 +403,10 @@ h4 {
   border: 2px solid $vert-fonce;
   margin-left: auto;
   margin-right: 25px;
+}
+
+.filters {
+  margin: 20px 0;
 }
 
 .filters-left {
@@ -433,7 +438,7 @@ h4 {
   position: relative;
   display: flex;
   justify-content: space-around;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 
 .all-marques {
@@ -460,9 +465,33 @@ h4 {
   width: 120%;
   transform: translateX(-10%);
   opacity: 80%;
-  height: 650px;
+  height: 850px;
   z-index: -99;
+  padding-top: 50px;
+  .map-section {
+    height: 70%;
+    width: 80%;
+    margin: auto;
+    background-color: $couleur-fond;
+  }
 }
+
+@media only screen and (max-width: 720px) {
+  .bg-rose {
+    background-color: $rose-clair;
+    position: relative;
+    width: 100%;
+    transform: translateX(0%);
+  }
+  .map-section {
+    width: 100%;
+    margin: 0;
+  }
+  .annuaire {
+    margin: 50px 0;
+  }
+}
+
 /* FOOTER MAGAZINE */
 
 .section-mag {
@@ -481,18 +510,34 @@ h4 {
 
 .footer-fiches {
   background-color: $vert-clair;
+  background-image: url("./static/nav-articles/bulb.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .footer-lexique {
   background-color: $rose-fonce;
+  background-image: url("./static/nav-articles/coton.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .footer-art-info {
   background-color: $rose-clair;
+  background-image: url("./static/nav-articles/infobig.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 
 .footer-marque {
-  background-color: $vert-fonce;
+  background-color: $vert-moyen;
+  background-image: url("./static/nav-articles/atomium.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .section-articles {
@@ -622,6 +667,7 @@ p.copyright {
   position: fixed;
   bottom: 25px;
   right: 25px;
+  z-index: 7;
 }
 
 div.btn-up > a {

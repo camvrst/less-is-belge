@@ -7,10 +7,14 @@
 }
 .nav-fiches {
   ul {
+    margin-left: 0 !important;
+    padding-left: 0;
     li {
-      color: $vert-fonce;
-      font-family: $main-font;
-      font-size: $texte-nav-pc;
+      a {
+        color: $vert-fonce;
+        font-family: $main-font;
+        font-size: $texte-nav-pc;
+      }
     }
     .afficher {
       font-size: $titre-pc-moyen;
@@ -50,8 +54,26 @@
         }
         .petit-hr-vert {
           background-color: $vert-clair;
-          width: 5%;
-          height: 10%;
+          width: 5px;
+          height: 30px;
+        }
+
+        .petit-hr-vertmoyen {
+          background-color: $vert-moyen;
+          width: 5px;
+          height: 30px;
+        }
+
+        .petit-hr-roseclair {
+          background-color: $rose-clair;
+          width: 5px;
+          height: 30px;
+        }
+
+        .petit-hr-rosefonce {
+          background-color: $rose-fonce;
+          width: 5px;
+          height: 30px;
         }
         .comments {
           padding: 5px;
@@ -77,14 +99,20 @@
         margin-top: 20px;
       }
       .btnsuite-vert {
-        font-style: $main-font;
-        font-size: small;
+        font-family: $main-font;
+        font-size: 16px;
         font-weight: $demi-bold;
         color: $vert-fonce;
         background-color: $vert-clair;
-        padding: 10px;
-        margin-left: 80%;
+        border: none;
+        box-shadow: $shadow-green-sm;
+        padding: 15px 15px;
+        white-space: nowrap;
+        width: 120px;
+        margin-left: auto;
         margin-top: 5%;
+        display: block;
+        text-align: center;
       }
     }
   }
@@ -97,7 +125,7 @@
     margin-bottom: 100px;
     .art1 {
       width: 350px;
-      height: 550px;
+      height: 500px;
       background-color: white;
       img {
         width: 100%;
@@ -110,15 +138,20 @@
         color: $vert-fonce;
         margin-top: 20px;
         font-weight: $demi-bold;
-        padding: 30px;
+        padding: 10px 20px;
       }
       p {
-        padding: 30px;
+        padding: 10px 20px;
+      }
+      h5,
+      p {
+        border-left: 10px solid $beige;
+        margin-left: 10px;
       }
     }
     .art2 {
       width: 350px;
-      height: 550px;
+      height: 500px;
       background-color: white;
       img {
         width: 100%;
@@ -130,15 +163,20 @@
         color: $vert-fonce;
         margin-top: 20px;
         font-weight: $demi-bold;
-        padding: 30px;
+        padding: 10px 20px;
       }
       p {
-        padding: 30px;
+        padding: 10px 20px;
+      }
+      h5,
+      p {
+        border-left: 10px solid $beige;
+        margin-left: 10px;
       }
     }
     .art3 {
       width: 500px;
-      height: 550px;
+      height: 500px;
       background-color: white;
       img {
         width: 100%;
@@ -150,10 +188,15 @@
         color: $vert-fonce;
         margin-top: 20px;
         font-weight: $demi-bold;
-        padding: 30px;
+        padding: 10px 20px;
       }
       p {
-        padding: 30px;
+        padding: 10px 20px;
+      }
+      h5,
+      p {
+        border-left: 10px solid $beige;
+        margin-left: 10px;
       }
     }
   }
@@ -166,14 +209,20 @@
   height: 3%;
 }
 .btnsuite-rose {
-  font-style: $main-font;
-  font-size: small;
+  font-family: $main-font;
+  font-size: 16px;
   font-weight: $demi-bold;
   color: $vert-fonce;
   background-color: $rose-clair;
-  padding: 10px;
-  margin-left: 80%;
   margin-top: 5%;
+  border: none;
+  box-shadow: $shadow-rose-sm;
+  padding: 15px;
+  white-space: nowrap;
+  width: 120px;
+  margin-left: auto;
+  display: block;
+  text-align: center;
 }
 // articles informatifs
 .hr-rosefonce {
@@ -183,14 +232,20 @@
   height: 3%;
 }
 .btnsuite-rosefonce {
-  font-style: $main-font;
-  font-size: small;
+  font-family: $main-font;
+  font-size: 16px;
   font-weight: $demi-bold;
   color: $vert-fonce;
   background-color: $rose-fonce;
-  padding: 10px;
-  margin-left: 80%;
+  border: none;
+  box-shadow: $shadow-lightrose-sm;
+  padding: 15px 15px;
+  white-space: nowrap;
+  width: 120px;
+  margin-left: auto;
   margin-top: 5%;
+  display: block;
+  text-align: center;
 }
 // les marques belges
 
@@ -201,12 +256,18 @@
   height: 3%;
 }
 .btnsuite-vertmoyen {
-  font-style: $main-font;
-  font-size: small;
+  font-family: $main-font;
+  font-size: 16px;
   font-weight: $demi-bold;
   color: $vert-fonce;
   background-color: $vert-moyen;
-  padding: 10px;
-  margin-left: 80%;
+  border: none;
+  box-shadow: $shadow-darkgreen-sm;
+  padding: 15px 15px;
+  white-space: nowrap;
+  width: 120px;
+  margin-left: auto;
   margin-top: 5%;
+  display: block;
+  text-align: center;
 }

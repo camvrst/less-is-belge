@@ -407,8 +407,63 @@ ol {
 }
 .about-logo img {
   margin-bottom: auto;
+  width: 350px;
 }
 
+.about-right {
+  margin-right: 150px;
+  margin-top: 150px;
+}
+.about-right .about-p {
+  background-color: #ffe7e7;
+  padding: 80px;
+  box-shadow: 8px 8px #e5b0a4;
+  transform: translateX(-30%);
+  position: relative;
+  z-index: -10;
+}
+.about-right .about-p p {
+  font-size: 16px;
+}
+
+.hr-rose-about {
+  width: 100%;
+  margin: 15px 0;
+  height: 10px;
+  background-color: #e5b0a4;
+}
+
+@media only screen and (max-width: 720px) {
+  .about {
+    flex-wrap: wrap;
+  }
+
+  .about-logo {
+    margin: 50px 0;
+    height: 40vh;
+    width: 100%;
+  }
+  .about-logo img {
+    margin-bottom: 0;
+    width: 350px;
+  }
+
+  .about-right {
+    margin-top: 30px;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 80px;
+  }
+  .about-right .about-p {
+    width: 100%;
+    background-color: #ffe7e7;
+    padding: 40px;
+    box-shadow: 8px 8px #e5b0a4;
+    transform: translateX(0);
+    position: relative;
+    z-index: 1;
+  }
+}
 .camille-img,
 .fanny-img,
 .ayaan-img {
@@ -427,6 +482,7 @@ ol {
 .team-section {
   background-color: #c0d1bf;
   padding: 50px 0px;
+  margin-bottom: 80px;
 }
 .team-section h2 {
   font-family: "ITC Garamond Std Bold Narrow";
@@ -454,6 +510,59 @@ ol {
   font-size: 22px;
 }
 
+@media only screen and (max-width: 720px) {
+  .camille-img,
+.fanny-img,
+.ayaan-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  }
+
+  .camille-img img {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin-top: auto;
+  }
+
+  .team-section {
+    background-color: #c0d1bf;
+    padding: 30px 0px;
+  }
+  .team-section h2 {
+    font-family: "ITC Garamond Std Bold Narrow";
+    font-size: 40px;
+    color: #0c0b0b;
+    margin-left: 20px;
+  }
+
+  .team {
+    flex-direction: column;
+    background-color: #c0d1bf;
+    padding: 30px 0;
+  }
+  .team h3 {
+    font-family: "ITC Garamond Std Bold Narrow";
+    font-size: 40px;
+    transform: translateY(-70%) translateX(-30%);
+  }
+  .team h4 {
+    font-family: "ITC Garamond Std Bold Narrow";
+    font-size: 50px;
+    transform: translateY(-70%);
+    color: #0c0b0b;
+  }
+  .team p {
+    font-size: 18px;
+  }
+
+  .camille,
+.fanny,
+.ayaan {
+    width: 80%;
+  }
+}
 .nav-fiches ul li {
   color: #1e3b2c;
   font-family: "TT Chocolates";
@@ -1126,7 +1235,7 @@ h4 {
 
 .footer-fiches {
   background-color: #d6ffc0;
-  background-image: url("./static/nav-articles/bulb.png");
+  background-image: url("./static/assets/nav-articles/bulb.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1134,7 +1243,7 @@ h4 {
 
 .footer-lexique {
   background-color: #e5b0a4;
-  background-image: url("./static/nav-articles/coton.png");
+  background-image: url("./static/assets/nav-articles/coton.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1142,7 +1251,7 @@ h4 {
 
 .footer-art-info {
   background-color: #ffe7e7;
-  background-image: url("./static/nav-articles/infobig.png");
+  background-image: url("./static/assets/nav-articles/infobig.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
@@ -1150,7 +1259,7 @@ h4 {
 
 .footer-marque {
   background-color: #c0d1bf;
-  background-image: url("./static/nav-articles/atomium.png");
+  background-image: url("./static/assets/nav-articles/atomium.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;

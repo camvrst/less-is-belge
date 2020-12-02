@@ -2,6 +2,9 @@
 @use "framework" as *;
 
 // bare nav articles
+.main-article {
+  margin-top: 80px;
+}
 .nav-fiches {
   ul {
     li {
@@ -173,23 +176,6 @@
   margin-top: 5%;
 }
 // articles informatifs
-.hr-vertmoyen {
-  background-color: $vert-moyen;
-  transform: translateX(-20%);
-  width: 120%;
-  height: 3%;
-}
-.btnsuite-vertmoyen {
-  font-style: $main-font;
-  font-size: small;
-  font-weight: $demi-bold;
-  color: $vert-fonce;
-  background-color: $vert-moyen;
-  padding: 10px;
-  margin-left: 80%;
-  margin-top: 5%;
-}
-// les marques belges
 .hr-rosefonce {
   background-color: $rose-fonce;
   transform: translateX(-20%);
@@ -202,6 +188,24 @@
   font-weight: $demi-bold;
   color: $vert-fonce;
   background-color: $rose-fonce;
+  padding: 10px;
+  margin-left: 80%;
+  margin-top: 5%;
+}
+// les marques belges
+
+.hr-vertmoyen {
+  background-color: $vert-moyen;
+  transform: translateX(-20%);
+  width: 120%;
+  height: 3%;
+}
+.btnsuite-vertmoyen {
+  font-style: $main-font;
+  font-size: small;
+  font-weight: $demi-bold;
+  color: $vert-fonce;
+  background-color: $vert-moyen;
   padding: 10px;
   margin-left: 80%;
   margin-top: 5%;

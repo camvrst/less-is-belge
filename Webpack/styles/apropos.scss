@@ -13,7 +13,6 @@
 }
 
 .about-right {
-  margin-right: 150px;
   margin-top: 150px;
   .about-p {
     background-color: $rose-clair;
@@ -45,10 +44,11 @@
     width: 100%;
     img {
       margin-bottom: 0;
-      width: 350px;
+      width: 250px;
     }
   }
   .about-right {
+    margin-right: 50px;
     margin-top: 30px;
     width: 90%;
     margin: auto;

@@ -411,7 +411,6 @@ ol {
 }
 
 .about-right {
-  margin-right: 150px;
   margin-top: 150px;
 }
 .about-right .about-p {
@@ -445,10 +444,11 @@ ol {
   }
   .about-logo img {
     margin-bottom: 0;
-    width: 350px;
+    width: 250px;
   }
 
   .about-right {
+    margin-right: 50px;
     margin-top: 30px;
     width: 90%;
     margin: auto;
@@ -782,7 +782,7 @@ h4 {
 }
 .nav-bar .nav-logo {
   width: 10%;
-  margin-left: 50px;
+  margin-left: 100px;
 }
 .nav-bar .nav-logo-sm {
   display: none;
@@ -840,7 +840,7 @@ h4 {
   .nav-bar .nav-logo-sm {
     display: block;
     width: 15%;
-    margin-left: 10px;
+    margin-left: 50px;
     z-index: 3;
   }
 

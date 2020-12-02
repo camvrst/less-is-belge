@@ -6,100 +6,239 @@
     <title>article single</title>
   </head>
   <body>
-    <div class="articlesingle">
-      <section
-        class="page_article vert-claire nav-fiches nav-bar d-flex justify-around items-center w-full"
-      >
-        <nav>
-          <ul class="w-90 d-flex">
-            <li>Accueil</li>
-            <li>Articles</li>
-            <li>Fiches techniques</li>
-          </ul>
-          <h2>Titre articles</h2>
-          <p>auteur</p>
-        </nav>
-      </section>
-      <article>
-        <img src="./static/testphoto.jpg" alt="" />
-        <section class="contenu-article">
-          <div class="d-flex">
-            <p class="date"><i class="far fa-clock"></i>12 décembre 2020</p>
-            <div class="petit-hr-vert"></div>
-            <p class="comments"><i class="fas fa-comment"></i>5 commentaires</p>
-          </div>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, eius
-            expedita. Molestiae, enim. Reprehenderit deserunt omnis, nobis nisi
-            odit eos a, aperiam, sed eligendi ab odio et autem quo facere! Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Commodi vel ipsum
-            voluptate et placeat at minus, tenetur ipsa laudantium voluptatum
-            facilis corporis eligendi deserunt quibusdam, impedit porro nobis
-            maxime sequi? Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Dolores repellat quisquam rerum possimus nam quos amet? Nam ab
-            blanditiis accusamus sint? Repudiandae hic beatae voluptates,
-            aspernatur itaque doloremque dolores nostrum. Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Commodi vel ipsum voluptate et
-            placeat at minus, tenetur ipsa laudantium voluptatum facilis
-            corporis eligendi deserunt quibusdam, impedit porro nobis maxime
-            sequi?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vel
-            ipsum voluptate et placeat at minus, tenetur ipsa laudantium
-            voluptatum facilis corporis eligendi deserunt quibusdam, impedit
-            porro nobis maxime sequi?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-            repellat quisquam rerum possimus nam quos amet? Nam ab blanditiis
-            accusamus sint? Repudiandae hic beatae voluptates, aspernatur itaque
-            doloremque dolores nostrum. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Commodi vel ipsum voluptate et placeat at minus,
-            tenetur ipsa laudantium voluptatum facilis corporis eligendi
-            deserunt quibusdam, impedit porro nobis maxime sequi?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, eius
-            expedita. Molestiae, enim. Reprehenderit deserunt omnis, nobis nisi
-            odit eos a, aperiam, sed eligendi ab odio et autem quo facere!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi vel
-            ipsum voluptate et placeat at minus, tenetur ipsa laudantium
-            voluptatum facilis corporis eligendi deserunt quibusdam, impedit
-            porro nobis maxime sequi?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-            repellat quisquam rerum possimus nam quos amet? Nam ab blanditiis
-            accusamus sint? Repudiandae hic beatae voluptates, aspernatur itaque
-            doloremque dolores nostrum. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Dolores repellat quisquam rerum possimus nam quos
-            amet? Nam ab blanditiis accusamus sint? Repudiandae hic beatae
-            voluptates, aspernatur itaque doloremque dolores nostrum. Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Commodi vel ipsum
-            voluptate et placeat at minus, tenetur ipsa laudantium voluptatum
-            facilis corporis eligendi deserunt quibusdam, impedit porro nobis
-            maxime sequi?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-            repellat quisquam rerum possimus nam quos amet? Nam ab blanditiis
-            accusamus sint? Repudiandae hic beatae voluptates, aspernatur itaque
-            doloremque dolores nostrum. Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Commodi vel ipsum voluptate et placeat at minus,
-            tenetur ipsa laudantium voluptatum facilis corporis eligendi
-            deserunt quibusdam, impedit porro nobis maxime sequi?
-          </p>
-        </section>
-        <div class="d-flex justify-around">
-          <img class="gauche" src="./static/testphoto.jpg" alt="" />
-          <img class="droite" src="./static/testphoto.jpg" alt="" />
+    <!--NAV BAR-->
+    <header>
+      <nav class="nav-bar d-flex justify-around items-center w-full">
+        <img
+          class="nav-logo lg-margin-top"
+          src="../assets/logo/logo-less-is-belge-big.png"
+          alt="Logo Less is Belge"
+        />
+        <img
+          class="nav-logo-sm lg-margin-top"
+          src="../assets/logo/less-is-belge-small-logo-eye.png"
+          alt="Logo Less is Belge"
+        />
+        <ul class="w-50 d-flex justify-around nav-links">
+          <li><a href="./annuaire.html" class="nav-text">annuaire</a></li>
+          <li>
+            <a href="./articles-generaux.html" class="nav-text dropdown-article"
+              >articles</a
+            >
+            <ul class="dropdown-sm">
+              <a href=""><li>fiches pratiques</li></a>
+              <a href=""><li>lexique des matières</li></a>
+              <a href=""><li>articles informatifs</li></a>
+              <a href=""><li>les marques belges</li></a>
+            </ul>
+          </li>
+          <li><a href="" class="nav-text">contact</a></li>
+          <li><a href="./a-propos.html" class="nav-text">à propos</a></li>
+        </ul>
+        <div class="burger-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
         </div>
-      </article>
-    </div>
+      </nav>
+      <div class="dropdown-article-pc">
+        <section class="section-mag">
+          <div
+            class="section-mag-title d-flex items-center justify-around align-baseline"
+          >
+            <div class="lg-w-30 w-10 sm-horizontal-line"></div>
+            <div>
+              <h4>Le magazine</h4>
+            </div>
+            <div class="lg-w-30 w-10 sm-horizontal-line"></div>
+          </div>
+          <div
+            class="section-articles d-flex justify-around w-full sm-flex-column flex-wrap"
+          >
+            <div class="footer-cat-articles w-20 footer-fiches">
+              <button class="cat-articles-title">fiches pratiques</button>
+            </div>
+            <div class="footer-cat-articles w-20 footer-lexique">
+              <button class="cat-articles-title">lexique des matières</button>
+            </div>
+            <div class="footer-cat-articles w-20 footer-art-info">
+              <button class="cat-articles-title">articles informatifs</button>
+            </div>
+            <div class="footer-cat-articles last-cat w-20 footer-marque">
+              <button class="cat-articles-title">les marques belges</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </header>
+    <main>
+      <div class="articlesingle">
+        <section
+          class="page_article vert-claire nav-fiches nav-bar d-flex justify-around items-center w-full"
+        >
+          <nav>
+            <ul class="w-90 d-flex">
+              <li>Accueil</li>
+              <li>Articles</li>
+              <li>Fiches techniques</li>
+            </ul>
+            <h2>Titre articles</h2>
+            <p>auteur</p>
+          </nav>
+        </section>
+        <article>
+          <img src="./static/testphoto.jpg" alt="" />
+          <section class="contenu-article">
+            <div class="d-flex">
+              <p class="date"><i class="far fa-clock"></i>12 décembre 2020</p>
+              <div class="petit-hr-vert"></div>
+              <p class="comments">
+                <i class="fas fa-comment"></i>5 commentaires
+              </p>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, eius
+              expedita. Molestiae, enim. Reprehenderit deserunt omnis, nobis
+              nisi odit eos a, aperiam, sed eligendi ab odio et autem quo
+              facere! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Commodi vel ipsum voluptate et placeat at minus, tenetur ipsa
+              laudantium voluptatum facilis corporis eligendi deserunt
+              quibusdam, impedit porro nobis maxime sequi? Lorem ipsum dolor sit
+              amet consectetur adipisicing elit. Dolores repellat quisquam rerum
+              possimus nam quos amet? Nam ab blanditiis accusamus sint?
+              Repudiandae hic beatae voluptates, aspernatur itaque doloremque
+              dolores nostrum. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Commodi vel ipsum voluptate et placeat at minus,
+              tenetur ipsa laudantium voluptatum facilis corporis eligendi
+              deserunt quibusdam, impedit porro nobis maxime sequi?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+              vel ipsum voluptate et placeat at minus, tenetur ipsa laudantium
+              voluptatum facilis corporis eligendi deserunt quibusdam, impedit
+              porro nobis maxime sequi?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              repellat quisquam rerum possimus nam quos amet? Nam ab blanditiis
+              accusamus sint? Repudiandae hic beatae voluptates, aspernatur
+              itaque doloremque dolores nostrum. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Commodi vel ipsum voluptate et
+              placeat at minus, tenetur ipsa laudantium voluptatum facilis
+              corporis eligendi deserunt quibusdam, impedit porro nobis maxime
+              sequi?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, eius
+              expedita. Molestiae, enim. Reprehenderit deserunt omnis, nobis
+              nisi odit eos a, aperiam, sed eligendi ab odio et autem quo
+              facere!
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+              vel ipsum voluptate et placeat at minus, tenetur ipsa laudantium
+              voluptatum facilis corporis eligendi deserunt quibusdam, impedit
+              porro nobis maxime sequi?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              repellat quisquam rerum possimus nam quos amet? Nam ab blanditiis
+              accusamus sint? Repudiandae hic beatae voluptates, aspernatur
+              itaque doloremque dolores nostrum. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Dolores repellat quisquam rerum
+              possimus nam quos amet? Nam ab blanditiis accusamus sint?
+              Repudiandae hic beatae voluptates, aspernatur itaque doloremque
+              dolores nostrum. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Commodi vel ipsum voluptate et placeat at minus,
+              tenetur ipsa laudantium voluptatum facilis corporis eligendi
+              deserunt quibusdam, impedit porro nobis maxime sequi?
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+              repellat quisquam rerum possimus nam quos amet? Nam ab blanditiis
+              accusamus sint? Repudiandae hic beatae voluptates, aspernatur
+              itaque doloremque dolores nostrum. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Commodi vel ipsum voluptate et
+              placeat at minus, tenetur ipsa laudantium voluptatum facilis
+              corporis eligendi deserunt quibusdam, impedit porro nobis maxime
+              sequi?
+            </p>
+          </section>
+          <div class="d-flex justify-around">
+            <img class="gauche" src="./static/testphoto.jpg" alt="" />
+            <img class="droite" src="./static/testphoto.jpg" alt="" />
+          </div>
+        </article>
+      </div>
+    </main>
+    <!-- FOOTER -->
 
+   
+        <!-- SECOND PART WITH NAV AND LOGO-->
+        <footer class="footer">
+          <!-- FIRST PART WITH MAGAZINE -->
+     <section class="section-mag">
+         <div class="section-mag-title d-flex items-center justify-around align-baseline">
+             <div class="lg-w-30 w-10 sm-horizontal-line"></div>
+             <div>
+                 <h4>Le magazine</h4>
+             </div>
+             <div class="lg-w-30 w-10 sm-horizontal-line"></div>
+         </div>
+         <div class="section-articles d-flex justify-around w-full sm-flex-column flex-wrap">
+             <div class="footer-cat-articles w-20 footer-fiches">
+                 <button class="cat-articles-title">fiches pratiques</button>
+             </div>
+             <div class="footer-cat-articles w-20 footer-lexique">
+                 <button class="cat-articles-title">lexique des matières</button>
+             </div>
+             <div class="footer-cat-articles w-20 footer-art-info">
+                 <button class="cat-articles-title">articles informatifs</button>
+             </div>
+             <div class="footer-cat-articles last-cat w-20 footer-marque">
+                 <button class="cat-articles-title">les marques belges</button>
+             </div>
+         </div>
+     </section>
+     
+         <div class="d-flex justify-center w-full sm-flex-column sm-justify-around sm-align-center">
+ 
+                 <div class="lg-w-30 w-full d-flex padding-auto sm-justify-center sm-margin-top">
+                     <a href="#" class="sm-d-flex sm-justify-center"><img class="logo-footer w-60 lg-w-80" src="../assets/logo/less-is-belge-big-logo-rose.png" alt="Logo Less is Belge"></a>
+                     <div class="vertical-line"></div>
+                 </div>
+     
+             <nav class="footer-nav d-flex justify-around lg-w-50 sm-flex-column sm-align-center sm-margin-top">
+                 <ul class="line-h-75">
+                     <a href="./annuaire.html"><li class="bold sm-txt-center">annuaire</li></a>
+                 </ul>
+                 <ul class="line-h-75">
+                     <a href="./articles-generaux.html"><li class="bold sm-txt-center">articles</li></a>
+                     <a href="#"><li class="sm-txt-center">fiches pratiques</li></a>
+                     <a href="#"><li class="sm-txt-center">lexique des matières</li></a>
+                     <a href="#"><li class="sm-txt-center">articles informatifs</li></a>
+                     <a href="#"><li class="sm-txt-center">les marques belges</li></a>
+                 </ul> 
+                 <ul class="line-h-75">
+                     <a href="#"><li class="bold sm-txt-center">contact</li></a>
+                     <a href="./a-propos.html"><li class="bold sm-txt-center">à propos</li></a>
+                     <a href="#"><li class="bold sm-txt-center">newsletter</li></a>
+                 </ul>
+                 <ul class="line-h-75">
+                     <a href="#"><li class="bold sm-txt-center">mentions légales</li></a>
+                 </ul>
+             </nav>
+             <div class="social-icons lg-w-5 sm-margin-top">
+             <a href="#"><i class="fab fa-instagram social-icon"></i></a>
+             <a href="#"><i class="fab fa-facebook-f social-icon"></i></a>
+             <a href="#"><i class="fab fa-pinterest-p social-icon"></i></a>
+             <a href="#"><i class="fas fa-share-alt social-icon"></i></a>
+         </div>
+     </div>
+         <div class="d-flex justify-around ">
+             <p class="copyright"> &copy;2020. Site créé avec <span>  &#x2764;&#xFE0F  </span> par Camille, Fanny et Ayaan.</p>
+         </div>
+     </footer>
     <script src="script.js"></script>
   </body>
 </html>

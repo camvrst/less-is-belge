@@ -1,10 +1,11 @@
 @use "variables" as *;
 @use "framework" as *;
 
-// fim d'ariane page article
+// fil d'ariane page article
 .articlesingle {
   .page_article {
     height: 350px;
+    background-color: $vert-clair;
     nav {
       width: 100%;
       ul {

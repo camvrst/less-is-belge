@@ -2,6 +2,7 @@
 @use "./styles/framework" as *;
 @use "./styles/apropos" as *;
 @use "./styles/articlesgeneral" as *;
+@use "./styles/articlesingle" as *;
 @import "@fortawesome/fontawesome-free/css/all.css";
 // @import "node_modules/bootstrap/scss/bootstrap";
 
@@ -369,7 +370,7 @@ h4 {
 /***** ANNUAIRE *****/
 
 .annuaire {
-  margin: 20px 50px;
+  margin: 50px 50px;
   z-index: 2;
   .hr-rose {
     width: 100%;
@@ -385,7 +386,7 @@ h4 {
 
 .section-marques {
   p {
-    font-size: 16px;
+    font-size: 18px;
     margin: 30px 0;
   }
   h3 {
@@ -468,6 +469,7 @@ h4 {
   opacity: 80%;
   height: 850px;
   z-index: -99;
+  margin-top: 20px;
   padding-top: 50px;
   .map-section {
     height: 70%;
@@ -550,6 +552,7 @@ h4 {
   width: 319px;
   border-radius: 50px;
   margin: 20px;
+  position: relative;
 }
 
 @media only screen and (max-width: 860px) {
@@ -566,14 +569,19 @@ h4 {
 
 .cat-articles-title {
   border: none;
-  height: 60px;
-  width: 220px;
   background-color: $couleur-fond;
-  margin: 38% 18%;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   text-align: center;
   font-family: $main-font;
+  white-space: nowrap;
   font-size: $texte-footer;
   font-weight: $regular-weight;
+  color: $noir;
+  cursor: pointer;
 }
 
 /* FOOTER */

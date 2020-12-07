@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Less is Belge | Tous nos articles</title>    
   </head>
-  <body>
+  <body class=".container-article">
     <!--NAV BAR-->
     <header >
       <nav class="nav-bar d-flex justify-around items-center w-full">
@@ -57,6 +57,7 @@
 
       </div>
   </header>
+  <!--contenu main-->
     <main class="main-article">
       <!-- BTN GO UP-->
       <div class="btn-up txt-only-stroke sticky"><a href="#" >UP</a></div>
@@ -67,10 +68,10 @@
           class="nav-fiches nav-bar d-flex justify-around items-center w-full"
         >
           <ul class="w-90 d-flex justify-around items-center">
-            <li><a name="fiches" class="afficher">Fiches pratiques</a></li>
-          <li><a href="#lexique">Lexique des matières</a></li>
-          <li><a href="#info">Articles informatifs</a></li>
-          <li><a href="#marques">Les marques belges</a></li>
+          <li><a name="fiches" class="afficher">Fiches pratiques</a></li>
+          <li><a href="#lexique" class="cacher">Lexique des matières</a></li>
+          <li><a href="#info" class="cacher">Articles informatifs</a></li>
+          <li><a href="#marques" class="cacher">Les marques belges</a></li>
           </ul>
         </nav>
         <article class="premiere-fiche">
@@ -134,10 +135,10 @@
          class="nav-fiches nav-bar d-flex justify-around items-center w-full"
        >
          <ul class="w-90 d-flex justify-around items-center">
-          <li><a href="#fiches">Fiches pratiques</a></li>
+          <li><a href="#fiches" class="cacher">Fiches pratiques</a></li>
           <li><a name="lexique" class="afficher">Lexique des matières</a></li>
-          <li><a href="#info">Articles informatifs</a></li>
-          <li><a href="#marques">Les marques belges</a></li>
+          <li><a href="#info" class="cacher">Articles informatifs</a></li>
+          <li><a href="#marques" class="cacher">Les marques belges</a></li>
          </ul>
        </nav>
        <article class="premiere-fiche">
@@ -201,10 +202,10 @@
           class="nav-fiches nav-bar d-flex justify-around items-center w-full"
         >
           <ul class="w-90 d-flex justify-around items-center">
-            <li><a href="#fiches">Fiches pratiques</a></li>
-            <li><a href="#lexique">Lexique des matières</a></li>
+            <li><a href="#fiches" class="cacher">Fiches pratiques</a></li>
+            <li><a href="#lexique" class="cacher">Lexique des matières</a></li>
             <li><a name="info" class="afficher">Articles informatifs</a></li>
-            <li><a href="#marques" >Les marques belges</a></li>
+            <li><a href="#marques" class="cacher">Les marques belges</a></li>
           </ul>
         </nav>
         <article class="premiere-fiche">
@@ -266,9 +267,9 @@
          <!--Les marques belges-->
          <nav class="nav-fiches nav-bar d-flex justify-around items-center w-full" >
          <ul class="w-90 d-flex justify-around items-center">
-           <li><a href="#fiches">Fiches pratiques</a></li>
-           <li><a href="#lexique">Lexique des matières</a></li>
-           <li><a href="#info">Articles informatifs</a></li>
+           <li><a href="#fiches" class="cacher">Fiches pratiques</a></li>
+           <li><a href="#lexique" class="cacher">Lexique des matières</a></li>
+           <li><a href="#info" class="cacher">Articles informatifs</a></li>
            <li><a name="marques" class="afficher">Les marques belges</a></li>
          </ul>
        </nav>

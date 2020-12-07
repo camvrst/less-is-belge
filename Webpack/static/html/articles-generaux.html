@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Articles généraux</title>    
+    <title>Less is Belge | Tous nos articles</title>    
   </head>
   <body>
     <!--NAV BAR-->
@@ -40,35 +40,37 @@
                   <div class="lg-w-30 w-10 sm-horizontal-line"></div>
               </div>
               <div class="section-articles d-flex justify-around w-full sm-flex-column flex-wrap">
-                  <div class="footer-cat-articles w-20 footer-fiches">
-                      <button class="cat-articles-title">fiches pratiques</button>
-                  </div>
-                  <div class="footer-cat-articles w-20 footer-lexique">
-                      <button class="cat-articles-title">lexique des matières</button>
-                  </div>
-                  <div class="footer-cat-articles w-20 footer-art-info">
-                      <button class="cat-articles-title">articles informatifs</button>
-                  </div>
-                  <div class="footer-cat-articles last-cat w-20 footer-marque">
-                      <button class="cat-articles-title">les marques belges</button>
-                  </div>
-              </div>
+                <div class="footer-cat-articles w-20 footer-fiches">
+                    <a href="./fiches-pratiques.html" class="cat-articles-title">fiches pratiques</a>
+                </div>
+                <div class="footer-cat-articles w-20 footer-lexique">
+                    <a class="cat-articles-title">lexique des matières</a>
+                </div>
+                <div class="footer-cat-articles w-20 footer-art-info">
+                    <a class="cat-articles-title">articles informatifs</a>
+                </div>
+                <div class="footer-cat-articles last-cat w-20 footer-marque">
+                    <a class="cat-articles-title">les marques belges</a>
+                </div>
+            </div>
           </section>
 
       </div>
   </header>
     <main class="main-article">
+      <!-- BTN GO UP-->
+      <div class="btn-up txt-only-stroke sticky"><a href="#" >UP</a></div>
       <div class="articlesgeneral">
         <!-- bar de nav pour les articles généraux-->
         <!--fiches articles-->
         <nav
           class="nav-fiches nav-bar d-flex justify-around items-center w-full"
         >
-          <ul class="w-90 d-flex justify-around">
-            <li class="afficher">Fiches pratiques</li>
-            <li>Lexique des matières</li>
-            <li>Articles informatifs</li>
-            <li>Les marques belges</li>
+          <ul class="w-90 d-flex justify-around items-center">
+            <li><a name="fiches" class="afficher">Fiches pratiques</a></li>
+          <li><a href="#lexique">Lexique des matières</a></li>
+          <li><a href="#info">Articles informatifs</a></li>
+          <li><a href="#marques">Les marques belges</a></li>
           </ul>
         </nav>
         <article class="premiere-fiche">
@@ -76,7 +78,7 @@
             <img src="../assets/img/ampoule.jpg" alt=""  />
             <div class="para" >
               <div class="hr-vert"></div>
-              <div class="d-flex">
+              <div class="d-flex items-end">
                 <p class="date"><i class="far fa-clock"></i>12 décembre 2020</p>
                 <div class="petit-hr-vert"></div>
                 <p class="comments">
@@ -95,7 +97,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
                 modi doloremque aliquid ipsum sequi possimus.
               </p>
-              <button class="btnsuite-vert"><a href="./article-simple.html" class="btnsuite-vert">lire la suite</a></button>
+              <a href="./article-simple.html" class="btnsuite-vert">lire la suite</a>
             </div>
           </section>
         </article>
@@ -131,11 +133,11 @@
          <nav
          class="nav-fiches nav-bar d-flex justify-around items-center w-full"
        >
-         <ul class="w-90 d-flex justify-around">
-           <li>Fiches pratiques</li>
-           <li class="afficher">Lexique des matières</li>
-           <li>Articles informatifs</li>
-           <li>Les marques belges</li>
+         <ul class="w-90 d-flex justify-around items-center">
+          <li><a href="#fiches">Fiches pratiques</a></li>
+          <li><a name="lexique" class="afficher">Lexique des matières</a></li>
+          <li><a href="#info">Articles informatifs</a></li>
+          <li><a href="#marques">Les marques belges</a></li>
          </ul>
        </nav>
        <article class="premiere-fiche">
@@ -143,9 +145,9 @@
            <img src="../assets/img/ampoule.jpg" alt=""  />
            <div class="para" >
              <div class="hr-rose"></div>
-             <div class="d-flex">
+             <div class="d-flex items-end">
                <p class="date"><i class="far fa-clock"></i>12 décembre 2020</p>
-               <div class="petit-hr-vert"></div>
+               <div class="petit-hr-roseclair"></div>
                <p class="comments">
                  <i class="fas fa-comment"></i>5 commentaires
                </p>
@@ -162,7 +164,7 @@
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
                modi doloremque aliquid ipsum sequi possimus.
              </p>
-             <button class="btnsuite-rose">lire la suite</button>
+             <a href="" class="btnsuite-rose">lire la suite</a>
            </div>
          </section>
        </article>
@@ -198,11 +200,11 @@
         <nav
           class="nav-fiches nav-bar d-flex justify-around items-center w-full"
         >
-          <ul class="w-90 d-flex justify-around">
-            <li>Fiches pratiques</li>
-            <li>Lexique des matières</li>
-            <li class="afficher">Articles informatifs</li>
-            <li>Les marques belges</li>
+          <ul class="w-90 d-flex justify-around items-center">
+            <li><a href="#fiches">Fiches pratiques</a></li>
+            <li><a href="#lexique">Lexique des matières</a></li>
+            <li><a name="info" class="afficher">Articles informatifs</a></li>
+            <li><a href="#marques" >Les marques belges</a></li>
           </ul>
         </nav>
         <article class="premiere-fiche">
@@ -210,9 +212,9 @@
             <img src="../assets/img/ampoule.jpg" alt=""  />
             <div class="para" >
               <div class="hr-rosefonce"></div>
-              <div class="d-flex">
+              <div class="d-flex items-end">
                 <p class="date"><i class="far fa-clock"></i>12 décembre 2020</p>
-                <div class="petit-hr-vertmoyen"></div>
+                <div class="petit-hr-rosefonce"></div>
                 <p class="comments">
                   <i class="fas fa-comment"></i>5 commentaires
                 </p>
@@ -229,7 +231,7 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
                 modi doloremque aliquid ipsum sequi possimus.
               </p>
-              <button class="btnsuite-rosefonce">lire la suite</button>
+              <a href="" class="btnsuite-rosefonce">lire la suite</a>
             </div>
           </section>
         </article>
@@ -262,14 +264,12 @@
             </section>
         </article>
          <!--Les marques belges-->
-         <nav
-         class="nav-fiches nav-bar d-flex justify-around items-center w-full"
-       >
-         <ul class="w-90 d-flex justify-around">
-           <li>Fiches pratiques</li>
-           <li>Lexique des matières</li>
-           <li>Articles informatifs</li>
-           <li class="afficher">Les marques belges</li>
+         <nav class="nav-fiches nav-bar d-flex justify-around items-center w-full" >
+         <ul class="w-90 d-flex justify-around items-center">
+           <li><a href="#fiches">Fiches pratiques</a></li>
+           <li><a href="#lexique">Lexique des matières</a></li>
+           <li><a href="#info">Articles informatifs</a></li>
+           <li><a name="marques" class="afficher">Les marques belges</a></li>
          </ul>
        </nav>
        <article class="premiere-fiche">
@@ -277,7 +277,7 @@
            <img src="../assets/img/ampoule.jpg" alt=""  />
            <div class="para" >
              <div class="hr-vertmoyen"></div>
-             <div class="d-flex">
+             <div class="d-flex items-end">
                <p class="date"><i class="far fa-clock"></i>12 décembre 2020</p>
                <div class="petit-hr-vertmoyen"></div>
                <p class="comments">
@@ -296,7 +296,7 @@
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
                modi doloremque aliquid ipsum sequi possimus.
              </p>
-             <button class="btnsuite-vertmoyen">lire la suite</button>
+             <a href="" class="btnsuite-vertmoyen">lire la suite</a>
            </div>
          </section>
        </article>
@@ -335,30 +335,30 @@
    
         <!-- SECOND PART WITH NAV AND LOGO-->
         <footer class="footer">
-          <!-- FIRST PART WITH MAGAZINE -->
-     <section class="section-mag">
-         <div class="section-mag-title d-flex items-center justify-around align-baseline">
-             <div class="lg-w-30 w-10 sm-horizontal-line"></div>
-             <div>
-                 <h4>Le magazine</h4>
-             </div>
-             <div class="lg-w-30 w-10 sm-horizontal-line"></div>
-         </div>
-         <div class="section-articles d-flex justify-around w-full sm-flex-column flex-wrap">
-             <div class="footer-cat-articles w-20 footer-fiches">
-                 <button class="cat-articles-title">fiches pratiques</button>
-             </div>
-             <div class="footer-cat-articles w-20 footer-lexique">
-                 <button class="cat-articles-title">lexique des matières</button>
-             </div>
-             <div class="footer-cat-articles w-20 footer-art-info">
-                 <button class="cat-articles-title">articles informatifs</button>
-             </div>
-             <div class="footer-cat-articles last-cat w-20 footer-marque">
-                 <button class="cat-articles-title">les marques belges</button>
-             </div>
-         </div>
-     </section>
+           <!-- FIRST PART WITH MAGAZINE -->
+           <section class="section-mag">
+            <div class="section-mag-title d-flex items-center justify-around align-baseline">
+                <div class="lg-w-30 w-10 sm-horizontal-line"></div>
+                <div>
+                    <h4>Le magazine</h4>
+                </div>
+                <div class="lg-w-30 w-10 sm-horizontal-line"></div>
+            </div>
+            <div class="section-articles d-flex justify-around w-full sm-flex-column flex-wrap">
+                <div class="footer-cat-articles w-20 footer-fiches">
+                    <a href="./fiches-pratiques.html" class="cat-articles-title">fiches pratiques</a>
+                </div>
+                <div class="footer-cat-articles w-20 footer-lexique">
+                    <a class="cat-articles-title">lexique des matières</a>
+                </div>
+                <div class="footer-cat-articles w-20 footer-art-info">
+                    <a class="cat-articles-title">articles informatifs</a>
+                </div>
+                <div class="footer-cat-articles last-cat w-20 footer-marque">
+                    <a class="cat-articles-title">les marques belges</a>
+                </div>
+            </div>
+        </section>
      
          <div class="d-flex justify-center w-full sm-flex-column sm-justify-around sm-align-center">
  

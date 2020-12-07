@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="image">
+          <img src="./static/photo-telephone.jpg" alt="" />
+        </div>
+
+        <div>
+          <hr class="separation" />
+        </div>
+
+        <div class="h1-contact">
+          <h1>Contact</h1>
+        </div>
+
+        <div class="p-contact">
+          <p>
+            Une remarque, une suggestion, un petit mot sympa, une plainte :
+            écrvivez-nous, nous serons ravies de vous lire et de répondre au
+            mieux à votre message. Pour cela, il suffit de compléter le
+            formulaire ci-dessous, simple comme bonjour !
+          </p>
+        </div>
+
+        <form action="" method="get" class="formulaire">
+          <div class="formulaire">
+            <label for="nom">Nom </label> <br />
+            <input type="text" name="nom" id="nom" required />
+          </div>
+          <br />
+          <div class="formulaire">
+            <label for="prenom">Prénom</label> <br />
+            <input type="text" name="prenom" id="prenom" required />
+          </div>
+          <br />
+          <div class="formulaire">
+            <label for="email">Adresse e-mail</label> <br />
+            <input type="email" name="email" id="email" required />
+          </div>
+          <br />
+          <div class="formulaire">
+            <label for="message">Message</label> <br />
+            <input type="text" name="message" id="message" required />
+          </div>
+          <br />
+          <div class="formulaire">
+            <button>envoyer</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

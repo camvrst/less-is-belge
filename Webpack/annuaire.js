@@ -1,8 +1,10 @@
-import './static/style.scss';
+import './style.scss';
 
-const radioBtn = document.querySelectorAll('.radio-btn');
+const radioBtns = document.querySelectorAll('.radio-btn');
 
-radioBtn.addEventListener('click', () => {
-  radioBtn.classList.toggle('radio-filled');
-  alert('toto');
-});
+for (let i = 0; i < radioBtns.length; i++) {
+  radioBtns[i].addEventListener('click', () => {
+    radioBtns[i].classList.toggle('radio-filled');
+    console.log('toto');
+  });
+}

@@ -3,31 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Articles généraux</title>
-    <link rel="stylesheet" href="../../style.css" />
-    
+    <title>Less is Belge | Tous nos articles</title>    
   </head>
   <body>
-    <main>
+    <!--NAV BAR-->
+    <header >
+      <nav class="nav-bar d-flex justify-around items-center w-full">
+          <img class="nav-logo lg-margin-top" src="../assets/logo/logo-less-is-belge-big.png" alt="Logo Less is Belge">
+          <img class="nav-logo-sm lg-margin-top" src="../assets/logo/less-is-belge-small-logo-eye.png" alt="Logo Less is Belge">
+          <ul class="w-50 d-flex justify-around nav-links">
+              <li><a href="./annuaire.html" class="nav-text">annuaire</a></li>
+              <li><a href="./articles-generaux.html" class="nav-text dropdown-article">articles</a>
+                      <ul class="dropdown-sm">
+                       <a href=""><li>fiches pratiques</li></a>
+                       <a href=""><li>lexique des matières</li></a>
+                       <a href=""><li>articles informatifs</li></a>
+                       <a href=""><li>les marques belges</li></a>
+                      </ul>
+              </li>
+              <li><a href="" class="nav-text">contact</a></li>
+              <li><a href="./a-propos.html" class="nav-text">à propos</a></li>
+          </ul>
+          <div class="burger-menu">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+          </div>
+      </nav>
+      <div class="dropdown-article-pc">
+          <section class="section-mag">
+              <div class="section-mag-title d-flex items-center justify-around align-baseline">
+                  <div class="lg-w-30 w-10 sm-horizontal-line"></div>
+                  <div>
+                      <h4>Le magazine</h4>
+                  </div>
+                  <div class="lg-w-30 w-10 sm-horizontal-line"></div>
+              </div>
+              <div class="section-articles d-flex justify-around w-full sm-flex-column flex-wrap">
+                <div class="footer-cat-articles w-20 footer-fiches">
+                    <a href="./fiches-pratiques.html" class="cat-articles-title">fiches pratiques</a>
+                </div>
+                <div class="footer-cat-articles w-20 footer-lexique">
+                    <a class="cat-articles-title">lexique des matières</a>
+                </div>
+                <div class="footer-cat-articles w-20 footer-art-info">
+                    <a class="cat-articles-title">articles informatifs</a>
+                </div>
+                <div class="footer-cat-articles last-cat w-20 footer-marque">
+                    <a class="cat-articles-title">les marques belges</a>
+                </div>
+            </div>
+          </section>
+
+      </div>
+  </header>
+    <main class="main-article">
+      <!-- BTN GO UP-->
+      <div class="btn-up txt-only-stroke sticky"><a href="#" >UP</a></div>
       <div class="articlesgeneral">
         <!-- bar de nav pour les articles généraux-->
         <!--fiches articles-->
         <nav
           class="nav-fiches nav-bar d-flex justify-around items-center w-full"
         >
-          <ul class="w-90 d-flex justify-around">
-            <li class="afficher">Fiches pratiques</li>
-            <li>Lexique des matières</li>
-            <li>Articles informatifs</li>
-            <li>Les marques belges</li>
+          <ul class="w-90 d-flex justify-around items-center">
+            <li><a name="fiches" class="afficher">Fiches pratiques</a></li>
+          <li><a href="#lexique">Lexique des matières</a></li>
+          <li><a href="#info">Articles informatifs</a></li>
+          <li><a href="#marques">Les marques belges</a></li>
           </ul>
         </nav>
         <article class="premiere-fiche">
           <section class="premiere-section d-flex flex-wrap ">
-            <img src="./static/testphoto.jpg" alt=""  />
+            <img src="../assets/img/ampoule.jpg" alt=""  />
             <div class="para" >
               <div class="hr-vert"></div>
-              <div class="d-flex">
+              <div class="d-flex items-end">
                 <p class="date"><i class="far fa-clock"></i>12 décembre 2020</p>
                 <div class="petit-hr-vert"></div>
                 <p class="comments">
@@ -46,14 +97,14 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
                 modi doloremque aliquid ipsum sequi possimus.
               </p>
-              <button class="btnsuite-vert">lire la suite</button>
+              <a href="./article-simple.html" class="btnsuite-vert">lire la suite</a>
             </div>
           </section>
         </article>
         <article class="deuxieme-fiche">
             <section class="deuxieme-section d-flex flex-wrap justify-around">
               <div class="art1 ">
-                <img src="./static/testphoto.jpg" alt=""  />
+                <img src="../assets/img/ampoule.jpg"  alt=""  />
                 <h5>Titre</h5>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
@@ -61,7 +112,7 @@
                   </p>
               </div>
               <div class="art2 ">
-                <img src="./static/testphoto.jpg" alt=""  />
+                <img src="../assets/img/ampoule.jpg"  alt=""  />
                 <h5>Titre</h5>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
@@ -69,7 +120,7 @@
                   </p>
               </div>
               <div class="art3 ">
-                <img src="./static/testphoto.jpg" alt=""  />
+                <img src="../assets/img/ampoule.jpg" alt=""  />
                 <h5>Titre</h5>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
@@ -82,21 +133,21 @@
          <nav
          class="nav-fiches nav-bar d-flex justify-around items-center w-full"
        >
-         <ul class="w-90 d-flex justify-around">
-           <li>Fiches pratiques</li>
-           <li class="afficher">Lexique des matières</li>
-           <li>Articles informatifs</li>
-           <li>Les marques belges</li>
+         <ul class="w-90 d-flex justify-around items-center">
+          <li><a href="#fiches">Fiches pratiques</a></li>
+          <li><a name="lexique" class="afficher">Lexique des matières</a></li>
+          <li><a href="#info">Articles informatifs</a></li>
+          <li><a href="#marques">Les marques belges</a></li>
          </ul>
        </nav>
        <article class="premiere-fiche">
          <section class="premiere-section d-flex flex-wrap ">
-           <img src="./static/testphoto.jpg" alt=""  />
+           <img src="../assets/img/ampoule.jpg" alt=""  />
            <div class="para" >
              <div class="hr-rose"></div>
-             <div class="d-flex">
+             <div class="d-flex items-end">
                <p class="date"><i class="far fa-clock"></i>12 décembre 2020</p>
-               <div class="petit-hr-vert"></div>
+               <div class="petit-hr-roseclair"></div>
                <p class="comments">
                  <i class="fas fa-comment"></i>5 commentaires
                </p>
@@ -113,14 +164,14 @@
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
                modi doloremque aliquid ipsum sequi possimus.
              </p>
-             <button class="btnsuite-rose">lire la suite</button>
+             <a href="" class="btnsuite-rose">lire la suite</a>
            </div>
          </section>
        </article>
        <article class="deuxieme-fiche">
            <section class="deuxieme-section d-flex flex-wrap justify-around">
              <div class="art1 ">
-               <img src="./static/testphoto.jpg" alt=""  />
+               <img src="../assets/img/ampoule.jpg" alt=""  />
                <h5>Titre</h5>
                <p>
                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
@@ -128,7 +179,7 @@
                  </p>
              </div>
              <div class="art2 ">
-               <img src="./static/testphoto.jpg" alt=""  />
+               <img src="../assets/img/ampoule.jpg" alt=""  />
                <h5>Titre</h5>
                <p>
                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
@@ -136,7 +187,7 @@
                  </p>
              </div>
              <div class="art3 ">
-               <img src="./static/testphoto.jpg" alt=""  />
+               <img src="../assets/img/ampoule.jpg" alt=""  />
                <h5>Titre</h5>
                <p>
                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
@@ -149,21 +200,21 @@
         <nav
           class="nav-fiches nav-bar d-flex justify-around items-center w-full"
         >
-          <ul class="w-90 d-flex justify-around">
-            <li>Fiches pratiques</li>
-            <li>Lexique des matières</li>
-            <li class="afficher">Articles informatifs</li>
-            <li>Les marques belges</li>
+          <ul class="w-90 d-flex justify-around items-center">
+            <li><a href="#fiches">Fiches pratiques</a></li>
+            <li><a href="#lexique">Lexique des matières</a></li>
+            <li><a name="info" class="afficher">Articles informatifs</a></li>
+            <li><a href="#marques" >Les marques belges</a></li>
           </ul>
         </nav>
         <article class="premiere-fiche">
           <section class="premiere-section d-flex flex-wrap ">
-            <img src="./static/testphoto.jpg" alt=""  />
+            <img src="../assets/img/ampoule.jpg" alt=""  />
             <div class="para" >
-              <div class="hr-vertmoyen"></div>
-              <div class="d-flex">
+              <div class="hr-rosefonce"></div>
+              <div class="d-flex items-end">
                 <p class="date"><i class="far fa-clock"></i>12 décembre 2020</p>
-                <div class="petit-hr-vertmoyen"></div>
+                <div class="petit-hr-rosefonce"></div>
                 <p class="comments">
                   <i class="fas fa-comment"></i>5 commentaires
                 </p>
@@ -180,14 +231,14 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
                 modi doloremque aliquid ipsum sequi possimus.
               </p>
-              <button class="btnsuite-vertmoyen">lire la suite</button>
+              <a href="" class="btnsuite-rosefonce">lire la suite</a>
             </div>
           </section>
         </article>
         <article class="deuxieme-fiche">
             <section class="deuxieme-section d-flex flex-wrap justify-around">
               <div class="art1 ">
-                <img src="./static/testphoto.jpg" alt=""  />
+                <img src="../assets/img/ampoule.jpg" alt=""  />
                 <h5>Titre</h5>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
@@ -195,7 +246,7 @@
                   </p>
               </div>
               <div class="art2 ">
-                <img src="./static/testphoto.jpg" alt=""  />
+                <img src="../assets/img/ampoule.jpg" alt=""  />
                 <h5>Titre</h5>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
@@ -203,7 +254,7 @@
                   </p>
               </div>
               <div class="art3 ">
-                <img src="./static/testphoto.jpg" alt=""  />
+                <img src="../assets/img/ampoule.jpg" alt=""  />
                 <h5>Titre</h5>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
@@ -213,24 +264,22 @@
             </section>
         </article>
          <!--Les marques belges-->
-         <nav
-         class="nav-fiches nav-bar d-flex justify-around items-center w-full"
-       >
-         <ul class="w-90 d-flex justify-around">
-           <li>Fiches pratiques</li>
-           <li>Lexique des matières</li>
-           <li>Articles informatifs</li>
-           <li class="afficher">Les marques belges</li>
+         <nav class="nav-fiches nav-bar d-flex justify-around items-center w-full" >
+         <ul class="w-90 d-flex justify-around items-center">
+           <li><a href="#fiches">Fiches pratiques</a></li>
+           <li><a href="#lexique">Lexique des matières</a></li>
+           <li><a href="#info">Articles informatifs</a></li>
+           <li><a name="marques" class="afficher">Les marques belges</a></li>
          </ul>
        </nav>
        <article class="premiere-fiche">
          <section class="premiere-section d-flex flex-wrap ">
-           <img src="./static/testphoto.jpg" alt=""  />
+           <img src="../assets/img/ampoule.jpg" alt=""  />
            <div class="para" >
-             <div class="hr-rosefonce"></div>
-             <div class="d-flex">
+             <div class="hr-vertmoyen"></div>
+             <div class="d-flex items-end">
                <p class="date"><i class="far fa-clock"></i>12 décembre 2020</p>
-               <div class="petit-hr-vert"></div>
+               <div class="petit-hr-vertmoyen"></div>
                <p class="comments">
                  <i class="fas fa-comment"></i>5 commentaires
                </p>
@@ -247,14 +296,14 @@
                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
                modi doloremque aliquid ipsum sequi possimus.
              </p>
-             <button class="btnsuite-rosefonce">lire la suite</button>
+             <a href="" class="btnsuite-vertmoyen">lire la suite</a>
            </div>
          </section>
        </article>
        <article class="deuxieme-fiche">
            <section class="deuxieme-section d-flex flex-wrap justify-around">
              <div class="art1 ">
-               <img src="./static/testphoto.jpg" alt=""  />
+               <img src="../assets/img/ampoule.jpg" alt=""  />
                <h5>Titre</h5>
                <p>
                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
@@ -262,7 +311,7 @@
                  </p>
              </div>
              <div class="art2 ">
-               <img src="./static/testphoto.jpg" alt=""  />
+               <img src="../assets/img/ampoule.jpg" alt=""  />
                <h5>Titre</h5>
                <p>
                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
@@ -270,7 +319,7 @@
                  </p>
              </div>
              <div class="art3 ">
-               <img src="./static/testphoto.jpg" alt=""  />
+               <img src="../assets/img/ampoule.jpg" alt=""  />
                <h5>Titre</h5>
                <p>
                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
@@ -281,6 +330,74 @@
        </article>
         
     </main>
+    <!-- FOOTER -->
+
+   
+        <!-- SECOND PART WITH NAV AND LOGO-->
+        <footer class="footer">
+           <!-- FIRST PART WITH MAGAZINE -->
+           <section class="section-mag">
+            <div class="section-mag-title d-flex items-center justify-around align-baseline">
+                <div class="lg-w-30 w-10 sm-horizontal-line"></div>
+                <div>
+                    <h4>Le magazine</h4>
+                </div>
+                <div class="lg-w-30 w-10 sm-horizontal-line"></div>
+            </div>
+            <div class="section-articles d-flex justify-around w-full sm-flex-column flex-wrap">
+                <div class="footer-cat-articles w-20 footer-fiches">
+                    <a href="./fiches-pratiques.html" class="cat-articles-title">fiches pratiques</a>
+                </div>
+                <div class="footer-cat-articles w-20 footer-lexique">
+                    <a class="cat-articles-title">lexique des matières</a>
+                </div>
+                <div class="footer-cat-articles w-20 footer-art-info">
+                    <a class="cat-articles-title">articles informatifs</a>
+                </div>
+                <div class="footer-cat-articles last-cat w-20 footer-marque">
+                    <a class="cat-articles-title">les marques belges</a>
+                </div>
+            </div>
+        </section>
+     
+         <div class="d-flex justify-center w-full sm-flex-column sm-justify-around sm-align-center">
+ 
+                 <div class="lg-w-30 w-full d-flex padding-auto sm-justify-center sm-margin-top">
+                     <a href="#" class="sm-d-flex sm-justify-center"><img class="logo-footer w-60 lg-w-80" src="../assets/logo/less-is-belge-big-logo-rose.png" alt="Logo Less is Belge"></a>
+                     <div class="vertical-line"></div>
+                 </div>
+     
+             <nav class="footer-nav d-flex justify-around lg-w-50 sm-flex-column sm-align-center sm-margin-top">
+                 <ul class="line-h-75">
+                     <a href="./annuaire.html"><li class="bold sm-txt-center">annuaire</li></a>
+                 </ul>
+                 <ul class="line-h-75">
+                     <a href="./articles-generaux.html"><li class="bold sm-txt-center">articles</li></a>
+                     <a href="#"><li class="sm-txt-center">fiches pratiques</li></a>
+                     <a href="#"><li class="sm-txt-center">lexique des matières</li></a>
+                     <a href="#"><li class="sm-txt-center">articles informatifs</li></a>
+                     <a href="#"><li class="sm-txt-center">les marques belges</li></a>
+                 </ul> 
+                 <ul class="line-h-75">
+                     <a href="#"><li class="bold sm-txt-center">contact</li></a>
+                     <a href="./a-propos.html"><li class="bold sm-txt-center">à propos</li></a>
+                     <a href="#"><li class="bold sm-txt-center">newsletter</li></a>
+                 </ul>
+                 <ul class="line-h-75">
+                     <a href="#"><li class="bold sm-txt-center">mentions légales</li></a>
+                 </ul>
+             </nav>
+             <div class="social-icons lg-w-5 sm-margin-top">
+             <a href="#"><i class="fab fa-instagram social-icon"></i></a>
+             <a href="#"><i class="fab fa-facebook-f social-icon"></i></a>
+             <a href="#"><i class="fab fa-pinterest-p social-icon"></i></a>
+             <a href="#"><i class="fas fa-share-alt social-icon"></i></a>
+         </div>
+     </div>
+         <div class="d-flex justify-around ">
+             <p class="copyright"> &copy;2020. Site créé avec <span>  &#x2764;&#xFE0F  </span> par Camille, Fanny et Ayaan.</p>
+         </div>
+     </footer>
     <script src="main.js"></script>
   </body>
 </html>

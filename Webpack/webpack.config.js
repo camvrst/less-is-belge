@@ -3,15 +3,11 @@ const path = require('path');
 
 // npm
 const webpack = require('webpack');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-
-// globals
-const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   mode: 'development',
-  entry: ['./main.js', './annuaire.js'],
+  entry: { main: './main.js', annuaire: './annuaire.js' },
   devtool: 'source-map',
   output: {
     filename: '[name].js',
@@ -32,28 +28,21 @@ module.exports = {
       }],
     }),
     new webpack.ProgressPlugin(),
-    new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: devMode ? '[name].css' : '[name].[hash].css',
-      chunkFilename: devMode ? '[id].css' : '[id].[hash].css',
-    }),
   ],
 
   module: {
     rules: [
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.(sa|sc|c)ss$/i,
         use: [
-          {
-            loader: MiniCssExtractPlugin.loader,
-            options: {
-              publicPath: '',
-            },
-
-          },
+          'style-loader',
           'css-loader',
-          'sass-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: require('sass'),
+            },
+          },
         ],
       },
       {

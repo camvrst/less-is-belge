@@ -69,27 +69,6 @@ const myLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 });
 myMap.addLayer(myLayer);
 
-// MARKERS
-
-const markers = [
-  {
-    nom: 'Episode',
-    coord: ['50.845606514632294', '4.3524056962972635'],
-  },
-  {
-    nom: 'Think Twice',
-    coord: ['50.84910153436276', '4.345443513909804'],
-  },
-  {
-    nom: 'Isabelle Bajart',
-    coord: ['50.84902908222008', '4.346073842745757'],
-  },
-  {
-    nom: 'Mardi Editions',
-    coord: ['50.8240553511075', '4.359173156237397'],
-  },
-];
-
 // INDIVUDAL MARKERS
 /*
 for (const marker of markers) {

@@ -1,5 +1,6 @@
 @use "./styles/variables" as *;
 @use "./styles/framework" as *;
+@use "./styles/contact" as *;
 @use "./styles/apropos" as *;
 @use "./styles/articlesgeneral" as *;
 @use "./styles/articlesingle" as *;
@@ -280,6 +281,7 @@ h4 {
   width: 100%;
   margin-top: 20px;
   margin-left: auto;
+  align-items: center;
 }
 
 .search-bar {
@@ -290,7 +292,7 @@ h4 {
 .search-input {
   width: 80%;
   border: none;
-  padding: 5px;
+  padding: 10px;
   height: 40px;
   outline: none;
   background: $couleur-fond;
@@ -300,6 +302,7 @@ h4 {
 }
 
 .search-btn {
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;

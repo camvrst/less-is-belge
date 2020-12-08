@@ -1,7 +1,18 @@
 import './style.scss';
 import L from 'leaflet';
 import { marques } from './src/data';
+import { header, footer } from './src/view/view';
 import 'leaflet-defaulticon-compatibility';
+
+/* INCLUDE HEADER AND FOOTER */
+const headerHTML = document.querySelector('header');
+const footerHTML = document.querySelector('footer.footer');
+console.log(headerHTML);
+
+headerHTML.innerHTML = header;
+footerHTML.innerHTML = footer;
+
+/* RADIO BUTTONS AND FILETRS */
 
 const radioBtns = document.querySelectorAll('.radio-btn');
 const sectionAnnuaire = document.querySelector('section.all-marques');
@@ -13,6 +24,8 @@ for (let i = 0; i < radioBtns.length; i++) {
     console.log('toto');
   });
 }
+
+/* DISPLAY ALL MARKS */
 
 marques.forEach((marque) => {
   const allMarques = `

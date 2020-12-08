@@ -1,56 +1,141 @@
 @use "variables" as *;
 @use "framework" as *;
 
-form.formulaire {
-    display: table;
-}
-
-div.formulaire {
-    display: table-row;
-}
-
-label, input {
-    display: table-cell;
-    margin-bottom: 10px;
-}
-
+form.formulaire > label,
 input {
-    border: none;
+  display: table-cell;
+  margin-bottom: 10px;
 }
-button {
-    margin-left: 0;
+
+form.formulaire > input {
+  border: none;
+  background-color: $couleur-fond;
+  height: 35px;
+  width: 100%;
+}
+button.contact {
+  margin-right: 0;
+  margin-left: auto;
+  display: block;
+  border: none;
+  padding: 15px 26px;
+  font-family: $main-font;
+  font-weight: $demi-bold;
+  background-color: $vert-clair;
+  box-shadow: $shadow-lightrose-sm;
 }
 label {
-    padding-right: 10px;
-}
-
-.separation{
-	clear: both;
-	position: absolute;
-	margin-top :10px;
-	margin-left: 250px;
-	height: 200px;
-	width : 5px;
-	background: $rose-clair;
+  padding-right: 10px;
 }
 
 .container {
-    display: flex; 
 }
 
-.image {
-    justify-content: flex-start;
-    width: 50%;
-}
-
-.h1-contact, .p-contact, .formulaire {
-    justify-content: flex-end;
+.img-contact {
+  img {
+    margin: 80px 80px;
+  }
 }
 
 .h1-contact {
-    font-size: 20px;
-    font-weight: bold;
+  margin: 20px 0;
 }
-body {
-    background-color: brown;
+
+.contact-section {
+  margin: 120px 80px 80px 0;
+}
+
+.separation {
+  height: 10px;
+  width: 130%;
+  transform: translateX(-20%);
+  background-color: $rose-fonce;
+}
+
+.p-contact {
+  font-size: 16px;
+  width: 70%;
+  margin: 0 0 50px 0;
+}
+
+form.formulaire {
+  font-family: $main-font;
+  font-size: 16px;
+  background-color: $vert-moyen;
+  width: 100%;
+  padding: 50px 150px;
+  box-shadow: $shadow-darkgreen-md;
+  transform: translateX(-20%);
+}
+
+#message {
+  height: 150px;
+}
+
+@media screen and (max-width: 1200px) {
+  form.formulaire {
+    padding: 50px 100px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .img-contact {
+    img {
+      width: 100%;
+      margin: 80px auto;
+    }
+  }
+  .p-contact {
+    width: 90%;
+  }
+  form.formulaire {
+    padding: 50px 100px;
+  }
+}
+
+@media screen and (max-width: 798px) {
+  .container {
+    flex-wrap: wrap;
+  }
+  .img-contact {
+    img {
+      width: 100%;
+    }
+  }
+  .p-contact {
+    width: 90%;
+  }
+  form.formulaire {
+    width: 100%;
+    padding: 50px 100px;
+    transform: translateX(0);
+  }
+  .contact-section {
+    margin: auto;
+    transform: translateY(-20%);
+    padding: 0 50px;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 798px) {
+  .img-contact {
+    img {
+      width: 100%;
+    }
+  }
+  .p-contact {
+    width: 90%;
+  }
+  form.formulaire {
+    width: 110%;
+    padding: 50px 20px;
+    transform: translateX(0);
+  }
+  .contact-section {
+    margin: auto;
+    transform: translateY(-5%);
+    padding: 0 50px;
+    margin-left: auto;
+  }
 }

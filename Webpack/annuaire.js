@@ -232,7 +232,6 @@ searchIpt.addEventListener('input', (e) => {
                     <h3>${marque.nom}</h3>
                   </a>
                 </div>
-    
         `;
       };
       showSearchResult();
@@ -257,8 +256,15 @@ showMap.addEventListener('click', () => {
 
 // CUSTOM PIN ICON
 
-const eyeIcon = L.icon({
+const eyeIconFe = L.icon({
   iconUrl: './assets/img/eyepin7.png',
+  iconSize: [32, 55], // size of the icon
+  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+  popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
+});
+
+const eyeIconHo = L.icon({
+  iconUrl: './assets/img/eyepin6.png',
   iconSize: [32, 55], // size of the icon
   iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
   popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
@@ -289,13 +295,25 @@ for (const marker of markers) {
 
 const markerGroup = [];
 for (const marker of marques) {
-  const pin = L.marker(marker.coord, { icon: eyeIcon });
+  const pin = L.marker(marker.coord, { icon: eyeIconFe });
   pin.bindPopup(`${marker.nom}`);
   markerGroup.push(pin);
 }
 
-const pinGroup = L.layerGroup(markerGroup);
-myMap.addLayer(pinGroup);
+const markerHommes = [];
+for (const marker of marques) {
+  if (marker.categorie.includes('Hommes')) {
+    const pinHomme = L.marker(marker.coord, { icon: eyeIconHo });
+    pinHomme.bindPopup(`${marker.nom}`);
+    markerHommes.push(pinHomme);
+  }
+}
+
+// const pinGroup = L.layerGroup(markerGroup);
+// myMap.addLayer(pinGroup);
+
+const pinGroupHo = L.layerGroup(markerHommes);
+myMap.addLayer(pinGroupHo);
 
 // BTN HIDE
 /*

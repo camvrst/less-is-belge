@@ -1,6 +1,6 @@
 import './style.scss';
+import $ from 'jquery';
 import { header, footer } from './src/view/view';
-// import $ from 'jquery';
 // import axios from 'axios';
 
 /* INCLUDE HEADER AND FOOTER */

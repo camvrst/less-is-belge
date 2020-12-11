@@ -39,15 +39,18 @@
           <!-- SEARCH BAR -->
           <div class="bg-green">
             <div class="search-section">
-              <div class="search-bar d-flex">
+              <div class="search-bar search-bar-annuaire d-flex">
+                <form action="" class="d-flex">
                 <input
+                  id="search-annuaire"
                   type="text"
                   class="search-input"
                   placeholder="Retrouver une marque, un article, ..."
                 />
-                <button type="submit" class="search-btn">
+                <button type="submit" class="search-btn" id="btn-search-annuaire">
                   <i class="fa fa-search"></i>
                 </button>
+              </form>
               </div>
             </div>
           </div>
@@ -89,29 +92,9 @@
               </div>
             </div>
           </section>
+          <section class="search-results d-flex flex-wrap" id="section-results"></section>
           <section class="all-marques d-flex flex-wrap">
-            <!--
-            <div class="w-50">
-              <a href="">
-                <img
-                  class="img-marque"
-                  src="../assets/marques/mardieditions.jpg"
-                  alt="Mardi Editions"
-                />
-                <h3>MARDI EDITIONS</h3>
-              </a>
-            </div>
-            <div class="w-50">
-              <a href="">
-                <img
-                  class="img-marque"
-                  src="../assets/marques/mardieditions.jpg"
-                  alt="Mardi Editions"
-                />
-                <h3>MARDI EDITIONS</h3>
-              </a>
-            </div>
-            -->
+
           </section>
         </section>
         <!--SECTION MAP -->

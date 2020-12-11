@@ -1,0 +1,31 @@
+  marques.forEach((marque) => {
+    if (marque.categorie === 'Femme') {
+      const marqueFemme = `
+              <div class="w-40">
+                <a href="${marque.url}" target=blank>
+                <div class="img-container">
+                  <img
+                    class="img-marque"
+                    src="${marque.image}"
+                    alt="${marque.nom}"
+                  />
+                </div>
+                  <h3>${marque.nom}</h3>
+                </a>
+              </div>
+    `;
+      sectionAnnuaire.innerHTML = marqueFemme;
+    }
+  });
+
+  showHomme.addEventListener('click', () => {
+  if(radioFilled === true);
+  for (const div of marquesDiv) {
+    const divHomme = div.classList.contains('Hommes');
+    if (divHomme) {
+      div.style.display = 'block';
+    } else if (!divHomme) {
+      div.style.display = 'none';
+    }
+  }
+});

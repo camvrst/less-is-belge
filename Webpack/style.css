@@ -1,4 +1,6 @@
 @import "@fortawesome/fontawesome-free/css/all.css";
+@import "leaflet/dist/leaflet.css";
+@import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 /***** COULEURS *****/
 /***** FONT-SIZE *****/
 /***** FONTS & FONT WEIGHT *****/
@@ -400,6 +402,143 @@ ol {
   color: transparent;
 }
 
+label,
+input {
+  display: table-cell;
+  margin-bottom: 10px;
+}
+
+input {
+  border: none;
+  background-color: #f6f3f6;
+  height: 35px;
+  width: 100%;
+}
+
+button {
+  margin-right: 0;
+  margin-left: auto;
+  display: block;
+  border: none;
+  padding: 15px 26px;
+  font-family: "TT Chocolates";
+  font-weight: 600;
+  background-color: #d6ffc0;
+  box-shadow: 4px 4px #ffe7e7;
+}
+
+label {
+  padding-right: 10px;
+}
+
+.img-contact img {
+  margin: 80px 80px;
+}
+
+.h1-contact {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.contact-section {
+  margin: 120px 80px 80px 0;
+}
+
+.separation {
+  height: 10px;
+  width: 130%;
+  transform: translateX(-20%);
+  background-color: #e5b0a4;
+}
+
+.p-contact {
+  font-size: 18px;
+  width: 70%;
+  margin: 0 0 50px 0;
+}
+
+form {
+  font-family: "TT Chocolates";
+  font-size: 16px;
+  background-color: #c0d1bf;
+  width: 100%;
+  padding: 50px 150px;
+  box-shadow: 8px 8px #1e3b2c;
+  transform: translateX(-20%);
+}
+
+#message {
+  height: 150px;
+}
+
+@media screen and (max-width: 1200px) {
+  form {
+    padding: 50px 100px;
+  }
+}
+@media screen and (max-width: 990px) {
+  .img-contact img {
+    width: 100%;
+    margin: 80px auto;
+  }
+
+  .p-contact {
+    width: 90%;
+  }
+
+  form {
+    padding: 50px 100px;
+  }
+}
+@media screen and (max-width: 798px) {
+  .container {
+    flex-wrap: wrap;
+  }
+
+  .img-contact img {
+    width: 100%;
+  }
+
+  .p-contact {
+    width: 90%;
+  }
+
+  form {
+    width: 100%;
+    padding: 50px 100px;
+    transform: translateX(0);
+  }
+
+  .contact-section {
+    margin: auto;
+    transform: translateY(-20%);
+    padding: 0 50px;
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 798px) {
+  .img-contact img {
+    width: 100%;
+  }
+
+  .p-contact {
+    width: 90%;
+  }
+
+  form {
+    width: 110%;
+    padding: 50px 20px;
+    transform: translateX(0);
+  }
+
+  .contact-section {
+    margin: auto;
+    transform: translateY(-5%);
+    padding: 0 50px;
+    margin-left: auto;
+  }
+}
 /* ABOUT */
 .about-logo {
   margin: 80px 0;
@@ -563,7 +702,15 @@ ol {
     width: 80%;
   }
 }
-.nav-fiches ul li {
+.main-article {
+  margin-top: 80px;
+}
+
+.nav-fiches ul {
+  margin-left: 0 !important;
+  padding-left: 0;
+}
+.nav-fiches ul li a {
   color: #1e3b2c;
   font-family: "TT Chocolates";
   font-size: 30px;
@@ -603,8 +750,23 @@ ol {
 }
 .premiere-fiche .premiere-section .para div .petit-hr-vert {
   background-color: #d6ffc0;
-  width: 5%;
-  height: 10%;
+  width: 5px;
+  height: 30px;
+}
+.premiere-fiche .premiere-section .para div .petit-hr-vertmoyen {
+  background-color: #c0d1bf;
+  width: 5px;
+  height: 30px;
+}
+.premiere-fiche .premiere-section .para div .petit-hr-roseclair {
+  background-color: #ffe7e7;
+  width: 5px;
+  height: 30px;
+}
+.premiere-fiche .premiere-section .para div .petit-hr-rosefonce {
+  background-color: #e5b0a4;
+  width: 5px;
+  height: 30px;
 }
 .premiere-fiche .premiere-section .para div .comments {
   padding: 5px;
@@ -629,14 +791,20 @@ ol {
   margin-top: 20px;
 }
 .premiere-fiche .premiere-section .para .btnsuite-vert {
-  font-style: "TT Chocolates";
-  font-size: small;
+  font-family: "TT Chocolates";
+  font-size: 16px;
   font-weight: 600;
   color: #1e3b2c;
   background-color: #d6ffc0;
-  padding: 10px;
-  margin-left: 80%;
+  border: none;
+  box-shadow: 4px 4px #c0d1bf;
+  padding: 15px 15px;
+  white-space: nowrap;
+  width: 120px;
+  margin-left: auto;
   margin-top: 5%;
+  display: block;
+  text-align: center;
 }
 
 .deuxieme-fiche .deuxieme-section {
@@ -646,7 +814,7 @@ ol {
 }
 .deuxieme-fiche .deuxieme-section .art1 {
   width: 350px;
-  height: 550px;
+  height: 500px;
   background-color: white;
 }
 .deuxieme-fiche .deuxieme-section .art1 img {
@@ -659,14 +827,19 @@ ol {
   color: #1e3b2c;
   margin-top: 20px;
   font-weight: 600;
-  padding: 30px;
+  padding: 10px 20px;
 }
 .deuxieme-fiche .deuxieme-section .art1 p {
-  padding: 30px;
+  padding: 10px 20px;
+}
+.deuxieme-fiche .deuxieme-section .art1 h5,
+.deuxieme-fiche .deuxieme-section .art1 p {
+  border-left: 10px solid #ecead5;
+  margin-left: 10px;
 }
 .deuxieme-fiche .deuxieme-section .art2 {
   width: 350px;
-  height: 550px;
+  height: 500px;
   background-color: white;
 }
 .deuxieme-fiche .deuxieme-section .art2 img {
@@ -679,14 +852,19 @@ ol {
   color: #1e3b2c;
   margin-top: 20px;
   font-weight: 600;
-  padding: 30px;
+  padding: 10px 20px;
 }
 .deuxieme-fiche .deuxieme-section .art2 p {
-  padding: 30px;
+  padding: 10px 20px;
+}
+.deuxieme-fiche .deuxieme-section .art2 h5,
+.deuxieme-fiche .deuxieme-section .art2 p {
+  border-left: 10px solid #ecead5;
+  margin-left: 10px;
 }
 .deuxieme-fiche .deuxieme-section .art3 {
   width: 500px;
-  height: 550px;
+  height: 500px;
   background-color: white;
 }
 .deuxieme-fiche .deuxieme-section .art3 img {
@@ -699,10 +877,15 @@ ol {
   color: #1e3b2c;
   margin-top: 20px;
   font-weight: 600;
-  padding: 30px;
+  padding: 10px 20px;
 }
 .deuxieme-fiche .deuxieme-section .art3 p {
-  padding: 30px;
+  padding: 10px 20px;
+}
+.deuxieme-fiche .deuxieme-section .art3 h5,
+.deuxieme-fiche .deuxieme-section .art3 p {
+  border-left: 10px solid #ecead5;
+  margin-left: 10px;
 }
 
 .hr-rose {
@@ -713,32 +896,20 @@ ol {
 }
 
 .btnsuite-rose {
-  font-style: "TT Chocolates";
-  font-size: small;
+  font-family: "TT Chocolates";
+  font-size: 16px;
   font-weight: 600;
   color: #1e3b2c;
   background-color: #ffe7e7;
-  padding: 10px;
-  margin-left: 80%;
   margin-top: 5%;
-}
-
-.hr-vertmoyen {
-  background-color: #c0d1bf;
-  transform: translateX(-20%);
-  width: 120%;
-  height: 3%;
-}
-
-.btnsuite-vertmoyen {
-  font-style: "TT Chocolates";
-  font-size: small;
-  font-weight: 600;
-  color: #1e3b2c;
-  background-color: #c0d1bf;
-  padding: 10px;
-  margin-left: 80%;
-  margin-top: 5%;
+  border: none;
+  box-shadow: 4px 4px #e5b0a4;
+  padding: 15px;
+  white-space: nowrap;
+  width: 120px;
+  margin-left: auto;
+  display: block;
+  text-align: center;
 }
 
 .hr-rosefonce {
@@ -749,14 +920,134 @@ ol {
 }
 
 .btnsuite-rosefonce {
-  font-style: "TT Chocolates";
-  font-size: small;
+  font-family: "TT Chocolates";
+  font-size: 16px;
   font-weight: 600;
   color: #1e3b2c;
   background-color: #e5b0a4;
-  padding: 10px;
-  margin-left: 80%;
+  border: none;
+  box-shadow: 4px 4px #ffe7e7;
+  padding: 15px 15px;
+  white-space: nowrap;
+  width: 120px;
+  margin-left: auto;
   margin-top: 5%;
+  display: block;
+  text-align: center;
+}
+
+.hr-vertmoyen {
+  background-color: #c0d1bf;
+  transform: translateX(-20%);
+  width: 120%;
+  height: 3%;
+}
+
+.btnsuite-vertmoyen {
+  font-family: "TT Chocolates";
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e3b2c;
+  background-color: #c0d1bf;
+  border: none;
+  box-shadow: 4px 4px #1e3b2c;
+  padding: 15px 15px;
+  white-space: nowrap;
+  width: 120px;
+  margin-left: auto;
+  margin-top: 5%;
+  display: block;
+  text-align: center;
+}
+
+.articlesingle .page_article {
+  height: 350px;
+  background-color: #d6ffc0;
+}
+.articlesingle .page_article nav {
+  width: 100%;
+}
+.articlesingle .page_article nav ul {
+  margin-left: 30px;
+}
+.articlesingle .page_article nav ul li {
+  padding: 10px;
+  font-size: 22px;
+}
+.articlesingle .page_article nav h2 {
+  font-size: 40px;
+  font-style: "TT Chocolates";
+  margin-left: 45%;
+  padding-top: 30px;
+}
+.articlesingle .page_article nav p {
+  font-size: 22px;
+  font-style: "TT Chocolates";
+  margin-left: 65%;
+}
+.articlesingle article img {
+  width: 100%;
+  height: 900px;
+}
+.articlesingle article .contenu-article {
+  width: 80%;
+  margin-left: 10%;
+  background-color: white;
+  transform: translateY(-50%);
+}
+.articlesingle article .contenu-article div {
+  margin-left: 25%;
+}
+.articlesingle article .contenu-article div .date {
+  padding: 5px;
+  margin-bottom: 50px;
+  color: #464343;
+  font-style: "TT Chocolates";
+  font-size: small;
+}
+.articlesingle article .contenu-article div .date i {
+  padding: 5px;
+}
+.articlesingle article .contenu-article div .petit-hr-vert {
+  background-color: #d6ffc0;
+  width: 5%;
+  height: 10%;
+}
+.articlesingle article .contenu-article div .comments {
+  padding: 5px;
+  color: #464343;
+  font-style: "TT Chocolates";
+  font-size: small;
+}
+.articlesingle article .contenu-article div .comments i {
+  padding: 5px;
+}
+.articlesingle article .contenu-article p {
+  font-style: "TT Chocolates";
+  font-size: 22px;
+  color: #0c0b0b;
+  margin-top: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+.articlesingle article div {
+  width: 90%;
+  margin-left: 5%;
+  transform: translateY(-70%);
+}
+.articlesingle article div .gauche {
+  width: 70%;
+  padding: 10px;
+}
+.articlesingle article div .droite {
+  width: 70%;
+  padding: 10px;
+}
+
+.vert-claire {
+  background-color: #d6ffc0;
 }
 
 * {
@@ -1020,11 +1311,12 @@ h4 {
 }
 
 .search-bar {
-  width: 100%;
+  width: 80%;
+  margin-left: 20px;
 }
 
 .search-input {
-  width: 100%;
+  width: 80%;
   border: none;
   padding: 5px;
   height: 40px;
@@ -1104,7 +1396,7 @@ h4 {
 }
 /***** ANNUAIRE *****/
 .annuaire {
-  margin: 20px 50px;
+  margin: 50px 50px;
   z-index: 2;
 }
 .annuaire .hr-rose {
@@ -1118,8 +1410,11 @@ h4 {
   margin: 15px 0;
 }
 
+.section-marques {
+  z-index: 10;
+}
 .section-marques p {
-  font-size: 16px;
+  font-size: 18px;
   margin: 30px 0;
 }
 .section-marques h3 {
@@ -1160,7 +1455,7 @@ h4 {
 
 .bg-green {
   background-color: #c0d1bf;
-  width: 100%;
+  width: 70%;
   height: 80px;
   position: relative;
   display: flex;
@@ -1174,31 +1469,47 @@ h4 {
 .all-marques div a {
   color: #0c0b0b;
 }
-.all-marques div .img-marque {
-  width: 100%;
-  height: 70%;
+.all-marques div .img-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+.all-marques div .img-container .img-marque {
   margin: 10px 0;
+  position: absolute;
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .all-marques div h3 {
   border-left: 5px solid #1e3b2c;
   padding: 0 5px;
 }
 
+.section-map {
+  z-index: 1;
+}
+
 .bg-rose {
   background-color: #ffe7e7;
   position: relative;
-  width: 120%;
+  width: 110%;
   transform: translateX(-10%);
   opacity: 80%;
   height: 850px;
-  z-index: -99;
+  z-index: -9;
+  margin-top: 20px;
   padding-top: 50px;
 }
 .bg-rose .map-section {
   height: 70%;
   width: 80%;
   margin: auto;
-  background-color: #f6f3f6;
+  z-index: 1000;
 }
 
 @media only screen and (max-width: 720px) {
@@ -1215,7 +1526,12 @@ h4 {
   }
 
   .annuaire {
-    margin: 50px 0;
+    margin: 50px 10px;
+  }
+
+  .all-marques {
+    display: flex;
+    flex-direction: column;
   }
 }
 /* FOOTER MAGAZINE */
@@ -1274,6 +1590,7 @@ h4 {
   width: 319px;
   border-radius: 50px;
   margin: 20px;
+  position: relative;
 }
 
 @media only screen and (max-width: 860px) {
@@ -1289,14 +1606,19 @@ h4 {
 
 .cat-articles-title {
   border: none;
-  height: 60px;
-  width: 220px;
   background-color: #f6f3f6;
-  margin: 38% 18%;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
   text-align: center;
   font-family: "TT Chocolates";
+  white-space: nowrap;
   font-size: 22px;
   font-weight: normal;
+  color: #0c0b0b;
+  cursor: pointer;
 }
 
 /* FOOTER */

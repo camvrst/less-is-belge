@@ -1,9 +1,12 @@
 @use "./styles/variables" as *;
 @use "./styles/framework" as *;
+@use "./styles/contact" as *;
 @use "./styles/apropos" as *;
 @use "./styles/articlesgeneral" as *;
 @use "./styles/articlesingle" as *;
 @import "@fortawesome/fontawesome-free/css/all.css";
+@import "leaflet/dist/leaflet.css";
+@import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 // @import "node_modules/bootstrap/scss/bootstrap";
 
 * {
@@ -171,8 +174,6 @@ h4 {
 /********** PAGES **********/
 /***** HOMEPAGE ******/
 
-.homepage-section {
-}
 .homepage-right {
   width: 50%;
   height: 100%;
@@ -280,16 +281,18 @@ h4 {
   width: 100%;
   margin-top: 20px;
   margin-left: auto;
+  align-items: center;
 }
 
 .search-bar {
-  width: 100%;
+  width: 80%;
+  margin-left: 20px;
 }
 
 .search-input {
-  width: 100%;
+  width: 80%;
   border: none;
-  padding: 5px;
+  padding: 10px;
   height: 40px;
   outline: none;
   background: $couleur-fond;
@@ -299,6 +302,7 @@ h4 {
 }
 
 .search-btn {
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -385,6 +389,7 @@ h4 {
 }
 
 .section-marques {
+  z-index: 10;
   p {
     font-size: 18px;
     margin: 30px 0;
@@ -435,7 +440,7 @@ h4 {
 
 .bg-green {
   background-color: $vert-moyen;
-  width: 100%;
+  width: 70%;
   height: 80px;
   position: relative;
   display: flex;
@@ -449,11 +454,23 @@ h4 {
     a {
       color: $noir;
     }
-    .img-marque {
-      width: 100%;
-      height: 70%;
-      margin: 10px 0;
+    .img-container {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      overflow: hidden;
+      .img-marque {
+        margin: 10px 0;
+        position: absolute;
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
+
     h3 {
       border-left: 5px solid $vert-fonce;
       padding: 0 5px;
@@ -461,21 +478,25 @@ h4 {
   }
 }
 
+.section-map {
+  z-index: 1;
+}
+
 .bg-rose {
   background-color: $rose-clair;
   position: relative;
-  width: 120%;
+  width: 110%;
   transform: translateX(-10%);
   opacity: 80%;
   height: 850px;
-  z-index: -99;
+  z-index: -9;
   margin-top: 20px;
   padding-top: 50px;
   .map-section {
     height: 70%;
     width: 80%;
     margin: auto;
-    background-color: $couleur-fond;
+    z-index: 1000;
   }
 }
 
@@ -491,7 +512,30 @@ h4 {
     margin: 0;
   }
   .annuaire {
-    margin: 50px 0;
+    margin: 50px 10px;
+  }
+  .all-marques {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .search-bar-annuaire {
+    width: 90%;
+  }
+  .bg-green {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .all-marques {
+    display: flex;
+    flex-direction: column;
+    div.w-40 {
+      width: 100%;
+    }
   }
 }
 

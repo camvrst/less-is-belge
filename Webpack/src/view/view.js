@@ -107,7 +107,7 @@ export const footer = `
             </ul>
         </nav>
         <div class="social-icons lg-w-5 sm-margin-top">
-        <a href="https://www.instagram.com/less.is.belge/?hl=fr"><i class="fab fa-instagram social-icon"></i></a>
+        <a href="https://www.instagram.com/less.is.belge/?hl=fr" target="blank"><i class="fab fa-instagram social-icon"></i></a>
         <a href="#"><i class="fab fa-facebook-f social-icon"></i></a>
         <a href="#"><i class="fab fa-pinterest-p social-icon"></i></a>
         <a href="#"><i class="fas fa-share-alt social-icon"></i></a>

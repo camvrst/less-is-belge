@@ -181,7 +181,7 @@ showMulti.addEventListener('click', () => {
   }
 });
 
-// SHOW ONLY MULTIMARKS
+// SHOW ONLY SECONDE MAIN
 
 const showOnlySeconde = () => {
   for (const div of marquesDiv) {

@@ -1,0 +1,63 @@
+@use "variables" as *;
+@use "framework" as *;
+
+.breadcrumb {
+  display: flex;
+  font-family: $main-font;
+  margin-left: 80px;
+  li {
+    margin: 50px 20px;
+    a {
+      text-decoration: none;
+      color: $noir;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.header-fiche {
+  background-color: $vert-clair;
+  margin: 50px 0;
+}
+
+.titre-onglet {
+  font-family: $secondary-font;
+  color: $noir;
+  font-size: 30px;
+  margin-left: 100px;
+}
+
+.titre-onglet-bis {
+  font-family: $secondary-font;
+  font-size: 30px;
+  margin-left: 150px;
+}
+
+.img-onglet {
+  margin: 50px 100px;
+  margin-left: auto;
+}
+@media only screen and (max-width: 768px) {
+  .breadcrumb {
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (max-width: 564px) {
+  .breadcrumb {
+    margin-left: 10px;
+  }
+  .titre-onglet {
+    margin-left: 20px;
+  }
+
+  .titre-onglet-bis {
+    margin-left: 80px;
+  }
+
+  .img-onglet {
+    margin: 50px auto;
+  }
+}

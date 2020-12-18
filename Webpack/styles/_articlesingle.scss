@@ -30,20 +30,29 @@
 // fil d'ariane page article
 .articlesingle {
   .page_article {
+    margin-top: 50px;
     height: 350px;
     background-color: $vert-clair;
     nav {
       width: 100%;
       ul {
         margin-left: 30px;
-        li {
-          padding: 10px;
+        a {
+          text-decoration: none;
           font-size: $mini-texte-pc;
+          font-family: $main-font;
+          cursor: pointer;
+          li {
+            padding: 10px;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
       h2 {
         font-size: $titre-pc-moyen;
-        font-style: $main-font;
+        font-style: $secondary-font;
         margin-left: 45%;
         padding-top: 30px;
       }
@@ -116,11 +125,14 @@
       margin-left: 10%;
       background-color: white;
       transform: translateY(-50%);
+      z-index: 1;
       div {
-        margin-left: 25%;
+        padding: 20px auto;
+        width: 50%;
+        margin-left: 35%;
         .date {
           padding: 5px;
-          margin-bottom: 50px;
+          margin: 20px 0;
           color: $gris-fonce;
           font-style: $main-font;
           font-size: small;
@@ -130,14 +142,16 @@
         }
         .petit-hr-vert {
           background-color: $vert-clair;
-          width: 5%;
-          height: 10%;
+          width: 5px;
+          height: 20px;
+          margin: 20px 10px;
         }
         .comments {
           padding: 5px;
           color: $gris-fonce;
           font-style: $main-font;
           font-size: small;
+          margin: 20px auto 20px 0;
           i {
             padding: 5px;
           }
@@ -145,26 +159,33 @@
       }
       p {
         font-style: $main-font;
-        font-size: $mini-texte-pc;
+        font-size: 16px;
         color: $noir;
         margin-top: 20px;
         padding-left: 100px;
         padding-right: 100px;
-        padding-bottom: 40px;
-        text-align: center;
+        padding-bottom: 20px;
+        text-align: left;
+        line-height: 25px;
       }
     }
     div {
       width: 90%;
-      margin-left: 5%;
-
+      margin: 0 auto;
+      z-index: 0;
+      margin-bottom: 50px;
       .gauche {
-        width: 70%;
+        width: 50%;
         padding: 10px;
+        z-index: -50;
+        transform: translateY(-70%);
       }
       .droite {
-        width: 70%;
+        width: 50%;
         padding: 10px;
+        z-index: 0;
+        z-index: -50;
+        transform: translateY(-70%);
       }
     }
   }
@@ -174,16 +195,15 @@
       img {
         height: 700px;
         width: 100%;
-        margin-left: 20%;
+        margin-left: auto;
       }
       .contenu-article {
         transform: translateY(0%);
-        width: 120%;
-        margin-left: 10%;
-        div {
-          margin-left: 15%;
+        width: 100%;
+        margin: auto div {
+          margin-left: auto;
         }
-        P {
+        p {
           margin-top: 5px;
           padding-left: 50px;
           padding-right: 50px;
@@ -193,9 +213,23 @@
       div {
         width: 100%;
         margin-left: 10%;
+        .gauche {
+          width: 50%;
+          padding: 10px;
+          z-index: -50;
+          transform: translateY(-20%);
+        }
+        .droite {
+          width: 50%;
+          padding: 10px;
+          z-index: 0;
+          z-index: -50;
+          transform: translateY(-20%);
+        }
       }
     }
   }
+
   @media screen and (max-width: 768px) {
     article {
       width: 540px;
@@ -232,17 +266,49 @@
         margin-left: 0;
       }
       .contenu-article {
+        div {
+          justify-content: center;
+          padding: 20px auto;
+          width: 100%;
+          margin-left: 0 !important;
+          .date {
+            padding: 5px;
+            margin: 20px px;
+            color: $gris-fonce;
+            font-style: $main-font;
+            font-size: small;
+            i {
+              padding: 5px;
+            }
+          }
+          .petit-hr-vert {
+            background-color: $vert-clair;
+            width: 5px;
+            height: 20px;
+            margin: 5px 5px;
+          }
+          .comments {
+            padding: 5px;
+            color: $gris-fonce;
+            font-style: $main-font;
+            font-size: small;
+            margin: 20px 5px;
+            i {
+              padding: 5px;
+            }
+          }
+        }
         transform: translateY(0%);
         width: 100%;
         margin-left: 0;
         div {
           margin-left: 10%;
         }
-        P {
+        p {
           margin-top: 5px;
-          padding-left: 10px;
-          padding-right: 10px;
-          padding-bottom: 10px;
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-bottom: 40px;
         }
       }
       div {

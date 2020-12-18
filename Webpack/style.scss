@@ -4,6 +4,7 @@
 @use "./styles/apropos" as *;
 @use "./styles/articlesgeneral" as *;
 @use "./styles/articlesingle" as *;
+@use "./styles/onglet-article.scss" as *;
 @import "@fortawesome/fontawesome-free/css/all.css";
 @import "leaflet/dist/leaflet.css";
 @import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";

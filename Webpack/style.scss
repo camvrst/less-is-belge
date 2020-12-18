@@ -4,6 +4,7 @@
 @use "./styles/apropos" as *;
 @use "./styles/articlesgeneral" as *;
 @use "./styles/articlesingle" as *;
+@use "./styles/onglet-article.scss" as *;
 @import "@fortawesome/fontawesome-free/css/all.css";
 @import "leaflet/dist/leaflet.css";
 @import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
@@ -31,12 +32,14 @@ h4 {
 .nav-bar {
   background-color: $couleur-fond;
   z-index: 10;
-  .nav-logo {
-    width: 10%;
-    margin-left: 100px;
-  }
-  .nav-logo-sm {
-    display: none;
+  a {
+    .nav-logo {
+      width: 40%;
+      margin-left: 100px;
+    }
+    .nav-logo-sm {
+      display: none;
+    }
   }
   ul {
     margin-left: auto;
@@ -98,9 +101,9 @@ h4 {
     .nav-logo {
       display: none;
     }
-    .nav-logo-sm {
+    a > .nav-logo-sm {
       display: block;
-      width: 15%;
+      width: 40%;
       margin-left: 50px;
       z-index: 3;
     }
@@ -323,6 +326,7 @@ h4 {
 /* NEWSLETTER */
 
 .newsletter {
+  position: relative;
   background-color: $vert-moyen;
   width: 50%;
   padding: 60px;
@@ -354,6 +358,41 @@ h4 {
     padding: 10px 20px;
     margin-top: 15px;
     font-weight: 600;
+  }
+
+  .overlay-news {
+    display: block;
+    position: absolute;
+    background-color: $vert-moyen;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    .btnClose {
+      font-weight: bold;
+      font-size: 40px;
+      display: flex;
+      justify-content: flex-end;
+      margin: 15px;
+      cursor: pointer;
+    }
+    h2,
+    p {
+      display: flex;
+      justify-content: center;
+      padding: 5px;
+    }
+    h2 {
+      font-weight: bold;
+    }
+    img {
+      display: flex;
+      justify-content: center;
+      margin: auto;
+      width: 80%;
+      height: 200px;
+      object-fit: contain;
+    }
   }
 }
 
@@ -408,7 +447,7 @@ h4 {
   outline: none;
   cursor: pointer;
   border: 2px solid $vert-fonce;
-  margin-left: auto;
+
   margin-right: 20px;
 }
 
@@ -498,6 +537,17 @@ h4 {
     margin: auto;
     z-index: 1000;
   }
+  h3 {
+    font-family: $main-font;
+    font-size: 22px;
+    margin: 20px 10%;
+  }
+  .filters-map {
+    div.d-flex {
+      padding: 20px 0;
+      font-size: 18px;
+    }
+  }
 }
 
 .search-results {
@@ -536,18 +586,28 @@ h4 {
     background-color: $rose-clair;
     position: relative;
     width: 100%;
+    height: 750px;
     transform: translateX(0%);
+    .map-section {
+      width: 100%;
+      height: 50%;
+      margin: 0;
+    }
   }
-  .map-section {
-    width: 100%;
-    margin: 0;
-  }
+
   .annuaire {
     margin: 50px 10px;
   }
   .all-marques {
     display: flex;
     flex-direction: column;
+  }
+  .filters-map {
+    flex-direction: column;
+    div.d-flex {
+      padding: 10px;
+      margin: 0 50px;
+    }
   }
 }
 

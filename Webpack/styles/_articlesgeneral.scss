@@ -27,6 +27,10 @@
   }
 }*/
 
+main {
+  overflow-x: hidden;
+}
+
 // bare nav articles
 .main-article {
   margin-top: 80px;
@@ -382,4 +386,83 @@
   margin-top: 5%;
   display: block;
   text-align: center;
+}
+
+// LIENS VERS ARTICLES SPECIFIQUES
+
+.btn-fiches,
+.btn-infos,
+.btn-marques,
+.btn-lexique {
+  margin: 0 0 50px 0;
+  text-decoration: none;
+  color: $noir;
+}
+
+.btn-fiches {
+  button {
+    cursor: pointer;
+    font-family: $main-font;
+    font-size: 18px;
+    border: none;
+    background-color: $vert-clair;
+    padding: 16px 22px;
+    box-shadow: $shadow-green-sm;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+      overflow-x: hidden;
+    }
+  }
+}
+
+.btn-lexique {
+  button {
+    cursor: pointer;
+    font-family: $main-font;
+    font-size: 18px;
+    border: none;
+    background-color: $rose-clair;
+    padding: 16px 22px;
+    box-shadow: $shadow-rose-sm;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+      overflow-x: hidden;
+    }
+  }
+}
+
+.btn-marques {
+  button {
+    cursor: pointer;
+    font-family: $main-font;
+    font-size: 18px;
+    border: none;
+    background-color: $vert-moyen;
+    padding: 16px 22px;
+    box-shadow: $shadow-darkgreen-sm;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+      overflow-x: hidden;
+    }
+  }
+}
+
+.btn-infos {
+  button {
+    cursor: pointer;
+    font-family: $main-font;
+    font-size: 18px;
+    border: none;
+    background-color: $rose-fonce;
+    padding: 16px 22px;
+    box-shadow: $shadow-lightrose-sm;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+      overflow-x: hidden;
+    }
+  }
 }

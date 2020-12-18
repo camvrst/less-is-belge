@@ -82,6 +82,31 @@
   }
 }
 
+.fanny-img {
+  img {
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 30%;
+    height: 100%;
+    text-align: center;
+    margin-top: auto;
+    border-radius: 50%;
+    border: 5px solid white;
+  }
+}
+
+.color-pink {
+  -webkit-text-stroke-color: $rose-fonce;
+}
+
+.color-green {
+  -webkit-text-stroke-color: $vert-fonce;
+}
+
+.color-beige {
+  -webkit-text-stroke-color: $beige;
+}
+
 .team-section {
   background-color: $vert-moyen;
   padding: 50px 0px;

@@ -32,9 +32,8 @@
             qualités éthiques, écologiques et durables.
           </p>
           <div class="d-flex items-center">
-            <h3>Afficher la carte</h3>
-            <!-- A VERIFIER SCRIPT -->
             <button type="checkbox" class="show-map radio-btn"></button>
+            <h3>Afficher la carte</h3>
           </div>
           <!-- SEARCH BAR -->
           <div class="bg-green">
@@ -59,36 +58,30 @@
           <section class="filters d-flex justify-between w-full">
             <div class="filters-left lg-w-50 w-full">
               <div class="d-flex items-center">
-                <p>Femmes</p>
-                <!-- A VERIFIER SCRIPT -->
                 <button type="checkbox" class="show-femme radio-btn"></button>
+                <p>Femmes</p>
               </div>
               <div class="d-flex items-center">
-                <p>Hommes</p>
-                <!-- A VERIFIER SCRIPT -->
                 <button type="checkbox" class="show-homme radio-btn"></button>
+                <p>Hommes</p>
               </div>
               <div class="d-flex items-center">
-                <p>Enfants</p>
-                <!-- A VERIFIER SCRIPT -->
                 <button type="checkbox" class="show-enfant radio-btn"></button>
+                <p>Enfants</p>
               </div>
             </div>
             <div class="filters-right lg-w-50 w-full">
               <div class="d-flex items-center">
-                <p>Magasin propre</p>
-                <!-- A VERIFIER SCRIPT -->
                 <button type="checkbox" class="show-maga radio-btn"></button>
+                <p>Magasin propre</p>
               </div>
               <div class="d-flex items-center">
-                <p>Multimarques</p>
-                <!-- A VERIFIER SCRIPT -->
                 <button type="checkbox" class="show-multi radio-btn"></button>
+                <p>Multimarques</p>
               </div>
               <div class="d-flex items-center">
-                <p>Seconde-main</p>
-                <!-- A VERIFIER SCRIPT -->
                 <button type="checkbox" class="show-seconde radio-btn"></button>
+                <p>Seconde-main</p>
               </div>
             </div>
           </section>
@@ -101,7 +94,23 @@
         <section class="section-map lg-w-50 w-full">
           <div class="bg-rose">
             <div id="map" class="map-section"></div>
+            <h3>Filtrer les types de magasins sur la carte</h3>
+            <div class="filters-map w-full d-flex justify-around flex-wrap">
+              <div class="d-flex items-center">
+                <button id="hide-maga" type="checkbox" class="show-maga-map radio-btn"></button>
+                <p>Magasin propre</p>
+              </div>
+              <div class="d-flex items-center">
+                <button id="hide-multi" type="checkbox" class="show-multi-map radio-btn"></button>
+                <p>Multimarques</p>
+              </div>
+              <div class="d-flex items-center">
+                <button id="hide-seconde" type="checkbox" class="show-seconde-map radio-btn"></button>
+                <p>Seconde-main</p>
+              </div>
+            </div>
           </div>
+
         </section>
       </section>
     </section>

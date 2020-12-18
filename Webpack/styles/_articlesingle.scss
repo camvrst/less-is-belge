@@ -1,23 +1,58 @@
 @use "variables" as *;
 @use "framework" as *;
 
+//responsive
+.container-article {
+  width: 1140px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .container-article {
+    width: 960px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .container-article {
+    width: 720px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container-article {
+    width: 540px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container-article {
+    width: 100%;
+  }
+}
+
 // fil d'ariane page article
 .articlesingle {
   .page_article {
+    margin-top: 50px;
     height: 350px;
     background-color: $vert-clair;
     nav {
       width: 100%;
       ul {
         margin-left: 30px;
-        li {
-          padding: 10px;
+        a {
+          text-decoration: none;
           font-size: $mini-texte-pc;
+          font-family: $main-font;
+          cursor: pointer;
+          li {
+            padding: 10px;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
         }
       }
       h2 {
         font-size: $titre-pc-moyen;
-        font-style: $main-font;
+        font-style: $secondary-font;
         margin-left: 45%;
         padding-top: 30px;
       }
@@ -25,6 +60,58 @@
         font-size: $mini-texte-pc;
         font-style: $main-font;
         margin-left: 65%;
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .articlesingle {
+      .page_article {
+        width: 540px;
+        nav {
+          ul {
+            margin-left: 5px;
+          }
+          li {
+            padding: 3px;
+            font-size: 18px;
+          }
+          h2 {
+            margin-left: 0;
+            font-size: $mini-texte-pc;
+            margin-left: 25%;
+            padding-top: 20px;
+          }
+          p {
+            margin-left: 0;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    .articlesingle {
+      .page_article {
+        width: 100%;
+        nav {
+          ul {
+            margin-left: 5px;
+          }
+          li {
+            padding: 3px;
+            font-size: 10px;
+          }
+          h2 {
+            margin-left: 0;
+            font-size: $mini-texte-pc;
+            margin-left: 25%;
+            padding-top: 20px;
+          }
+          p {
+            margin-left: 0;
+            font-size: 10px;
+          }
+        }
       }
     }
   }
@@ -38,11 +125,14 @@
       margin-left: 10%;
       background-color: white;
       transform: translateY(-50%);
+      z-index: 1;
       div {
-        margin-left: 25%;
+        padding: 20px auto;
+        width: 50%;
+        margin-left: 35%;
         .date {
           padding: 5px;
-          margin-bottom: 50px;
+          margin: 20px 0;
           color: $gris-fonce;
           font-style: $main-font;
           font-size: small;
@@ -52,14 +142,16 @@
         }
         .petit-hr-vert {
           background-color: $vert-clair;
-          width: 5%;
-          height: 10%;
+          width: 5px;
+          height: 20px;
+          margin: 20px 10px;
         }
         .comments {
           padding: 5px;
           color: $gris-fonce;
           font-style: $main-font;
           font-size: small;
+          margin: 20px auto 20px 0;
           i {
             padding: 5px;
           }
@@ -67,26 +159,161 @@
       }
       p {
         font-style: $main-font;
-        font-size: $mini-texte-pc;
+        font-size: 16px;
         color: $noir;
         margin-top: 20px;
         padding-left: 100px;
         padding-right: 100px;
-        padding-bottom: 40px;
-        text-align: center;
+        padding-bottom: 20px;
+        text-align: left;
+        line-height: 25px;
       }
     }
     div {
       width: 90%;
-      margin-left: 5%;
-      transform: translateY(-70%);
+      margin: 0 auto;
+      z-index: 0;
+      margin-bottom: 50px;
       .gauche {
-        width: 70%;
+        width: 50%;
         padding: 10px;
+        z-index: -50;
+        transform: translateY(-70%);
       }
       .droite {
-        width: 70%;
+        width: 50%;
         padding: 10px;
+        z-index: 0;
+        z-index: -50;
+        transform: translateY(-70%);
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    article {
+      width: 720px;
+      img {
+        height: 700px;
+        width: 100%;
+        margin-left: auto;
+      }
+      .contenu-article {
+        transform: translateY(0%);
+        width: 100%;
+        margin: auto div {
+          margin-left: auto;
+        }
+        p {
+          margin-top: 5px;
+          padding-left: 50px;
+          padding-right: 50px;
+          padding-bottom: 20px;
+        }
+      }
+      div {
+        width: 100%;
+        margin-left: 10%;
+        .gauche {
+          width: 50%;
+          padding: 10px;
+          z-index: -50;
+          transform: translateY(-20%);
+        }
+        .droite {
+          width: 50%;
+          padding: 10px;
+          z-index: 0;
+          z-index: -50;
+          transform: translateY(-20%);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    article {
+      width: 540px;
+      img {
+        height: 550px;
+        width: 100%;
+        margin-left: 20%;
+      }
+      .contenu-article {
+        transform: translateY(0%);
+        width: 120%;
+        margin-left: 10%;
+        div {
+          margin-left: 10%;
+        }
+        P {
+          margin-top: 5px;
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-bottom: 15px;
+        }
+      }
+      div {
+        width: 100%;
+        margin-left: 10%;
+      }
+    }
+  }
+  @media screen and (max-width: 576px) {
+    article {
+      width: 100%;
+      img {
+        height: 400px;
+        margin-left: 0;
+      }
+      .contenu-article {
+        div {
+          justify-content: center;
+          padding: 20px auto;
+          width: 100%;
+          margin-left: 0 !important;
+          .date {
+            padding: 5px;
+            margin: 20px px;
+            color: $gris-fonce;
+            font-style: $main-font;
+            font-size: small;
+            i {
+              padding: 5px;
+            }
+          }
+          .petit-hr-vert {
+            background-color: $vert-clair;
+            width: 5px;
+            height: 20px;
+            margin: 5px 5px;
+          }
+          .comments {
+            padding: 5px;
+            color: $gris-fonce;
+            font-style: $main-font;
+            font-size: small;
+            margin: 20px 5px;
+            i {
+              padding: 5px;
+            }
+          }
+        }
+        transform: translateY(0%);
+        width: 100%;
+        margin-left: 0;
+        div {
+          margin-left: 10%;
+        }
+        p {
+          margin-top: 5px;
+          padding-left: 20px;
+          padding-right: 20px;
+          padding-bottom: 40px;
+        }
+      }
+      div {
+        margin-left: 0;
+        flex-wrap: wrap;
       }
     }
   }

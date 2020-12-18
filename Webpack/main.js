@@ -1,6 +1,15 @@
 import './style.scss';
-// import $ from 'jquery';
+import $ from 'jquery';
+import { header, footer } from './src/view/view';
 // import axios from 'axios';
+
+/* INCLUDE HEADER AND FOOTER */
+const headerHTML = document.querySelector('header');
+const footerHTML = document.querySelector('footer.footer');
+console.log(headerHTML);
+
+headerHTML.innerHTML = header;
+footerHTML.innerHTML = footer;
 
 // ***** NAV BAR ANIMATION ON CLICK RESPONSIVE ***** //
 

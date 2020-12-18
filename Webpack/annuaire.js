@@ -212,7 +212,7 @@ const resultsSection = document.getElementById('section-results');
 
 searchIpt.addEventListener('input', (e) => {
   const results = [];
-  const needle = e.currentTarget.value.toLowerCase();
+  const needle = e.currentTarget.value.toLowerCase().trim();
   resultsSection.style.display = 'block';
   for (const marque of marques) {
     const lowerCaseMarque = marque.nom.toLowerCase();
@@ -256,15 +256,22 @@ showMap.addEventListener('click', () => {
 
 // CUSTOM PIN ICON
 
-const eyeIconFe = L.icon({
-  iconUrl: './assets/img/eyepin7.png',
+const eyeIconMa = L.icon({
+  iconUrl: './assets/img/pinMa4.png',
   iconSize: [32, 55], // size of the icon
   iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
   popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
 });
 
-const eyeIconHo = L.icon({
-  iconUrl: './assets/img/eyepin6.png',
+const eyeIconMu = L.icon({
+  iconUrl: './assets/img/pinMu2.png',
+  iconSize: [32, 55], // size of the icon
+  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
+  popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
+});
+
+const eyeIconSe = L.icon({
+  iconUrl: './assets/img/pinSe2.png',
   iconSize: [32, 55], // size of the icon
   iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
   popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
@@ -292,36 +299,75 @@ for (const marker of markers) {
 }
 */
 // GROUPED MARKERS
-
+/*
 const markerGroup = [];
 for (const marker of marques) {
   const pin = L.marker(marker.coord, { icon: eyeIconFe });
   pin.bindPopup(`${marker.nom}`);
   markerGroup.push(pin);
 }
-
-const markerHommes = [];
+*/
+const markerMarque = [];
 for (const marker of marques) {
-  if (marker.categorie.includes('Hommes')) {
-    const pinHomme = L.marker(marker.coord, { icon: eyeIconHo });
-    pinHomme.bindPopup(`${marker.nom}`);
-    markerHommes.push(pinHomme);
+  if (marker.categorie.includes('Marque')) {
+    const pinMarque = L.marker(marker.coord, { icon: eyeIconMa });
+    pinMarque.bindPopup(`${marker.nom}`);
+    markerMarque.push(pinMarque);
+  }
+}
+
+const markerSeconde = [];
+for (const marker of marques) {
+  if (marker.categorie.includes('Seconde-main')) {
+    const pinSeconde = L.marker(marker.coord, { icon: eyeIconSe });
+    pinSeconde.bindPopup(`${marker.nom}`);
+    markerSeconde.push(pinSeconde);
+  }
+}
+
+const markerMulti = [];
+for (const marker of marques) {
+  if (marker.categorie.includes('Multimarques')) {
+    const pinMulti = L.marker(marker.coord, { icon: eyeIconMu });
+    pinMulti.bindPopup(`${marker.nom}`);
+    markerMulti.push(pinMulti);
   }
 }
 
 // const pinGroup = L.layerGroup(markerGroup);
 // myMap.addLayer(pinGroup);
 
-const pinGroupHo = L.layerGroup(markerHommes);
-myMap.addLayer(pinGroupHo);
+const pinGroupMa = L.layerGroup(markerMarque);
+myMap.addLayer(pinGroupMa);
+
+const pinGroupMu = L.layerGroup(markerMulti);
+myMap.addLayer(pinGroupMu);
+
+const pinGroupSe = L.layerGroup(markerSeconde);
+myMap.addLayer(pinGroupSe);
 
 // BTN HIDE
-/*
-document.getElementById('btn-hide').addEventListener('click', () => {
-  if (myMap.hasLayer(pinGroup)) {
-    myMap.removeLayer(pinGroup);
+
+document.getElementById('hide-maga').addEventListener('click', () => {
+  if (myMap.hasLayer(pinGroupMa)) {
+    myMap.removeLayer(pinGroupMa);
   } else {
-    myMap.addLayer(pinGroup);
+    myMap.addLayer(pinGroupMa);
   }
 });
-*/
+
+document.getElementById('hide-multi').addEventListener('click', () => {
+  if (myMap.hasLayer(pinGroupMu)) {
+    myMap.removeLayer(pinGroupMu);
+  } else {
+    myMap.addLayer(pinGroupMu);
+  }
+});
+
+document.getElementById('hide-seconde').addEventListener('click', () => {
+  if (myMap.hasLayer(pinGroupSe)) {
+    myMap.removeLayer(pinGroupSe);
+  } else {
+    myMap.addLayer(pinGroupSe);
+  }
+});

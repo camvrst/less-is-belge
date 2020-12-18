@@ -20,3 +20,41 @@ burgerMenu.addEventListener('click', () => {
   navLinks.classList.toggle('open');
   burgerMenu.classList.toggle('toggle');
 });
+
+
+// NEWSLETTER INSCRIPTION
+
+// INPUTS FORM
+const nomNews = document.getElementById('nom-newsletter');
+const prenomNews = document.getElementById('prenom-newsletter');
+const btnEnvoyerNews = document.getElementById('btn-newsletter');
+
+btnEnvoyerNews.disabled = true;
+
+nomNews.addEventListener('input', () => {
+  if (nomNews.value) {
+    btnEnvoyerNews.disabled = false;
+  } else {
+    btnEnvoyerNews.disabled = true;
+  }
+});
+
+// OVERLAY POP UP FOR NEWSLETTER
+
+const overlay = document.getElementById('overlay-news');
+btnEnvoyerNews.addEventListener('click', openModal);
+function openModal(e) {
+  e.preventDefault();
+  if (document.querySelector('form').checkValidity()) {
+    overlay.style.display = 'block';
+  }
+}
+// faire disparaitre ma pop-up
+const btnClose = document.getElementById('btnClose');
+
+btnClose.addEventListener('click', closeModal);
+
+function closeModal() {
+  overlay.style.display = 'none';
+ // formulaire.style.display = 'none';
+};

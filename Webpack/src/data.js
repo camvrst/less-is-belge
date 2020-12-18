@@ -235,7 +235,7 @@ export const marques = [
   {
     nom: 'Jipex',
     image: './assets/marques/jipex.jpg',
-    categorie: ['Seconde Main', 'Femmes', 'Hommes', 'Enfants'],
+    categorie: ['Seconde-main', 'Femmes', 'Hommes', 'Enfants'],
     url: 'https://www.facebook.com/BoutiqueJipex',
     adresse: 'Chaussée de Wavre 774, 1040 Etterbeek',
     coord: ['50.82962826571068', '4.392019014103012'],
@@ -243,7 +243,7 @@ export const marques = [
   {
     nom: 'Happinest',
     image: './assets/marques/happinest.jpg',
-    categorie: ['Seconde Main', 'Enfants'],
+    categorie: ['Seconde-main', 'Enfants'],
     url: 'https://happinest.be/PrestaShop/',
     adresse: 'Waversesteenweg 1688, 1160 Oudergem',
     coord: ['50.81625336572961', '4.430132420707558'],
@@ -251,7 +251,7 @@ export const marques = [
   {
     nom: 'La Ritournelle',
     image: './assets/marques/ritournelle.jpg',
-    categorie: ['Seconde Main', 'Enfants'],
+    categorie: ['Seconde-main', 'Enfants'],
     url: 'https://www.ritournelle.be/',
     adresse: 'Rue des Pâquerettes 77, 1030 Schaerbeek',
     coord: ['50.861429476068224', '4.383365270441977'],
@@ -259,7 +259,7 @@ export const marques = [
   {
     nom: "Les Enfants d'Edouard",
     image: './assets/marques/edouard.jpg',
-    categorie: ['Seconde Main', 'Femmes', 'Hommes', 'Luxe'],
+    categorie: ['Seconde-main', 'Femmes', 'Hommes', 'Luxe'],
     url: 'https://lesenfantsdedouard.com/',
     adresse: 'Avenue Louise 175, 1050 Bruxelles',
     coord: ['50.827975963499426', '4.363390355097224'],
@@ -267,7 +267,7 @@ export const marques = [
   {
     nom: 'Déjà Vu',
     image: './assets/marques/dejavu.jpg',
-    categorie: ['Seconde Main', 'Femmes'],
+    categorie: ['Seconde-main', 'Femmes'],
     url: 'https://www.dejavu.shop/',
     adresse: 'Chaussée de Wavre 319, 1040 Etterbeek',
     coord: ['50.836472216857835', '4.38004471224785'],

@@ -344,3 +344,11 @@ ol {
   -webkit-text-stroke-color: $noir;
   color: transparent;
 }
+
+// BUTTON
+
+button,
+input[type="button"] {
+  outline: none;
+  cursor: pointer;
+}

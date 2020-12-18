@@ -1,7 +1,7 @@
 @use "variables" as *;
 @use "framework" as *;
 
-//responsive
+/*responsive
 .container-article {
   width: 1140px;
   margin: auto;
@@ -25,7 +25,7 @@
   .container-article {
     width: 100%;
   }
-}
+}*/
 
 // fil d'ariane page article
 .articlesingle {
@@ -115,17 +115,27 @@
       }
     }
   }
+  //article
   article {
-    img {
-      width: 100%;
+    padding: 0;
+    margin: O;
+    .container-image {
+      padding: 0;
+      margin: 0;
+      width: 90%;
       height: 900px;
+      .grande-img {
+        background-image: url("./static/assets/img/testphoto.jpg");
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+      }
     }
     .contenu-article {
       width: 80%;
       margin-left: 10%;
       background-color: white;
-      transform: translateY(-50%);
-      z-index: 1;
       div {
         padding: 20px auto;
         width: 50%;
@@ -171,37 +181,51 @@
     }
     div {
       width: 90%;
-      margin: 0 auto;
-      z-index: 0;
-      margin-bottom: 50px;
-      .gauche {
-        width: 50%;
-        padding: 10px;
-        z-index: -50;
-        transform: translateY(-70%);
+
+      margin-left: 5%;
+      .image-droite {
+        padding: 0;
+        margin: 0;
+        width: 45%;
+        height: 750px;
+        .droite {
+          background-image: url("./static/assets/img/testphoto.jpg");
+          background-size: cover;
+          background-position: center center;
+          width: 100%;
+          height: 100%;
+        }
       }
-      .droite {
-        width: 50%;
-        padding: 10px;
-        z-index: 0;
-        z-index: -50;
-        transform: translateY(-70%);
+      .image-gauche {
+        padding: 0;
+        margin: 0;
+        width: 45%;
+        height: 750px;
+        .gauche {
+          background-image: url("./static/assets/img/testphoto.jpg");
+          background-size: cover;
+          background-position: center center;
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
   @media screen and (max-width: 992px) {
     article {
       width: 720px;
-      img {
+      .container-image {
         height: 700px;
         width: 100%;
         margin-left: auto;
       }
       .contenu-article {
-        transform: translateY(0%);
-        width: 100%;
-        margin: auto div {
-          margin-left: auto;
+
+        width: 120%;
+        margin-left: 10%;
+        div {
+          margin-left: 15%;
+
         }
         p {
           margin-top: 5px;
@@ -233,10 +257,10 @@
   @media screen and (max-width: 768px) {
     article {
       width: 540px;
-      img {
+      .container-image {
         height: 550px;
         width: 100%;
-        margin-left: 20%;
+        margin-left: 10%;
       }
       .contenu-article {
         transform: translateY(0%);
@@ -253,15 +277,23 @@
         }
       }
       div {
-        width: 100%;
-        margin-left: 10%;
+        margin-left: 50px;
+        flex-wrap: wrap;
+        .image-droite {
+          width: 100%;
+          height: 500px;
+        }
+        .image-gauche {
+          width: 100%;
+          height: 500px;
+        }
       }
     }
   }
   @media screen and (max-width: 576px) {
     article {
       width: 100%;
-      img {
+      .container-image {
         height: 400px;
         margin-left: 0;
       }
@@ -314,6 +346,14 @@
       div {
         margin-left: 0;
         flex-wrap: wrap;
+        .image-droite {
+          width: 100%;
+          height: 500px;
+        }
+        .image-gauche {
+          width: 100%;
+          height: 500px;
+        }
       }
     }
   }

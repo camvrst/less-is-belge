@@ -64,30 +64,39 @@ h4 {
 .dropdown-article-pc {
   display: none;
   z-index: 5;
+  position: absolute;
+}
+
+.dropdown-article.active {
+  display: block;
 }
 
 .dropdown-article {
   position: relative;
-}
-
-.nav-links {
-  li {
-    a.dropdown-article:hover {
-      .dropdown-article-pc {
-        display: block;
-        position: absolute;
-        overflow: hidden;
-      }
+  &:hover {
+    .dropdown-article-pc {
+      display: block;
+      position: absolute;
+      overflow: hidden;
     }
   }
 }
 
-.dropdown-article:hover {
-  .dropdown-article-pc {
+.nav-links {
+  li.dropdown-article:hover + .dropdown-article-pc {
     display: block;
-    position: absolute;
+
     overflow: hidden;
   }
+}
+.dropdown-article:hover + .dropdown-article-pc {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  right: 0;
+  top: 200px;
 }
 
 @media only screen and (max-width: 720px) {
@@ -156,6 +165,9 @@ h4 {
 
   .nav-links.open {
     display: flex;
+  }
+  .dropdown-article:hover + .dropdown-article-pc {
+    display: none;
   }
 }
 
@@ -289,7 +301,6 @@ h4 {
 
 .search-bar {
   width: 80%;
-  margin-left: 20px;
 }
 
 .search-input {
@@ -361,7 +372,7 @@ h4 {
   }
 
   .overlay-news {
-    display: block;
+    display: none;
     position: absolute;
     background-color: $vert-moyen;
     top: 0;
@@ -447,8 +458,17 @@ h4 {
   outline: none;
   cursor: pointer;
   border: 2px solid $vert-fonce;
-
+  z-index: 15;
   margin-right: 20px;
+  background-image: url(./static/assets/img/witness.png);
+  background-position: center center;
+  background-size: contain;
+}
+
+.radio-filled {
+  background-color: $couleur-fond;
+  border: 2px solid $vert-fonce;
+  background-image: none;
 }
 
 .filters {
@@ -471,10 +491,6 @@ h4 {
       padding: 10px 0px;
     }
   }
-}
-
-.radio-filled {
-  background-color: $vert-fonce;
 }
 
 .bg-green {
@@ -542,11 +558,12 @@ h4 {
     font-size: 22px;
     margin: 20px 10%;
   }
-  .filters-map {
-    div.d-flex {
-      padding: 20px 0;
-      font-size: 18px;
-    }
+}
+.filters-map {
+  div.d-flex {
+    padding: 20px 0;
+    font-size: 18px;
+    transform: translateY(-280%);
   }
 }
 
@@ -609,9 +626,15 @@ h4 {
       margin: 0 50px;
     }
   }
+  .filters-map {
+    div.d-flex {
+      transform: translateY(-600%);
+    }
+  }
 }
 
 .search-bar-annuaire {
+  margin-left: 20px;
   form {
     width: 100%;
   }

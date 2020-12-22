@@ -58,3 +58,12 @@ function closeModal() {
   overlay.style.display = 'none';
  // formulaire.style.display = 'none';
 };
+
+
+// HOVER ON NAV MENU
+
+$(
+  $(".dropdown-article").hover(function() {
+    $("dropdown-articles-pc").addClass("active")
+  })
+)

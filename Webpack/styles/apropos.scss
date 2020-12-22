@@ -21,6 +21,7 @@
     transform: translateX(-30%);
     position: relative;
     z-index: -10;
+    line-height: 35px;
     p {
       font-size: 18px;
     }
@@ -61,6 +62,7 @@
       transform: translateX(0);
       position: relative;
       z-index: 1;
+      line-height: 25px;
     }
   }
 }
@@ -110,6 +112,7 @@
 .team-section {
   background-color: $vert-moyen;
   padding: 50px 0px;
+  margin-top: 20px;
   h2 {
     font-family: $secondary-font;
     font-size: 40px;
@@ -196,6 +199,6 @@
 
 .txt-emphase-rose {
   font-weight: bold;
-  border-bottom: 10px solid $rose-fonce;
+  text-decoration: underline 10px solid $rose-fonce;
   padding-bottom: 2px;
 }

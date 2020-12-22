@@ -1,18 +1,3 @@
-@font-face {
-  font-family: "ITC Garamond Std Bold Narrow";
-  src: url("../static/assets/fonts/ITCGaramondStd-BdNarrow.eot");
-  src: url("../static/assets/fonts/ITCGaramondStd-BdNarrow.eot?#iefix")
-      format("embedded-opentype"),
-    url("../static/assets/fonts/ITCGaramondStd-BdNarrow.woff2") format("woff2"),
-    url("../static/assets/fonts/ITCGaramondStd-BdNarrow.woff") format("woff"),
-    url("../static/assets/fonts/ITCGaramondStd-BdNarrow.ttf") format("truetype"),
-    url("../static/assets/fonts/ITCGaramondStd-BdNarrow.svg#ITCGaramondStd-BdNarrow")
-      format("svg");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
 /***** COULEURS *****/
 
 $couleur-fond: #f6f3f6;

@@ -1,14 +1,6 @@
 @import "@fortawesome/fontawesome-free/css/all.css";
 @import "leaflet/dist/leaflet.css";
 @import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
-@font-face {
-  font-family: "ITC Garamond Std Bold Narrow";
-  src: url("../static/assets/fonts/ITCGaramondStd-BdNarrow.eot");
-  src: url("../static/assets/fonts/ITCGaramondStd-BdNarrow.eot?#iefix") format("embedded-opentype"), url("../static/assets/fonts/ITCGaramondStd-BdNarrow.woff2") format("woff2"), url("../static/assets/fonts/ITCGaramondStd-BdNarrow.woff") format("woff"), url("../static/assets/fonts/ITCGaramondStd-BdNarrow.ttf") format("truetype"), url("../static/assets/fonts/ITCGaramondStd-BdNarrow.svg#ITCGaramondStd-BdNarrow") format("svg");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
 /***** COULEURS *****/
 /***** FONT-SIZE *****/
 /***** FONTS & FONT WEIGHT *****/
@@ -476,6 +468,7 @@ label {
   font-size: 18px;
   width: 70%;
   margin: 0 0 50px 0;
+  line-height: 25px;
 }
 
 form.formulaire {
@@ -605,6 +598,7 @@ form.formulaire {
   transform: translateX(-30%);
   position: relative;
   z-index: -10;
+  line-height: 35px;
 }
 .about-right .about-p p {
   font-size: 18px;
@@ -647,6 +641,7 @@ form.formulaire {
     transform: translateX(0);
     position: relative;
     z-index: 1;
+    line-height: 25px;
   }
 }
 .camille-img,
@@ -690,6 +685,7 @@ form.formulaire {
 .team-section {
   background-color: #c0d1bf;
   padding: 50px 0px;
+  margin-top: 20px;
 }
 .team-section h2 {
   font-family: "ITC Garamond Std Bold Narrow";
@@ -772,7 +768,7 @@ form.formulaire {
 }
 .txt-emphase-rose {
   font-weight: bold;
-  border-bottom: 10px solid #e5b0a4;
+  text-decoration: underline 10px solid #e5b0a4;
   padding-bottom: 2px;
 }
 
@@ -906,7 +902,8 @@ main {
 }
 .premiere-fiche .premiere-section .para p {
   font-style: "TT Chocolates";
-  font-size: 22px;
+  font-size: 18px;
+  line-height: 25px;
   color: #0c0b0b;
   margin-top: 20px;
 }
@@ -971,7 +968,8 @@ main {
   }
   .premiere-fiche .premiere-section .para p {
     font-style: "TT Chocolates";
-    font-size: 22px;
+    line-height: 25px;
+    font-size: 18px;
     color: #0c0b0b;
     margin-top: 20px;
   }
@@ -1267,13 +1265,13 @@ main {
 }
 .articlesingle .page_article nav h2 {
   font-size: 40px;
-  font-style: "ITC Garamond Std Bold Narrow";
+  font-family: "ITC Garamond Std Bold Narrow";
   margin-left: 45%;
   padding-top: 30px;
 }
 .articlesingle .page_article nav p {
   font-size: 22px;
-  font-style: "TT Chocolates";
+  font-family: "TT Chocolates";
   margin-left: 65%;
 }
 @media screen and (max-width: 768px) {
@@ -1351,7 +1349,7 @@ main {
   padding: 5px;
   margin: 20px 0;
   color: #464343;
-  font-style: "TT Chocolates";
+  font-family: "TT Chocolates";
   font-size: small;
 }
 .articlesingle article .contenu-article div .date i {
@@ -1366,7 +1364,7 @@ main {
 .articlesingle article .contenu-article div .comments {
   padding: 5px;
   color: #464343;
-  font-style: "TT Chocolates";
+  font-family: "TT Chocolates";
   font-size: small;
   margin: 20px auto 20px 0;
 }
@@ -1374,7 +1372,7 @@ main {
   padding: 5px;
 }
 .articlesingle article .contenu-article p {
-  font-style: "TT Chocolates";
+  font-family: "TT Chocolates";
   font-size: 16px;
   color: #0c0b0b;
   margin-top: 20px;
@@ -1539,7 +1537,7 @@ main {
     padding: 5px;
     margin: 20px px;
     color: #464343;
-    font-style: "TT Chocolates";
+    font-family: "TT Chocolates";
     font-size: small;
   }
   .articlesingle article .contenu-article div .date i {
@@ -1554,7 +1552,7 @@ main {
   .articlesingle article .contenu-article div .comments {
     padding: 5px;
     color: #464343;
-    font-style: "TT Chocolates";
+    font-family: "TT Chocolates";
     font-size: small;
     margin: 20px 5px;
   }
@@ -1690,6 +1688,41 @@ main {
     transform: rotate(-260deg) translate(0, -100px);
   }
 }
+.posted-comments {
+  margin: 50px auto;
+  color: #0c0b0b;
+}
+.posted-comments h3 {
+  font-family: "TT Chocolates";
+  font-size: 26px;
+  padding: 10px 0;
+}
+.posted-comments .hr-vert {
+  display: flex;
+  width: 100%;
+  height: 10px;
+  background-color: #d6ffc0;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.posted-comments div {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.posted-comments div div i {
+  font-size: 40px;
+  margin: 0 20px;
+}
+.posted-comments div h4 {
+  font-family: "TT Chocolates";
+  font-size: 24px;
+  padding: 10px 0;
+}
+.posted-comments div p {
+  font-size: 16px;
+}
+
 .breadcrumb {
   display: flex;
   font-family: "TT Chocolates";

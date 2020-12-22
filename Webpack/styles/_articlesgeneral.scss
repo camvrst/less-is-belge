@@ -140,7 +140,8 @@ main {
       }
       p {
         font-style: $main-font;
-        font-size: $mini-texte-pc;
+        font-size: 18px;
+        line-height: 25px;
         color: $noir;
         margin-top: 20px;
       }
@@ -209,7 +210,8 @@ main {
         }
         p {
           font-style: $main-font;
-          font-size: $mini-texte-pc;
+          line-height: 25px;
+          font-size: 18px;
           color: $noir;
           margin-top: 20px;
         }

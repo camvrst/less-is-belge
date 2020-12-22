@@ -6,6 +6,31 @@ export const header = `
             <ul class="w-50 d-flex justify-around nav-links">
                 <li><a href="./annuaire.html" class="nav-text">annuaire</a></li>
                 <li><a href="./articles-generaux.html" class="nav-text dropdown-article">articles</a>
+                <div class="dropdown-article-pc">
+                    <section class="section-mag">
+                        <div class="section-mag-title d-flex items-center justify-around align-baseline">
+                            <div class="lg-w-30 w-10 sm-horizontal-line"></div>
+                            <div>
+                                <h4>Le magazine</h4>
+                            </div>
+                            <div class="lg-w-30 w-10 sm-horizontal-line"></div>
+                        </div>
+                        <div class="section-articles d-flex justify-around w-full sm-flex-column flex-wrap">
+                            <div class="footer-cat-articles w-20 footer-fiches">
+                                <a href="./fiches-pratiques.html" class="cat-articles-title">fiches pratiques</a>
+                            </div>
+                            <div class="footer-cat-articles w-20 footer-lexique">
+                                <a href="./lexique-matiere.html" class="cat-articles-title">lexique des matières</a>
+                            </div>
+                            <div class="footer-cat-articles w-20 footer-art-info">
+                                <a href="./articles-infos.html" class="cat-articles-title">articles informatifs</a>
+                            </div>
+                            <div class="footer-cat-articles last-cat w-20 footer-marque">
+                                <a  href="./articles-marques.html" class="cat-articles-title">les marques belges</a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
                         <ul class="dropdown-sm">
                          <a href="./fiches-pratiques.html"><li>fiches pratiques</li></a>
                          <a href="./lexique-matiere.html"><li>lexique des matières</li></a>
@@ -22,32 +47,7 @@ export const header = `
                 <div class="line3"></div>
             </div>
         </nav>
-        <div class="dropdown-article-pc">
-            <section class="section-mag">
-                <div class="section-mag-title d-flex items-center justify-around align-baseline">
-                    <div class="lg-w-30 w-10 sm-horizontal-line"></div>
-                    <div>
-                        <h4>Le magazine</h4>
-                    </div>
-                    <div class="lg-w-30 w-10 sm-horizontal-line"></div>
-                </div>
-                <div class="section-articles d-flex justify-around w-full sm-flex-column flex-wrap">
-                    <div class="footer-cat-articles w-20 footer-fiches">
-                        <a href="./fiches-pratiques.html" class="cat-articles-title">fiches pratiques</a>
-                    </div>
-                    <div class="footer-cat-articles w-20 footer-lexique">
-                        <a href="./lexique-matiere.html" class="cat-articles-title">lexique des matières</a>
-                    </div>
-                    <div class="footer-cat-articles w-20 footer-art-info">
-                        <a href="./articles-infos.html" class="cat-articles-title">articles informatifs</a>
-                    </div>
-                    <div class="footer-cat-articles last-cat w-20 footer-marque">
-                        <a  href="./articles-marques.html" class="cat-articles-title">les marques belges</a>
-                    </div>
-                </div>
-            </section>
-
-        </div>
+        
     </header>
 `;
 
@@ -107,7 +107,7 @@ export const footer = `
             </ul>
         </nav>
         <div class="social-icons lg-w-5 sm-margin-top">
-        <a href="https://www.instagram.com/less.is.belge/?hl=fr"><i class="fab fa-instagram social-icon"></i></a>
+        <a href="https://www.instagram.com/less.is.belge/?hl=fr" target="blank"><i class="fab fa-instagram social-icon"></i></a>
         <a href="#"><i class="fab fa-facebook-f social-icon"></i></a>
         <a href="#"><i class="fab fa-pinterest-p social-icon"></i></a>
         <a href="#"><i class="fas fa-share-alt social-icon"></i></a>

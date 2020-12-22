@@ -243,8 +243,9 @@ searchIpt.addEventListener('input', (e) => {
 });
 
 // ------ MAP ------ //
+
 const showMap = document.querySelector('button.show-map');
-const mapDiv = document.getElementById('map');
+const mapDiv = document.getElementById('map-section');
 showMap.addEventListener('click', () => {
   radioFilled = !radioFilled;
   if (radioFilled === true) {
@@ -258,23 +259,23 @@ showMap.addEventListener('click', () => {
 
 const eyeIconMa = L.icon({
   iconUrl: './assets/img/pinMa4.png',
-  iconSize: [32, 55], // size of the icon
-  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-  popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
+  iconSize: [32, 55], 
+  iconAnchor: [22, 94], 
+  popupAnchor: [-3, -76], 
 });
 
 const eyeIconMu = L.icon({
   iconUrl: './assets/img/pinMu2.png',
-  iconSize: [32, 55], // size of the icon
-  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-  popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
+  iconSize: [32, 55], 
+  iconAnchor: [22, 94], 
+  popupAnchor: [-3, -76], 
 });
 
 const eyeIconSe = L.icon({
   iconUrl: './assets/img/pinSe2.png',
-  iconSize: [32, 55], // size of the icon
-  iconAnchor: [22, 94], // point of the icon which will correspond to marker's location
-  popupAnchor: [-3, -76], // point from which the popup should open relative to the iconAnchor
+  iconSize: [32, 55], 
+  iconAnchor: [22, 94], 
+  popupAnchor: [-3, -76], 
 });
 
 // MAP AND VIEW SETTINGS

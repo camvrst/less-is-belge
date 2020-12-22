@@ -60,6 +60,7 @@
               voluptatum facilis corporis eligendi deserunt quibusdam, impedit
               porro nobis maxime sequi?
             </p>
+            <span class="txt-divide-right"></span>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
               repellat quisquam rerum possimus nam quos amet? Nam ab blanditiis
@@ -70,6 +71,7 @@
               corporis eligendi deserunt quibusdam, impedit porro nobis maxime
               sequi?
             </p>
+
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, eius
               expedita. Molestiae, enim. Reprehenderit deserunt omnis, nobis
@@ -82,6 +84,7 @@
               voluptatum facilis corporis eligendi deserunt quibusdam, impedit
               porro nobis maxime sequi?
             </p>
+            <span class="txt-divide-left"></span>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
               repellat quisquam rerum possimus nam quos amet? Nam ab blanditiis
@@ -95,6 +98,7 @@
               tenetur ipsa laudantium voluptatum facilis corporis eligendi
               deserunt quibusdam, impedit porro nobis maxime sequi?
             </p>
+
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
               repellat quisquam rerum possimus nam quos amet? Nam ab blanditiis
@@ -117,6 +121,84 @@
           </div>
         </article>
       </div>
+      <section
+        class="comments-section w-full lg-w-80 d-flex flex-wrap justify-around"
+      >
+        <div class="lg-w-40 w-full">
+          <h3 class="title-comment">Laisser un commentaire</h3>
+          <form action="#" method="POST">
+            <div class="d-flex justify-between flex-wrap">
+              <div class="d-flex flex-column w-full">
+                <label for="nom-newsletter">Nom </label>
+                <input
+                  type="text"
+                  name="nom-comments"
+                  id="nom-comments"
+                  required
+                />
+              </div>
+              <div class="d-flex flex-column w-full">
+                <label for="prenom-newsletter">Prénom </label>
+                <input
+                  type="text"
+                  name="prenom-comments"
+                  id="prenom-comments"
+                  required
+                />
+              </div>
+            </div>
+            <div class="d-flex justify-between items-end flex-wrap">
+              <div class="d-flex flex-column w-full">
+                <label for="email-newsletter">Email </label>
+                <input
+                  type="email"
+                  name="email-comments"
+                  id="email-comments"
+                  required
+                />
+              </div>
+            </div>
+            <div class="d-flex justify-between items-end flex-wrap">
+              <div class="d-flex flex-column w-full">
+                <label for="email-newsletter">Commentaire </label>
+                <input
+                  type="text"
+                  name="msg-comments"
+                  id="msg-comments"
+                  required
+                />
+              </div>
+            </div>
+            <button class="btn-pages" type="submit" id="btn-comments">
+              ajouter
+            </button>
+          </form>
+        </div>
+        <div class="lg-w-20 w-full">
+          <h3>Partager cet article</h3>
+          <div
+            class="d-flex lg-justify-between justify-start sm-margin-top social-icons-comments"
+          >
+            <a
+              href="https://www.instagram.com/less.is.belge/?hl=fr"
+              target="blank"
+              ><i class="fab fa-instagram social-icon"></i
+            ></a>
+            <a href="#"><i class="fab fa-facebook-f social-icon"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p social-icon"></i></a>
+            <a href="#"><i class="fas fa-share-alt social-icon"></i></a>
+          </div>
+          <img
+            class="arrow-comment"
+            src="../assets/img/arrow1.png"
+            alt="Flèche"
+          />
+        </div>
+      </section>
+      <section class="posted-comments">
+        <h3>Commentaires</h3>
+        <span class="hr-vert"></span>
+      </section>
     </main>
 
     <footer class="footer"></footer>

@@ -6,7 +6,7 @@ export const header = `
             <ul class="w-50 d-flex justify-around nav-links">
                 <li><a href="./annuaire.html" class="nav-text">annuaire</a></li>
                 <li><a href="./articles-generaux.html" class="nav-text dropdown-article">articles</a>
-                <div class="dropdown-article-pc">
+                <!-- <div class="dropdown-article-pc">
                     <section class="section-mag">
                         <div class="section-mag-title d-flex items-center justify-around align-baseline">
                             <div class="lg-w-30 w-10 sm-horizontal-line"></div>
@@ -30,7 +30,7 @@ export const header = `
                             </div>
                         </div>
                     </section>
-                </div>
+                </div> -->
                         <ul class="dropdown-sm">
                          <a href="./fiches-pratiques.html"><li>fiches pratiques</li></a>
                          <a href="./lexique-matiere.html"><li>lexique des matières</li></a>
@@ -107,12 +107,12 @@ export const footer = `
             </ul>
         </nav>
         <div class="social-icons lg-w-5 sm-margin-top">
-        <a href="https://www.instagram.com/less.is.belge/?hl=fr" target="blank"><i class="fab fa-instagram social-icon"></i></a>
-        <a href="#"><i class="fab fa-facebook-f social-icon"></i></a>
-        <a href="#"><i class="fab fa-pinterest-p social-icon"></i></a>
-        <a href="#"><i class="fas fa-share-alt social-icon"></i></a>
+            <a href="https://www.instagram.com/less.is.belge/?hl=fr" target="blank"><i class="fab fa-instagram social-icon"></i></a>
+            <a href="#"><i class="fab fa-facebook-f social-icon"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p social-icon"></i></a>
+            <a href="#"><i class="fas fa-share-alt social-icon"></i></a>
+        </div>
     </div>
-</div>
     <div class="d-flex justify-around ">
         <p class="copyright"> &copy;2020. Site créé avec <span>  &#x2764;&#xFE0F  </span> par Camille, Fanny et Ayaan.</p>
     </div>

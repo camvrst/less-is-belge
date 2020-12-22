@@ -9,7 +9,6 @@
 @import "leaflet/dist/leaflet.css";
 @import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 
-// @import "node_modules/bootstrap/scss/bootstrap";
 
 * {
   margin: 0;
@@ -68,6 +67,7 @@ h4 {
   position: absolute;
 }
 
+/*
 .dropdown-article.active {
   display: block;
 }
@@ -86,10 +86,10 @@ h4 {
 .nav-links {
   li.dropdown-article:hover + .dropdown-article-pc {
     display: block;
-
     overflow: hidden;
   }
 }
+
 .dropdown-article:hover + .dropdown-article-pc {
   display: block;
   overflow: hidden;
@@ -99,6 +99,7 @@ h4 {
   right: 0;
   top: 200px;
 }
+*/
 
 @media only screen and (max-width: 720px) {
   body {
@@ -157,6 +158,7 @@ h4 {
     align-items: center;
     justify-content: center;
   }
+
   .dropdown-sm {
     display: flex;
     flex-direction: column;
@@ -194,6 +196,7 @@ h4 {
   width: 50%;
   height: 100%;
 }
+
 .homepage-img {
   margin: 30px 80px;
   width: 40%;
@@ -451,6 +454,7 @@ h4 {
     font-weight: 600px;
   }
 }
+
 .radio-btn {
   width: 25px;
   height: 25px;
@@ -464,6 +468,18 @@ h4 {
   background-image: url(./static/assets/img/witness.png);
   background-position: center center;
   background-size: contain;
+}
+
+.show-maga-map {
+  background-color: rgb(28, 110, 97);
+}
+
+.show-seconde-map {
+  background-color: $vert-moyen;
+}
+
+.show-multi-map {
+  background-color: $rose-fonce;
 }
 
 .radio-filled {
@@ -564,6 +580,7 @@ h4 {
   div.d-flex {
     padding: 20px 0;
     font-size: 18px;
+    margin-right: auto;
     transform: translateY(-280%);
   }
 }
@@ -799,6 +816,7 @@ h4 {
   flex-direction: column;
   align-items: center;
 }
+
 .social-icon {
   color: $vert-fonce;
   font-size: 24px;

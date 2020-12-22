@@ -45,19 +45,6 @@ h1 {
   justify-content: space-around;
 }
 
-@media only screen and (min-width: 990px) {
-  .lg-justify-start {
-    justify-content: flex-start;
-  }
-
-  .lg-justify-end {
-    justify-content: flex-end;
-  }
-
-  .lg-d-flex {
-    display: flex;
-  }
-}
 .justify-between {
   justify-content: space-between;
 }
@@ -78,6 +65,23 @@ h1 {
   justify-content: flex-start;
 }
 
+@media only screen and (min-width: 990px) {
+  .lg-justify-start {
+    justify-content: flex-start;
+  }
+
+  .lg-justify-end {
+    justify-content: flex-end;
+  }
+
+  .lg-justify-between {
+    justify-content: space-between;
+  }
+
+  .lg-d-flex {
+    display: flex;
+  }
+}
 .content-end {
   align-content: flex-end;
 }
@@ -461,9 +465,10 @@ label {
 }
 
 .p-contact {
-  font-size: 16px;
+  font-size: 18px;
   width: 70%;
   margin: 0 0 50px 0;
+  line-height: 25px;
 }
 
 form.formulaire {
@@ -593,9 +598,10 @@ form.formulaire {
   transform: translateX(-30%);
   position: relative;
   z-index: -10;
+  line-height: 35px;
 }
 .about-right .about-p p {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .hr-rose-about {
@@ -635,6 +641,7 @@ form.formulaire {
     transform: translateX(0);
     position: relative;
     z-index: 1;
+    line-height: 25px;
   }
 }
 .camille-img,
@@ -678,7 +685,7 @@ form.formulaire {
 .team-section {
   background-color: #c0d1bf;
   padding: 50px 0px;
-  margin-bottom: 80px;
+  margin-top: 20px;
 }
 .team-section h2 {
   font-family: "ITC Garamond Std Bold Narrow";
@@ -759,6 +766,12 @@ form.formulaire {
     width: 80%;
   }
 }
+.txt-emphase-rose {
+  font-weight: bold;
+  text-decoration: underline 10px solid #e5b0a4;
+  padding-bottom: 2px;
+}
+
 /*responsive
 .container-article {
   width: 1140px;
@@ -889,7 +902,8 @@ main {
 }
 .premiere-fiche .premiere-section .para p {
   font-style: "TT Chocolates";
-  font-size: 22px;
+  font-size: 18px;
+  line-height: 25px;
   color: #0c0b0b;
   margin-top: 20px;
 }
@@ -954,7 +968,8 @@ main {
   }
   .premiere-fiche .premiere-section .para p {
     font-style: "TT Chocolates";
-    font-size: 22px;
+    line-height: 25px;
+    font-size: 18px;
     color: #0c0b0b;
     margin-top: 20px;
   }
@@ -1250,13 +1265,13 @@ main {
 }
 .articlesingle .page_article nav h2 {
   font-size: 40px;
-  font-style: "ITC Garamond Std Bold Narrow";
+  font-family: "ITC Garamond Std Bold Narrow";
   margin-left: 45%;
   padding-top: 30px;
 }
 .articlesingle .page_article nav p {
   font-size: 22px;
-  font-style: "TT Chocolates";
+  font-family: "TT Chocolates";
   margin-left: 65%;
 }
 @media screen and (max-width: 768px) {
@@ -1334,7 +1349,7 @@ main {
   padding: 5px;
   margin: 20px 0;
   color: #464343;
-  font-style: "TT Chocolates";
+  font-family: "TT Chocolates";
   font-size: small;
 }
 .articlesingle article .contenu-article div .date i {
@@ -1349,7 +1364,7 @@ main {
 .articlesingle article .contenu-article div .comments {
   padding: 5px;
   color: #464343;
-  font-style: "TT Chocolates";
+  font-family: "TT Chocolates";
   font-size: small;
   margin: 20px auto 20px 0;
 }
@@ -1357,7 +1372,7 @@ main {
   padding: 5px;
 }
 .articlesingle article .contenu-article p {
-  font-style: "TT Chocolates";
+  font-family: "TT Chocolates";
   font-size: 16px;
   color: #0c0b0b;
   margin-top: 20px;
@@ -1419,6 +1434,17 @@ main {
     padding-right: 50px;
     padding-bottom: 20px;
   }
+  .articlesingle article .contenu-article .txt-divide-right,
+.articlesingle article .contenu-article .txt-divide-left {
+    height: 10px;
+    width: 50%;
+    background-color: #d6ffc0;
+    margin: 0 50px;
+    margin-bottom: 20px;
+  }
+  .articlesingle article .contenu-article .txt-divide-right {
+    margin-left: auto;
+  }
   .articlesingle article div {
     width: 100%;
     margin-left: 10%;
@@ -1457,11 +1483,22 @@ main {
   .articlesingle article .contenu-article div {
     margin-left: 10%;
   }
-  .articlesingle article .contenu-article P {
+  .articlesingle article .contenu-article p {
     margin-top: 5px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 15px;
+  }
+  .articlesingle article .contenu-article .txt-divide-right,
+.articlesingle article .contenu-article .txt-divide-left {
+    height: 10px;
+    width: 70%;
+    background-color: #d6ffc0;
+    margin: 0 20px;
+    margin-bottom: 15px;
+  }
+  .articlesingle article .contenu-article .txt-divide-right {
+    margin-left: auto;
   }
   .articlesingle article div {
     margin-left: 50px;
@@ -1500,7 +1537,7 @@ main {
     padding: 5px;
     margin: 20px px;
     color: #464343;
-    font-style: "TT Chocolates";
+    font-family: "TT Chocolates";
     font-size: small;
   }
   .articlesingle article .contenu-article div .date i {
@@ -1515,7 +1552,7 @@ main {
   .articlesingle article .contenu-article div .comments {
     padding: 5px;
     color: #464343;
-    font-style: "TT Chocolates";
+    font-family: "TT Chocolates";
     font-size: small;
     margin: 20px 5px;
   }
@@ -1530,6 +1567,13 @@ main {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 40px;
+  }
+  .articlesingle article .contenu-article .txt-divide-right,
+.articlesingle article .contenu-article .txt-divide-left {
+    height: 10px;
+    width: 90%;
+    background-color: #d6ffc0;
+    margin-bottom: 40px;
   }
   .articlesingle article div {
     margin-left: 0;
@@ -1549,6 +1593,134 @@ main {
 
 .vert-claire {
   background-color: #d6ffc0;
+}
+
+.txt-divide-right,
+.txt-divide-left {
+  height: 10px;
+  width: 50%;
+  background-color: #d6ffc0;
+  margin: 0 100px;
+}
+
+.txt-divide-right {
+  display: flex;
+  margin-right: auto;
+}
+
+.txt-divide-left {
+  display: flex;
+  margin-left: auto;
+}
+
+.comments-section {
+  background-color: #fcf9f9;
+  margin: 50px auto;
+  padding: 50px 0;
+}
+.comments-section div h3 {
+  font-family: "TT Chocolates";
+  font-size: 26px;
+  color: #0c0b0b;
+  margin-bottom: 20px;
+  border-left: 10px solid #d6ffc0;
+  padding-left: 15px;
+}
+.comments-section div form {
+  font-family: "TT Chocolates";
+  font-size: 16px;
+  color: #0c0b0b;
+  padding: 10px;
+}
+.comments-section div form label {
+  padding-bottom: 5px;
+  font-weight: 600;
+}
+.comments-section div form input {
+  border: none;
+  background-color: #f6f3f6;
+  height: 40px;
+  outline: none;
+}
+.comments-section div form button {
+  background-color: #d6ffc0;
+  display: flex;
+  font-weight: bold;
+  box-shadow: 4px 4px #ffe7e7;
+  margin: 20px 0;
+  margin-left: auto;
+}
+.comments-section div.lg-w-20 div.social-icons-comments {
+  margin-left: 15px;
+}
+.comments-section div.lg-w-20 div.social-icons-comments a {
+  margin: 20px 5px;
+}
+.comments-section div.lg-w-20 img.arrow-comment {
+  transform: rotate(-260deg);
+  display: flex;
+  margin-left: auto;
+}
+
+@media screen and (max-width: 992) {
+  .comments-section div.lg-w-20 div.social-icons-comments {
+    margin-left: 15px;
+  }
+  .comments-section div.lg-w-20 div.social-icons-comments a {
+    margin: 20px 5px;
+  }
+  .comments-section div.lg-w-20 img.arrow-comment {
+    transform: rotate(-260deg);
+    display: flex;
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 860px) {
+  .comments-section h3 {
+    margin-left: 20px;
+  }
+  .comments-section div.lg-w-20 {
+    margin-top: 50px;
+  }
+  .comments-section div.lg-w-20 img.arrow-comment {
+    display: flex;
+    margin: 20px;
+    transform: rotate(-260deg) translate(0, -100px);
+  }
+}
+.posted-comments {
+  margin: 50px auto;
+  color: #0c0b0b;
+}
+.posted-comments h3 {
+  font-family: "TT Chocolates";
+  font-size: 26px;
+  padding: 10px 0;
+}
+.posted-comments .hr-vert {
+  display: flex;
+  width: 100%;
+  height: 10px;
+  background-color: #d6ffc0;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.posted-comments div {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.posted-comments div div i {
+  font-size: 40px;
+  margin: 0 20px;
+}
+.posted-comments div h4 {
+  font-family: "TT Chocolates";
+  font-size: 24px;
+  padding: 10px 0;
+}
+.posted-comments div p {
+  font-size: 16px;
 }
 
 .breadcrumb {
@@ -1680,22 +1852,27 @@ h4 {
   position: absolute;
 }
 
+/*
 .dropdown-article.active {
   display: block;
 }
 
 .dropdown-article {
   position: relative;
-}
-.dropdown-article:hover .dropdown-article-pc {
-  display: block;
-  position: absolute;
-  overflow: hidden;
+  &:hover {
+    .dropdown-article-pc {
+      display: block;
+      position: absolute;
+      overflow: hidden;
+    }
+  }
 }
 
-.nav-links li.dropdown-article:hover + .dropdown-article-pc {
-  display: block;
-  overflow: hidden;
+.nav-links {
+  li.dropdown-article:hover + .dropdown-article-pc {
+    display: block;
+    overflow: hidden;
+  }
 }
 
 .dropdown-article:hover + .dropdown-article-pc {
@@ -1707,7 +1884,7 @@ h4 {
   right: 0;
   top: 200px;
 }
-
+*/
 @media only screen and (max-width: 720px) {
   body {
     overflow-x: hidden;
@@ -2070,6 +2247,18 @@ h4 {
   background-size: contain;
 }
 
+.show-maga-map {
+  background-color: #1c6e61;
+}
+
+.show-seconde-map {
+  background-color: #c0d1bf;
+}
+
+.show-multi-map {
+  background-color: #e5b0a4;
+}
+
 .radio-filled {
   background-color: #f6f3f6;
   border: 2px solid #1e3b2c;
@@ -2157,6 +2346,7 @@ h4 {
 .filters-map div.d-flex {
   padding: 20px 0;
   font-size: 18px;
+  margin-right: auto;
   transform: translateY(-280%);
 }
 

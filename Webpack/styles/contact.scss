@@ -1,19 +1,23 @@
 @use "variables" as *;
 @use "framework" as *;
 
-form.formulaire > label,
+form {
+  position: relative;
+}
+
+form.formulaire > .formulaire > label,
 input {
   display: table-cell;
   margin-bottom: 10px;
 }
 
-form.formulaire > input {
+form.formulaire > .formulaire > input {
   border: none;
   background-color: $couleur-fond;
   height: 35px;
   width: 100%;
 }
-button.contact {
+button.btn-contact {
   margin-right: 0;
   margin-left: auto;
   display: block;
@@ -26,9 +30,6 @@ button.contact {
 }
 label {
   padding-right: 10px;
-}
-
-.container {
 }
 
 .img-contact {
@@ -53,9 +54,10 @@ label {
 }
 
 .p-contact {
-  font-size: 16px;
+  font-size: 18px;
   width: 70%;
   margin: 0 0 50px 0;
+  line-height: 25px;
 }
 
 form.formulaire {
@@ -137,5 +139,33 @@ form.formulaire {
     transform: translateY(-5%);
     padding: 0 50px;
     margin-left: auto;
+  }
+}
+
+// CONTACT JS
+
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 70%;
+  height: 100%;
+  background-color: $vert-moyen;
+  .btnClose {
+    cursor: pointer;
+    font-size: 50px;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px 15px;
+  }
+  h2,
+  .popText {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+  }
+  img {
+    margin: 20px 0;
   }
 }

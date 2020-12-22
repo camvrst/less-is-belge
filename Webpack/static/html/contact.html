@@ -24,13 +24,13 @@
           <div class="p-contact">
             <p>
               Une remarque, une suggestion, un petit mot sympa, une plainte :
-              écrvivez-nous, nous serons ravies de vous lire et de répondre au
+              écrivez-nous, nous serons ravies de vous lire et de répondre au
               mieux à votre message. Pour cela, il suffit de compléter le
               formulaire ci-dessous, simple comme bonjour !
             </p>
           </div>
 
-          <form action="" method="get" class="formulaire">
+          <form action="#" method="post" class="formulaire">
             <div class="formulaire">
               <label for="nom">Nom </label> <br />
               <input type="text" name="nom" id="nom" required />
@@ -47,18 +47,34 @@
             </div>
             <br />
             <div class="formulaire">
-              <label for="message">Message</label> <br />
+              <label for="message" class="label-msg">Message</label> <br />
               <input type="text" name="message" id="message" required />
             </div>
             <br />
             <div class="formulaire">
-              <button class="btn-contact" type="submit">envoyer</button>
+              <button class="btn-contact" id="btnPopContact" type="submit">
+                envoyer
+              </button>
+            </div>
+            <div id="overlay" class="overlay">
+              <div id="popup" class="popup">
+                <span id="btnClose" class="btnClose">&times;</span>
+                <h2>Merci pour votre message !</h2>
+                <p class="popText">
+                  Nous vous répondrons dans les plus bref délais.
+                </p>
+                <img
+                  class="w-full"
+                  src="../assets/img/msg-sent.png"
+                  alt="Message envoyé"
+                />
+              </div>
             </div>
           </form>
         </div>
       </div>
     </main>
     <footer class="footer"></footer>
-    <script src="main.js"></script>
+    <script src="contact.js"></script>
   </body>
 </html>

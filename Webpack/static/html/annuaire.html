@@ -32,22 +32,21 @@
             qualités éthiques, écologiques et durables.
           </p>
           <div class="d-flex items-center">
-            <h3>Afficher la carte</h3>
-            <!-- A VERIFIER SCRIPT -->
             <button type="checkbox" class="show-map radio-btn"></button>
+            <h3>Afficher la carte</h3>
           </div>
           <!-- SEARCH BAR -->
           <div class="bg-green">
             <div class="search-section">
               <div class="search-bar search-bar-annuaire d-flex">
-                <form action="" class="d-flex">
+                <form action="#" class="d-flex">
                 <input
                   id="search-annuaire"
                   type="text"
                   class="search-input"
                   placeholder="Retrouver une marque, un article, ..."
                 />
-                <button type="submit" class="search-btn" id="btn-search-annuaire">
+                <button type="submit" class="search-btn" id="btn-search-annuaire" disabled>
                   <i class="fa fa-search"></i>
                 </button>
               </form>
@@ -59,36 +58,30 @@
           <section class="filters d-flex justify-between w-full">
             <div class="filters-left lg-w-50 w-full">
               <div class="d-flex items-center">
+                <button type="checkbox" class="show-femme radio-btn radio-filled"></button>
                 <p>Femmes</p>
-                <!-- A VERIFIER SCRIPT -->
-                <button type="checkbox" class="show-femme radio-btn"></button>
               </div>
               <div class="d-flex items-center">
+                <button type="checkbox" class="show-homme radio-btn radio-filled"></button>
                 <p>Hommes</p>
-                <!-- A VERIFIER SCRIPT -->
-                <button type="checkbox" class="show-homme radio-btn"></button>
               </div>
               <div class="d-flex items-center">
+                <button type="checkbox" class="show-enfant radio-btn radio-filled"></button>
                 <p>Enfants</p>
-                <!-- A VERIFIER SCRIPT -->
-                <button type="checkbox" class="show-enfant radio-btn"></button>
               </div>
             </div>
             <div class="filters-right lg-w-50 w-full">
               <div class="d-flex items-center">
+                <button type="checkbox" class="show-maga radio-btn radio-filled"></button>
                 <p>Magasin propre</p>
-                <!-- A VERIFIER SCRIPT -->
-                <button type="checkbox" class="show-maga radio-btn"></button>
               </div>
               <div class="d-flex items-center">
+                <button type="checkbox" class="show-multi radio-btn radio-filled"></button>
                 <p>Multimarques</p>
-                <!-- A VERIFIER SCRIPT -->
-                <button type="checkbox" class="show-multi radio-btn"></button>
               </div>
               <div class="d-flex items-center">
+                <button type="checkbox" class="show-seconde radio-btn radio-filled"></button>
                 <p>Seconde-main</p>
-                <!-- A VERIFIER SCRIPT -->
-                <button type="checkbox" class="show-seconde radio-btn"></button>
               </div>
             </div>
           </section>
@@ -98,10 +91,27 @@
           </section>
         </section>
         <!--SECTION MAP -->
-        <section class="section-map lg-w-50 w-full">
+        <section class="section-map lg-w-50 w-full" id="map-section">
           <div class="bg-rose">
             <div id="map" class="map-section"></div>
+            <h3>Filtrer les types de magasins sur la carte</h3>
+         
+            </div>
           </div>
+          <div class="filters-map w-full d-flex justify-around flex-wrap">
+            <div class="d-flex items-center">
+              <button id="hide-maga" type="checkbox" class="show-maga-map radio-btn"></button>
+              <p>Magasin propre</p>
+            </div>
+            <div class="d-flex items-center">
+              <button id="hide-multi" type="checkbox" class="show-multi-map radio-btn"></button>
+              <p>Multimarques</p>
+            </div>
+            <div class="d-flex items-center">
+              <button id="hide-seconde" type="checkbox" class="show-seconde-map radio-btn"></button>
+              <p>Seconde-main</p>
+            </div>
+
         </section>
       </section>
     </section>

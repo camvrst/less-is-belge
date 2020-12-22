@@ -1,7 +1,7 @@
 @use "variables" as *;
 @use "framework" as *;
 
-//responsive
+/*responsive
 .container-article {
   width: 1140px;
   margin: auto;
@@ -25,23 +25,27 @@
   .container-article {
     width: 100%;
   }
-}
+}*/
 
 // fil d'ariane page article
 .articlesingle {
   .page_article {
     margin-top: 50px;
-    height: 350px;
+    height: 250px;
     background-color: $vert-clair;
     nav {
       width: 100%;
       ul {
-        margin-left: 30px;
+        margin-left: 80px;
         a {
           text-decoration: none;
           font-size: $mini-texte-pc;
           font-family: $main-font;
           cursor: pointer;
+          color: $noir;
+          .first-li {
+            margin-left: 80px;
+          }
           li {
             padding: 10px;
           }
@@ -52,13 +56,13 @@
       }
       h2 {
         font-size: $titre-pc-moyen;
-        font-style: $secondary-font;
+        font-family: $secondary-font;
         margin-left: 45%;
         padding-top: 30px;
       }
       p {
         font-size: $mini-texte-pc;
-        font-style: $main-font;
+        font-family: $main-font;
         margin-left: 65%;
       }
     }
@@ -115,17 +119,27 @@
       }
     }
   }
+  //article
   article {
-    img {
-      width: 100%;
+    padding: 0;
+    margin: O;
+    .container-image {
+      padding: 0;
+      margin: 0;
+      width: 90%;
       height: 900px;
+      .grande-img {
+        background-image: url("./static/assets/img/testphoto.jpg");
+        background-size: cover;
+        background-position: center center;
+        width: 100%;
+        height: 100%;
+      }
     }
     .contenu-article {
       width: 80%;
       margin-left: 10%;
       background-color: white;
-      transform: translateY(-50%);
-      z-index: 1;
       div {
         padding: 20px auto;
         width: 50%;
@@ -134,7 +148,7 @@
           padding: 5px;
           margin: 20px 0;
           color: $gris-fonce;
-          font-style: $main-font;
+          font-family: $main-font;
           font-size: small;
           i {
             padding: 5px;
@@ -149,7 +163,7 @@
         .comments {
           padding: 5px;
           color: $gris-fonce;
-          font-style: $main-font;
+          font-family: $main-font;
           font-size: small;
           margin: 20px auto 20px 0;
           i {
@@ -158,7 +172,7 @@
         }
       }
       p {
-        font-style: $main-font;
+        font-family: $main-font;
         font-size: 16px;
         color: $noir;
         margin-top: 20px;
@@ -171,43 +185,66 @@
     }
     div {
       width: 90%;
-      margin: 0 auto;
-      z-index: 0;
-      margin-bottom: 50px;
-      .gauche {
-        width: 50%;
-        padding: 10px;
-        z-index: -50;
-        transform: translateY(-70%);
+
+      margin-left: 5%;
+      .image-droite {
+        padding: 0;
+        margin: 0;
+        width: 45%;
+        height: 750px;
+        .droite {
+          background-image: url("./static/assets/img/testphoto.jpg");
+          background-size: cover;
+          background-position: center center;
+          width: 100%;
+          height: 100%;
+        }
       }
-      .droite {
-        width: 50%;
-        padding: 10px;
-        z-index: 0;
-        z-index: -50;
-        transform: translateY(-70%);
+      .image-gauche {
+        padding: 0;
+        margin: 0;
+        width: 45%;
+        height: 750px;
+        .gauche {
+          background-image: url("./static/assets/img/testphoto.jpg");
+          background-size: cover;
+          background-position: center center;
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
   @media screen and (max-width: 992px) {
     article {
       width: 720px;
-      img {
+      .container-image {
         height: 700px;
         width: 100%;
         margin-left: auto;
       }
       .contenu-article {
-        transform: translateY(0%);
-        width: 100%;
-        margin: auto div {
-          margin-left: auto;
+        width: 120%;
+        margin-left: 10%;
+        div {
+          margin-left: 15%;
         }
         p {
           margin-top: 5px;
           padding-left: 50px;
           padding-right: 50px;
           padding-bottom: 20px;
+        }
+        .txt-divide-right,
+        .txt-divide-left {
+          height: 10px;
+          width: 50%;
+          background-color: $vert-clair;
+          margin: 0 50px;
+          margin-bottom: 20px;
+        }
+        .txt-divide-right {
+          margin-left: auto;
         }
       }
       div {
@@ -217,26 +254,29 @@
           width: 50%;
           padding: 10px;
           z-index: -50;
-          transform: translateY(-20%);
+          transform: translateY(0%);
         }
         .droite {
           width: 50%;
           padding: 10px;
           z-index: 0;
           z-index: -50;
-          transform: translateY(-20%);
+          transform: translateY(0%);
         }
       }
     }
   }
 
   @media screen and (max-width: 768px) {
+    .first-li {
+      margin-left: 20px !important;
+    }
     article {
       width: 540px;
-      img {
+      .container-image {
         height: 550px;
         width: 100%;
-        margin-left: 20%;
+        margin-left: 10%;
       }
       .contenu-article {
         transform: translateY(0%);
@@ -245,27 +285,47 @@
         div {
           margin-left: 10%;
         }
-        P {
+        p {
           margin-top: 5px;
           padding-left: 20px;
           padding-right: 20px;
           padding-bottom: 15px;
         }
+        .txt-divide-right,
+        .txt-divide-left {
+          height: 10px;
+          width: 70%;
+          background-color: $vert-clair;
+          margin: 0 20px;
+          margin-bottom: 15px;
+        }
+        .txt-divide-right {
+          margin-left: auto;
+        }
       }
       div {
-        width: 100%;
-        margin-left: 10%;
+        margin-left: 50px;
+        flex-wrap: wrap;
+        .image-droite {
+          width: 100%;
+          height: 500px;
+        }
+        .image-gauche {
+          width: 100%;
+          height: 500px;
+        }
       }
     }
   }
   @media screen and (max-width: 576px) {
     article {
       width: 100%;
-      img {
+      .container-image {
         height: 400px;
         margin-left: 0;
       }
       .contenu-article {
+        width: 100%;
         div {
           justify-content: center;
           padding: 20px auto;
@@ -275,7 +335,7 @@
             padding: 5px;
             margin: 20px px;
             color: $gris-fonce;
-            font-style: $main-font;
+            font-family: $main-font;
             font-size: small;
             i {
               padding: 5px;
@@ -290,7 +350,7 @@
           .comments {
             padding: 5px;
             color: $gris-fonce;
-            font-style: $main-font;
+            font-family: $main-font;
             font-size: small;
             margin: 20px 5px;
             i {
@@ -310,10 +370,27 @@
           padding-right: 20px;
           padding-bottom: 40px;
         }
+        .txt-divide-right,
+        .txt-divide-left {
+          height: 10px;
+          width: 90%;
+          background-color: $vert-clair;
+          margin-bottom: 40px;
+        }
       }
       div {
         margin-left: 0;
         flex-wrap: wrap;
+        .image-droite {
+          width: 100%;
+          height: 500px;
+          transform: translateY(0%);
+        }
+        .image-gauche {
+          width: 100%;
+          height: 500px;
+          transform: translateY(0%);
+        }
       }
     }
   }
@@ -321,4 +398,149 @@
 // page article fiche technique
 .vert-claire {
   background-color: $vert-clair;
+}
+
+.txt-divide-right,
+.txt-divide-left {
+  height: 10px;
+  width: 50%;
+  background-color: $vert-clair;
+  margin: 0 100px;
+}
+
+.txt-divide-right {
+  display: flex;
+  margin-right: auto;
+}
+
+.txt-divide-left {
+  display: flex;
+  margin-left: auto;
+}
+
+// COMMENTS SECTION
+
+.comments-section {
+  background-color: rgb(252, 249, 249);
+  margin: 50px auto;
+  padding: 50px 0;
+  div {
+    h3 {
+      font-family: $main-font;
+      font-size: 26px;
+      color: $noir;
+      margin-bottom: 20px;
+      border-left: 10px solid $vert-clair;
+      padding-left: 15px;
+    }
+    form {
+      font-family: $main-font;
+      font-size: 16px;
+      color: $noir;
+      padding: 10px;
+      label {
+        padding-bottom: 5px;
+        font-weight: $demi-bold;
+      }
+      input {
+        border: none;
+        background-color: $couleur-fond;
+        height: 40px;
+        outline: none;
+      }
+      button {
+        background-color: $vert-clair;
+        display: flex;
+        font-weight: bold;
+        box-shadow: $shadow-lightrose-sm;
+        margin: 20px 0;
+        margin-left: auto;
+      }
+    }
+  }
+  div.lg-w-20 {
+    div.social-icons-comments {
+      margin-left: 15px;
+      a {
+        margin: 20px 5px;
+      }
+    }
+    img.arrow-comment {
+      transform: rotate(-260deg);
+      display: flex;
+      margin-left: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 992) {
+  .comments-section {
+    div.lg-w-20 {
+      div.social-icons-comments {
+        margin-left: 15px;
+        a {
+          margin: 20px 5px;
+        }
+      }
+      img.arrow-comment {
+        transform: rotate(-260deg);
+        display: flex;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .comments-section {
+    h3 {
+      margin-left: 20px;
+    }
+    div.lg-w-20 {
+      margin-top: 50px;
+      img.arrow-comment {
+        display: flex;
+        margin: 20px;
+        transform: rotate(-260deg) translate(0, -100px);
+      }
+    }
+  }
+}
+
+.posted-comments {
+  margin: 50px auto;
+  color: $noir;
+
+  h3 {
+    font-family: $main-font;
+    font-size: 26px;
+    padding: 10px 0;
+  }
+  .hr-vert {
+    display: flex;
+    width: 100%;
+    height: 10px;
+    background-color: $vert-clair;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+  div {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    div {
+      i {
+        font-size: 40px;
+        margin: 0 20px;
+      }
+    }
+    h4 {
+      font-family: $main-font;
+      font-size: 24px;
+      padding: 10px 0;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
 }

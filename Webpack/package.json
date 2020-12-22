@@ -34,6 +34,7 @@
     "@fortawesome/fontawesome-free": "5.15.1"
   },
   "dependencies": {
+    "airtable": "^0.10.1",
     "jquery": "^3.5.1",
     "leaflet": "^1.7.1",
     "leaflet-defaulticon-compatibility": "^0.1.1"

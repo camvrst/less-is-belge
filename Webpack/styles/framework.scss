@@ -21,18 +21,6 @@
   justify-content: space-around;
 }
 
-@media only screen and (min-width: 990px) {
-  .lg-justify-start {
-    justify-content: flex-start;
-  }
-  .lg-justify-end {
-    justify-content: flex-end;
-  }
-  .lg-d-flex {
-    display: flex;
-  }
-}
-
 .justify-between {
   justify-content: space-between;
 }
@@ -51,6 +39,21 @@
 
 .justify-start {
   justify-content: flex-start;
+}
+
+@media only screen and (min-width: 990px) {
+  .lg-justify-start {
+    justify-content: flex-start;
+  }
+  .lg-justify-end {
+    justify-content: flex-end;
+  }
+  .lg-justify-between {
+    justify-content: space-between;
+  }
+  .lg-d-flex {
+    display: flex;
+  }
 }
 
 .content-end {
@@ -343,4 +346,12 @@ ol {
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: $noir;
   color: transparent;
+}
+
+// BUTTON
+
+button,
+input[type="button"] {
+  outline: none;
+  cursor: pointer;
 }

@@ -21,8 +21,9 @@
     transform: translateX(-30%);
     position: relative;
     z-index: -10;
+    line-height: 35px;
     p {
-      font-size: 16px;
+      font-size: 18px;
     }
   }
 }
@@ -61,6 +62,7 @@
       transform: translateX(0);
       position: relative;
       z-index: 1;
+      line-height: 25px;
     }
   }
 }
@@ -82,10 +84,35 @@
   }
 }
 
+.fanny-img {
+  img {
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 30%;
+    height: 100%;
+    text-align: center;
+    margin-top: auto;
+    border-radius: 50%;
+    border: 5px solid white;
+  }
+}
+
+.color-pink {
+  -webkit-text-stroke-color: $rose-fonce;
+}
+
+.color-green {
+  -webkit-text-stroke-color: $vert-fonce;
+}
+
+.color-beige {
+  -webkit-text-stroke-color: $beige;
+}
+
 .team-section {
   background-color: $vert-moyen;
   padding: 50px 0px;
-  margin-bottom: 80px;
+  margin-top: 20px;
   h2 {
     font-family: $secondary-font;
     font-size: 40px;
@@ -168,4 +195,10 @@
   .ayaan {
     width: 80%;
   }
+}
+
+.txt-emphase-rose {
+  font-weight: bold;
+  text-decoration: underline 10px solid $rose-fonce;
+  padding-bottom: 2px;
 }

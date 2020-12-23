@@ -118,3 +118,16 @@ export const footer = `
     </div>
 </footer>
 `;
+
+
+export const postedComments = `
+<div class="w-full d-flex items-center comment">
+    <div>
+        <i class="fas fa-star-of-life"></i>
+    </div>
+    <div>
+        <h4>Fanny</h4>
+        <p>Super article !</p>
+    </div>
+</div>
+`

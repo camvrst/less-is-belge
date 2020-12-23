@@ -13,6 +13,16 @@ console.log(headerHTML);
 headerHTML.innerHTML = header;
 footerHTML.innerHTML = footer;
 
+// ***** NAV BAR ANIMATION ON CLICK RESPONSIVE ***** //
+
+const burgerMenu = document.querySelector('.burger-menu');
+const navLinks = document.querySelector('.nav-links');
+
+burgerMenu.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  burgerMenu.classList.toggle('toggle');
+});
+
 /* RADIO BUTTONS AND FILTERS */
 
 const radioBtns = document.querySelectorAll('.radio-btn');

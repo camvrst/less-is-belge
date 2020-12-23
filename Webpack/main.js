@@ -68,7 +68,7 @@ function openModal(e) {
     overlay.style.display = 'block';
   }
 }
-// faire disparaitre ma pop-up
+
 const btnClose = document.getElementById('btnClose');
 
 btnClose.addEventListener('click', closeModal);
@@ -86,38 +86,3 @@ $(
     $("dropdown-articles-pc").addClass("active")
   })
 )
-
-
-// COMMENTS AIRTABLE
-
-var Airtable = require('airtable');
-Airtable.configure({
-    endpointUrl: 'https://api.airtable.com',
-    apiKey: 'keyz9qFpTI4KwnNyH'
-});
-var base = new Airtable({apiKey: 'keyz9qFpTI4KwnNyH'}).base('appcrPBEfeSrBcqgL');
-
-base('Comments').select({
-  // Selecting the first 3 records in Grid view:
-  maxRecords: 3,
-  view: "Grid view"
-}).eachPage(function page(records, fetchNextPage) {
-  // This function (`page`) will get called for each page of records.
-
-  records.forEach(function(record) {
-      console.log('Retrieved', record.get('Nom'));
-  });
-
-  // To fetch the next page of records, call `fetchNextPage`.
-  // If there are more records, `page` will get called again.
-  // If there are no more records, `done` will get called.
-  fetchNextPage();
-
-}, function done(err) {
-  if (err) { console.error(err); return; }
-});
-
-base('Comments').find('recO6kYtLskcA3J8G', function(err, record) {
-  if (err) { console.error(err); return; }
-  console.log('Retrieved', record.id);
-});

@@ -1,7 +1,9 @@
 import './style.scss';
 import $ from 'jquery';
 import { header, footer } from './src/view/view';
-import { contentarticle} from './src/view/article';
+import {contentarticle} from './src/view/article';
+import {contentartgeneraux} from './src/view/articles-generaux';
+import {contfiches} from './src/view/fichespratiques';
 // import axios from 'axios';
 
 /* INCLUDE HEADER AND FOOTER */
@@ -20,8 +22,14 @@ burgerMenu.addEventListener('click', () => {
   navLinks.classList.toggle('open');
   burgerMenu.classList.toggle('toggle');
 });
+
+// inclus page article-generaux
+$('.main').html(contentartgeneraux);
 // include article
-$('.main-articleSingle').html(contentarticle);
+$('.btnsuite-vert').on('click', () => contentarticle());
+$('.go_fiches').on('click', () => contfiches());
+
+
 
 // NEWSLETTER INSCRIPTION
 

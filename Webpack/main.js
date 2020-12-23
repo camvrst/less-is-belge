@@ -4,6 +4,9 @@ import { header, footer } from './src/view/view';
 import {contentarticle} from './src/view/article';
 import {contentartgeneraux} from './src/view/articles-generaux';
 import {contfiches} from './src/view/fichespratiques';
+import {continfo} from './src/view/article-info';
+import {contentlexique} from './src/view/lexique';
+import {contentmarques} from './src/view/marque-be';
 // import axios from 'axios';
 
 /* INCLUDE HEADER AND FOOTER */
@@ -26,8 +29,15 @@ burgerMenu.addEventListener('click', () => {
 // inclus page article-generaux
 $('.main').html(contentartgeneraux);
 // include article
-$('.btnsuite-vert').on('click', () => contentarticle());
-$('.go_fiches').on('click', () => contfiches());
+$('.contentarticle').html(contentarticle);
+// inclus page fiches prtaiques
+$('.content-fichespratiques').html(contfiches);
+// inclus page articles informatifs
+$('.continfo').html(continfo);
+// inclus page lexique des matiéres
+$('.contentlexique').html(contentlexique);
+// inclus page marques belges
+$('.contentmarques').html(contentmarques);
 
 
 

@@ -226,6 +226,45 @@
   }
 }
 
+@media only screen and (max-width: 860px) {
+  .sm-w-full {
+    width: 100%;
+  }
+  .sm-w-5 {
+    width: 5%;
+  }
+  .sm-w-10 {
+    width: 10%;
+  }
+  .sm-w-20 {
+    width: 20%;
+  }
+  .sm-w-25 {
+    width: 25%;
+  }
+  .sm-w-30 {
+    width: 30%;
+  }
+  .sm-w-40 {
+    width: 40%;
+  }
+  .sm-w-50 {
+    width: 50%;
+  }
+  .sm-w-60 {
+    width: 60%;
+  }
+  .sm-w-70 {
+    width: 70%;
+  }
+  .sm-w-80 {
+    width: 80%;
+  }
+  .sm-w-90 {
+    width: 90%;
+  }
+}
+
 /* HEIGHT */
 
 .h-full {

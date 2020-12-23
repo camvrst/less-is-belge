@@ -1,14 +1,80 @@
 import $ from 'jquery'; 
+import {lexiqueMat} from '../articles'
+import '../../style.scss';
+import { header, footer } from './view';
 
-export const contentlexique = `
+
+/* INCLUDE HEADER AND FOOTER */
+const headerHTML = document.querySelector('header');
+const footerHTML = document.querySelector('footer.footer');
+
+headerHTML.innerHTML = header;
+footerHTML.innerHTML = footer;
+
+// ***** NAV BAR ANIMATION ON CLICK RESPONSIVE ***** //
+
+const burgerMenu = document.querySelector('.burger-menu');
+const navLinks = document.querySelector('.nav-links');
+
+burgerMenu.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  burgerMenu.classList.toggle('toggle');
+});
+
+// LEXIQUE 
+
+// first 3 articles
+let firstContentLexique = '';
+for (let i = 0; i < 3; i ++) {
+  firstContentLexique += `
+  <div class="artfp1 w-full lg-w-30">
+      <div class="img-lexique${i} bg-img-art"></div>
+      <a href=# class="lien-lexique${i}"> <h5>${lexiqueMat[i].titre}</h5></a>
+      <p>
+        ${lexiqueMat[i].contenu.p1}
+      </p>
+  </div>
+  `
+  $('.section-lexique-1').html(firstContentLexique);
+}
+
+// 4th big article
+
+const secondContentLexique = `
+            <div class="container-img">
+              <div class="img-lexique3 bg-img-art"></div>
+            </div>
+            <div class="para">
+              <div class="hr-vert"></div>
+              <div class="d-flex items-end">
+                <p class="date"><i class="far fa-clock"></i>${lexiqueMat[3].date}</p>
+                <div class="petit-hr-vert"></div>
+                <p class="comments">
+                  <i class="fas fa-comment"></i>${lexiqueMat[3].commentaires.length} commentaires
+                </p>
+              </div>
+              <h4>${lexiqueMat[3].titre}</h4>
+              <p>
+              ${lexiqueMat[3].contenu.p1}
+              </p>
+              <p>
+              ${lexiqueMat[3].contenu.p2}
+              </p>
+              <a href="./article-simple.html" class="btnsuite-vert lien-lexique3" 
+                >lire la suite</a
+              >
+            </div>
+`
+$('.section-lexique-2').html(secondContentLexique);
+
+const contentLexique = `
 <div>
-      
       <section class="art-fichesPratiques">
         <article class="petite-fichesPratiques">
           <section class="section-fp-1 d-flex flex-wrap justify-around">
             <div class="artfp1">
               <div class="imgfp1"></div>
-              <h5>Titre</h5>
+              <a href=# class="lien-lexique0" <h5>Titre</h5>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
                 modi doloremque aliquid ipsum sequi possimus.
@@ -96,4 +162,4 @@ export const contentlexique = `
     </div>
     `;
 
-    $('.contentlexique').html(contentlexique);
+    //$('.section-lexique-1').html(firstContentLexique);

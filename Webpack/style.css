@@ -1840,6 +1840,7 @@ h4 {
 
 .burger-menu {
   display: none;
+  z-index: 60;
 }
 
 .dropdown-sm {
@@ -1908,7 +1909,7 @@ h4 {
     cursor: pointer;
     margin-right: 15px;
     margin-left: auto;
-    z-index: 4;
+    z-index: 60;
   }
   .burger-menu .line1,
 .burger-menu .line2,
@@ -1923,14 +1924,14 @@ h4 {
   .nav-links {
     position: absolute;
     right: 0px;
-    top: 7vh;
-    height: 90%;
+    top: 0px;
+    height: 100%;
     width: 100%;
     background-color: #f6f3f6;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 2;
+    z-index: 50;
     display: none;
   }
 
@@ -1970,6 +1971,7 @@ h4 {
 }
 .toggle div {
   transition: all 0.1s ease;
+  z-index: 60;
 }
 
 /********** PAGES **********/
@@ -2030,6 +2032,10 @@ h4 {
   flex-direction: column;
 }
 
+.search-bar {
+  width: 80%;
+}
+
 @media only screen and (max-width: 990px) {
   .homepage-img {
     width: 80vw;
@@ -2045,16 +2051,21 @@ h4 {
 
   .homepage-intro {
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: auto;
-    padding: 60px;
+    padding: 20px;
     margin: 40px auto;
     transform: translateX(0%) translateY(-30%);
   }
   .homepage-intro h1 {
     font-size: 30px;
+    width: 100%;
   }
   .homepage-intro p {
     margin: 16px 0;
+    width: 100%;
   }
   .homepage-intro button {
     background-color: #d6ffc0;
@@ -2069,11 +2080,14 @@ h4 {
     width: 90vw;
     background-color: #d6ffc0;
     box-shadow: 8px 8px #c0d1bf;
-    padding: 60px;
+    padding: 20px;
     margin: 0px auto 100px auto;
   }
   .homepage-search h2 {
     font-size: 28px;
+  }
+  .homepage-search .search-bar {
+    width: 100%;
   }
 }
 /* SEARCH BAR */
@@ -2082,10 +2096,6 @@ h4 {
   margin-top: 20px;
   margin-left: auto;
   align-items: center;
-}
-
-.search-bar {
-  width: 80%;
 }
 
 .search-input {
@@ -2192,11 +2202,16 @@ h4 {
 
 @media only screen and (max-width: 990px) {
   .newsletter {
-    width: 80%;
+    background-color: #c0d1bf;
+    width: 90%;
+    padding: 20px;
   }
   .newsletter label {
     font-size: 16px;
     margin: 20px 0;
+  }
+  .newsletter input {
+    width: 100%;
   }
 
   .arrow {

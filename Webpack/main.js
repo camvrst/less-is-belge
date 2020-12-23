@@ -1,6 +1,8 @@
 import './style.scss';
 import $ from 'jquery';
 import { header, footer } from './src/view/view';
+import { contentarticle} from './src/view/article';
+// import axios from 'axios';
 
 /* INCLUDE HEADER AND FOOTER */
 const headerHTML = document.querySelector('header');
@@ -18,7 +20,8 @@ burgerMenu.addEventListener('click', () => {
   navLinks.classList.toggle('open');
   burgerMenu.classList.toggle('toggle');
 });
-
+// include article
+$('.main-articleSingle').html(contentarticle);
 
 // NEWSLETTER INSCRIPTION
 
@@ -47,7 +50,7 @@ function openModal(e) {
     overlay.style.display = 'block';
   }
 }
-// faire disparaitre ma pop-up
+
 const btnClose = document.getElementById('btnClose');
 
 btnClose.addEventListener('click', closeModal);

@@ -1,7 +1,7 @@
 import './style.scss';
 import L from 'leaflet';
 import $ from 'jquery';
-import { marques } from './src/data';
+import { marques } from './src/data/data';
 import { header, footer } from './src/view/view';
 import 'leaflet-defaulticon-compatibility';
 

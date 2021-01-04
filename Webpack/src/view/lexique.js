@@ -1,5 +1,5 @@
 import $ from 'jquery'; 
-import {lexiqueMat} from '../articles'
+import {lexiqueMat} from '../data/articles'
 import '../../style.scss';
 import { header, footer } from './view';
 

@@ -1,5 +1,5 @@
 import $ from 'jquery'; 
-import {articlesMarques} from '../articles'
+import {articlesMarques} from '../data/articles'
 import '../../style.scss';
 import { header, footer } from './view';
 

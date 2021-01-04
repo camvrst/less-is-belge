@@ -31,10 +31,13 @@
 .articlesingle {
   .page_article {
     margin-top: 50px;
-    height: 250px;
+    height: auto;
     background-color: $vert-clair;
     nav {
+      z-index: 25;
       width: 100%;
+      margin-bottom: 20px;
+      padding: 15px;
       ul {
         margin-left: 80px;
         a {
@@ -57,13 +60,14 @@
       h2 {
         font-size: $titre-pc-moyen;
         font-family: $secondary-font;
-        margin-left: 45%;
+        text-align: center;
         padding-top: 30px;
       }
       p {
         font-size: $mini-texte-pc;
         font-family: $main-font;
-        margin-left: 65%;
+        text-align: center;
+        margin: 20px 0;
       }
     }
   }
@@ -119,7 +123,9 @@
       }
     }
   }
+
   //article
+
   article {
     padding: 0;
     margin: O;
@@ -129,7 +135,6 @@
       width: 90%;
       height: 900px;
       .grande-img {
-        background-image: url("./static/assets/img/testphoto.jpg");
         background-size: cover;
         background-position: center center;
         width: 100%;
@@ -185,15 +190,13 @@
     }
     div {
       width: 90%;
-
       margin-left: 5%;
       .image-droite {
         padding: 0;
         margin: 0;
         width: 45%;
-        height: 750px;
+        height: 650px;
         .droite {
-          background-image: url("./static/assets/img/testphoto.jpg");
           background-size: cover;
           background-position: center center;
           width: 100%;
@@ -204,9 +207,8 @@
         padding: 0;
         margin: 0;
         width: 45%;
-        height: 750px;
+        height: 650px;
         .gauche {
-          background-image: url("./static/assets/img/testphoto.jpg");
           background-size: cover;
           background-position: center center;
           width: 100%;
@@ -217,7 +219,6 @@
   }
   @media screen and (max-width: 992px) {
     article {
-      width: 720px;
       .container-image {
         height: 700px;
         width: 100%;
@@ -251,13 +252,13 @@
         width: 100%;
         margin-left: 10%;
         .gauche {
-          width: 50%;
+          width: 45%;
           padding: 10px;
           z-index: -50;
           transform: translateY(0%);
         }
         .droite {
-          width: 50%;
+          width: 45%;
           padding: 10px;
           z-index: 0;
           z-index: -50;
@@ -542,5 +543,65 @@
     p {
       font-size: 16px;
     }
+  }
+}
+
+.grande-img .img-fiche3 {
+  background-image: url("./static/assets/img/jewels.jpg");
+}
+
+.img-fiche3 {
+  .droite {
+    background-image: url("./static/assets/img/beach.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-fiche3 {
+  .gauche {
+    background-image: url("./static/assets/img/reduce.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-fiche0 {
+  .droite {
+    background-image: url("./static/assets/img/feuille2.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-fiche0 {
+  .gauche {
+    background-image: url("./static/assets/img/custom-vest.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-fiche1 {
+  .droite {
+    background-image: url("./static/assets/img/jeans2.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-fiche1 {
+  .gauche {
+    background-image: url("./static/assets/img/seewhat.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-fiche2 {
+  .droite {
+    background-image: url("./static/assets/img/rental.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-fiche2 {
+  .gauche {
+    background-image: url("./static/assets/img/pink-girl.jpg");
+    margin-left: 0 !important;
   }
 }

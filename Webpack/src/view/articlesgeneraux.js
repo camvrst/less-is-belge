@@ -1,5 +1,5 @@
 import $ from 'jquery'; 
-import {lexiqueMat, fichesPrat, articlesInfos, articlesMarques} from '../articles'
+import {lexiqueMat, fichesPrat, articlesInfos, articlesMarques} from '../data/articles'
 import '../../style.scss';
 import { header, footer } from './view';
 
@@ -20,6 +20,11 @@ burgerMenu.addEventListener('click', () => {
   burgerMenu.classList.toggle('toggle');
 });
 
+export const selectFiche = (n) => {
+  let selectedFiche = n;
+  return selectedFiche;
+}
+
 export const contentartgeneraux = `
 <div>
 <!-- BTN GO UP-->
@@ -38,7 +43,7 @@ export const contentartgeneraux = `
     </ul>
   </nav>
   <article class="premiere-fiche">
-    <section class="premiere-section d-flex flex-wrap ">
+    <section class="premiere-section d-flex ">
       <div class="container-img">
         <div class="img-fiche3 bg-img-art-gen" ></div>
       </div>
@@ -58,29 +63,29 @@ export const contentartgeneraux = `
         <p>
         ${fichesPrat[3].contenu.p2}
         </p>
-        <a href="./article-simple.html" class="btnsuite-vert lien-fiche3">lire la suite</a>
+        <a href="./article-fiche3.html" class="btnsuite-vert lien-fiche3">lire la suite</a>
       </div>
     </section>
   </article>
   <article class="deuxieme-fiche">
-      <section class="deuxieme-section d-flex flex-wrap justify-around">
-        <div class="art1 ">
+      <section class="deuxieme-section d-flex justify-around">
+        <div class="art1 sm-w-full">
           <div class="img-fiche0 bg-img-art"></div>
-          <a href=# class="lien-fiche0"> <h5>${fichesPrat[0].titre}</h5></a>
+          <a href="./article-fiche0.html" class="lien-fiche0" onclick="selectFiche(0)"> <h5>${fichesPrat[0].titre}</h5></a>
           <p>
           ${fichesPrat[0].contenu.p1}
           </p>
         </div>
-        <div class="art2">
+        <div class="art2 sm-w-full">
           <div class="img-fiche1 bg-img-art"></div>
-          <a href=# class="lien-fiche1"> <h5>${fichesPrat[1].titre}</h5></a>
+          <a href="./article-fiche1.html" class="lien-fiche1"> <h5>${fichesPrat[1].titre}</h5></a>
           <p>
           ${fichesPrat[1].contenu.p1}
           </p>
         </div>
-        <div class="art3">
+        <div class="art3 sm-w-full">
           <div class="img-fiche2 bg-img-art"></div>
-          <a href=# class="lien-fiche2"> <h5>${fichesPrat[2].titre}</h5></a>
+          <a href="./article-fiche2.html" class="lien-fiche2"> <h5>${fichesPrat[2].titre}</h5></a>
           <p>
           ${fichesPrat[2].contenu.p1}
           </p>
@@ -100,7 +105,7 @@ export const contentartgeneraux = `
    </ul>
  </nav>
  <article class="premiere-fiche">
-   <section class="premiere-section d-flex flex-wrap ">
+   <section class="premiere-section d-flex ">
     <div class="container-img">
       <div class="img-lexique3 bg-img-art-gen" ></div>
     </div>
@@ -120,27 +125,27 @@ export const contentartgeneraux = `
        <p>
        ${lexiqueMat[3].contenu.p2}
        </p>
-       <a href="" class="btnsuite-rose lien-lexique3">lire la suite</a>
+       <a href="./article-lexique3.html" class="btnsuite-rose lien-lexique3">lire la suite</a>
      </div>
    </section>
  </article>
  <article class="deuxieme-fiche">
-     <section class="deuxieme-section d-flex flex-wrap justify-around">
-       <div class="art1">
+     <section class="deuxieme-section d-flex justify-around">
+       <div class="art1 sm-w-full">
         <div class="img-lexique0 bg-img-art" ></div>
-         <a href=# class="lien-lexique0"><h5>${lexiqueMat[0].titre}</h5></a>
+         <a href="./article-lexique0.html" class="lien-lexique0"><h5>${lexiqueMat[0].titre}</h5></a>
          <p>
          ${lexiqueMat[0].contenu.p1}
          </p>
        </div>
-       <div class="art2">
+       <div class="art2 sm-w-full">
         <div class="img-lexique1 bg-img-art" ></div>
         <a href=# class="lien-lexique1"><h5>${lexiqueMat[1].titre}</h5></a>
          <p>
          ${lexiqueMat[1].contenu.p1}
          </p>
        </div>
-       <div class="art3">
+       <div class="art3 sm-w-full">
         <div class="img-lexique2 bg-img-art" ></div>
         <a href=# class="lien-lexique2"><h5>${lexiqueMat[2].titre}</h5></a>
          <p>
@@ -163,60 +168,52 @@ export const contentartgeneraux = `
     </ul>
   </nav>
   <article class="premiere-fiche">
-    <section class="premiere-section d-flex flex-wrap ">
+    <section class="premiere-section d-flex ">
       <div class="container-img">
-        <div class="img-premiere" ></div>
+        <div class="img-infos3 bg-img-art-gen" ></div>
       </div>
       <div class="para" >
         <div class="hr-rosefonce"></div>
         <div class="d-flex items-end">
-          <p class="date"><i class="far fa-clock"></i>12 décembre 2020</p>
+          <p class="date"><i class="far fa-clock"></i>${articlesInfos[3].date}</p>
           <div class="petit-hr-rosefonce"></div>
           <p class="comments">
-            <i class="fas fa-comment"></i>5 commentaires
+            <i class="fas fa-comment"></i>${articlesInfos[3].commentaires.length} commentaires
           </p>
         </div>
-        <h4>Comment consommer ces vêtements de maniére durable?</h4>
+        <h4>${articlesInfos[3].titre}</h4>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-          Numquam, dicta, magni itaque accusantium libero natus doloremque
-          ratione optio deserunt corrupti consequuntur. Laudantium
-          accusantium, autem expedita suscipit eum accusamus molestiae
-          eaque?
+        ${articlesInfos[3].contenu.p1}
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
-          modi doloremque aliquid ipsum sequi possimus.
+        ${articlesInfos[3].contenu.p2}
         </p>
-        <a href="" class="btnsuite-rosefonce">lire la suite</a>
+        <a href="" class="btnsuite-rosefonce lien-infos3">lire la suite</a>
       </div>
     </section>
   </article>
   <article class="deuxieme-fiche">
-      <section class="deuxieme-section d-flex flex-wrap justify-around">
-        <div class="art1 ">
-          <div class="img1" ></div>
-          <h5>Titre</h5>
+      <section class="deuxieme-section d-flex  justify-around">
+        <div class="art1 sm-w-full ">
+          <div class="img-infos0 bg-img-art" ></div>
+          <a href=# class="lien-infos0"><h5>${articlesInfos[0].titre}</h5></a>
           <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
-              modi doloremque aliquid ipsum sequi possimus.
-            </p>
+          ${articlesInfos[0].contenu.p1}
+          </p>
         </div>
-        <div class="art2 ">
-          <div class="img2" ></div>
-          <h5>Titre</h5>
+        <div class="art2 sm-w-full ">
+          <div class="img-infos1 bg-img-art" ></div>
+          <a href=# class="lien-infos1"><h5>${articlesInfos[1].titre}</h5></a>
           <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
-              modi doloremque aliquid ipsum sequi possimus.
-            </p>
+          ${articlesInfos[1].contenu.p1}
+          </p>
         </div>
-        <div class="art3 ">
-          <div class="img3" ></div>
-          <h5>Titre</h5>
+        <div class="art3 sm-w-full ">
+          <div class="img-infos2 bg-img-art" ></div>
+          <a href=# class="lien-infos2"><h5>${articlesInfos[2].titre}</h5></a>
           <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
-              modi doloremque aliquid ipsum sequi possimus.
-            </p>
+          ${articlesInfos[2].contenu.p1}
+          </p>
         </div>
       </section>
       <a href="./articles-infos.html" class="btn-pages btn-infos d-flex justify-around"><button >Voir tous les articles informatifs</button></a>
@@ -232,60 +229,52 @@ export const contentartgeneraux = `
    </ul>
  </nav>
  <article class="premiere-fiche">
-   <section class="premiere-section d-flex flex-wrap ">
+   <section class="premiere-section d-flex ">
     <div class="container-img">
-      <div class="img-premiere" ></div>
+      <div class="img-belge3 bg-img-art-gen" ></div>
     </div>
      <div class="para" >
        <div class="hr-vertmoyen"></div>
        <div class="d-flex items-end">
-         <p class="date"><i class="far fa-clock"></i>12 décembre 2020</p>
+         <p class="date"><i class="far fa-clock"></i>${articlesMarques[3].date}</p>
          <div class="petit-hr-vertmoyen"></div>
          <p class="comments">
-           <i class="fas fa-comment"></i>5 commentaires
+           <i class="fas fa-comment"></i>${articlesMarques[3].commentaires.length} commentaires
          </p>
        </div>
-       <h4>Connaissez-vous cette marque belge?</h4>
+       <h4>${articlesMarques[3].titre}</h4>
        <p>
-         Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-         Numquam, dicta, magni itaque accusantium libero natus doloremque
-         ratione optio deserunt corrupti consequuntur. Laudantium
-         accusantium, autem expedita suscipit eum accusamus molestiae
-         eaque?
+       ${articlesMarques[3].contenu.p1}
        </p>
        <p>
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
-         modi doloremque aliquid ipsum sequi possimus.
+       ${articlesMarques[3].contenu.p2}
        </p>
-       <a href="" class="btnsuite-vertmoyen">lire la suite</a>
+       <a href="" class="btnsuite-vertmoyen lien-belge3">lire la suite</a>
      </div>
    </section>
  </article>
  <article class="deuxieme-fiche">
      <section class="deuxieme-section d-flex flex-wrap justify-around">
-       <div class="art1 ">
-        <div class="img1" ></div>
-         <h5>Titre</h5>
+       <div class="art1 sm-w-full ">
+        <div class="img-belge0 bg-img-art" ></div>
+        <a href=# class="lien-belge0"><h5>${articlesMarques[0].titre}</h5></a>
          <p>
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
-             modi doloremque aliquid ipsum sequi possimus.
-           </p>
+         ${articlesMarques[0].contenu.p1}
+         </p>
        </div>
-       <div class="art2 ">
-        <div class="img2" ></div>
-         <h5>Titre</h5>
+       <div class="art2 sm-w-full ">
+        <div class="img-belge1 bg-img-art" ></div>
+        <a href=# class="lien-belge1"><h5>${articlesMarques[1].titre}</h5></a>
          <p>
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
-             modi doloremque aliquid ipsum sequi possimus.
-           </p>
+         ${articlesMarques[1].contenu.p1}
+         </p>
        </div>
-       <div class="art3 ">
-        <div class="img3" ></div>
-         <h5>Titre</h5>
+       <div class="art3 sm-w-full ">
+        <div class="img-belge2 bg-img-art" ></div>
+        <a href=# class="lien-belge2"><h5>${articlesMarques[2].titre}</h5></a>
          <p>
-             Lorem ipsum dolor sit amet consectetur adipisicing elit. Error,
-             modi doloremque aliquid ipsum sequi possimus.
-           </p>
+         ${articlesMarques[2].contenu.p1}
+         </p>
        </div>
      </section>
      <a href="./articles-marques.html" class="btn-pages btn-marques d-flex justify-around"><button>Voir tous les articles sur les marques belges</button> </a>
@@ -295,3 +284,76 @@ export const contentartgeneraux = `
 `;
 
 $('.main').html(contentartgeneraux);
+
+// CLICK -> LEAD TO ARTICLES
+
+// CLICK ARTICLE SIMPLE
+/*
+for (let i = 0; i < fichesPrat.length; i++) {
+  console.log(i);
+  console.log($( `.lien-fiche${i} > h5`));
+  $(`.lien-fiche${i} > h5`).on('click', () => {
+    console.log('click');
+    
+    
+    //location.href = './article-simple.html';
+    console.log('on page now');
+    showFiche(i);
+    console.log('done');
+  })
+}
+*/
+
+// CLICK ON FP
+/*
+
+$('.lien-fiche0 > h5').on('click', () => {
+  //location.href = './article-simple.html';
+  
+},showFiche(0));
+
+$('.lien-fiche1 > h5').on('click', () => {
+  //location.href = './article-simple.html';
+},showFiche(1));
+
+$('.lien-fiche2 > h5').on('click', () => {
+  //location.href = './article-simple.html';
+},showFiche(2));
+
+$('.lien-fiche3 > h5').on('click', () => {
+  //location.href = './article-simple.html';
+},showFiche(3));
+*/
+
+
+/*
+$('.lien-fiche3 > h5').on('click', () => {
+  location.href = './article-simple.html';
+}).then(showFiche(3));
+
+$('.lien-fiche0 > h5').on('click', () => {
+  location.href = './article-simple.html';
+  window.onload(showFiche(0));
+});
+$('.lien-fiche3 > h5').on('click', () => {
+
+  //location.href = './article-simple.html';
+
+  showFiche(3);
+});
+*/
+// CLICK ON LEXIQUE
+
+
+/*
+$('.lien-fiche0 > h5').on('click', () => {
+  console.log('click');
+  location.href = './article-simple.html';
+  console.log('on page now');
+  
+  $('.contentarticle').html(articleInHtml);
+  console.log('done');
+})
+*/
+//$('.contentarticle').html(articleInHtml);
+

@@ -7,7 +7,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: { main: './main.js', annuaire: './annuaire.js' , contact: './contact.js', articlesimple: './articlesimple.js', fichespratiques: './src/view/fichespratiques.js', lexique: './src/view/lexique.js', marquebe: './src/view/marquebe.js', articlesinfos : './src/view/articlesinfos.js', articlesgeneraux: './src/view/articlesgeneraux.js'},
+  entry: { main: './main.js', annuaire: './annuaire.js' , contact: './contact.js', articlesimple: './src/services/articlesimple.js', fichespratiques: './src/view/fichespratiques.js', lexique: './src/view/lexique.js', marquebe: './src/view/marquebe.js', articlesinfos : './src/view/articlesinfos.js', articlesgeneraux: './src/view/articlesgeneraux.js', fiche3: './src/view/fiche3.js', fiche0: './src/view/fiche0.js', fiche1: './src/view/fiche1.js', fiche2: './src/view/fiche2.js'},
   devtool: 'source-map',
   output: {
     filename: '[name].js',

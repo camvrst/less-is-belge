@@ -1,5 +1,5 @@
 import $ from 'jquery'; 
-import {fichesPrat} from '../articles'
+import {fichesPrat} from '../data/articles'
 import '../../style.scss';
 import { header, footer } from './view';
 
@@ -29,7 +29,7 @@ for (let i = 0; i < 3; i ++) {
   firstContentFiches += `
   <div class="artfp1 w-full lg-w-30">
               <div class="img-fiche${i} bg-img-art"></div>
-              <a href=# class="lien-fiche${i}"> <h5>${fichesPrat[i].titre}</h5></a>
+              <a href='./article-fiche${i}.html' class="lien-fiche${i}"> <h5>${fichesPrat[i].titre}</h5></a>
               <p>
                 ${fichesPrat[i].contenu.p1}
               </p>
@@ -60,7 +60,7 @@ const secondContentFiche = `
               <p>
               ${fichesPrat[3].contenu.p2}
               </p>
-              <a href="./article-simple.html" class="btnsuite-vert lien-fiche3" 
+              <a href="./article-fiche3.html" class="btnsuite-vert lien-fiche3" 
                 >lire la suite</a
               >
             </div>
@@ -74,21 +74,21 @@ export const contFiches = `
           <section class="section-fp-1 d-flex flex-wrap justify-around lg-w-90 w-full>
             <div class="artfp1 lg-w-30 sm-w-full">
               <div class="bg-img-art imgfp1"></div>
-              <a href=# class="lien-fiches0"><h5>${fichesPrat[0].titre}</h5></a>
+              <a href="./article-fiche0.html" class="lien-fiches0"><h5>${fichesPrat[0].titre}</h5></a>
               <p>
               ${fichesPrat[0].contenu.p1}
               </p>
             </div>
             <div class="artfp2 lg-w-20 sm-w-full">
               <div class="imgfp2"></div>
-              <a class="lien-fiches1" href=#><h5>${fichesPrat[1].titre}</h5></a>
+              <a class="lien-fiches1" href="./article-fiche1.html"><h5>${fichesPrat[1].titre}</h5></a>
               <p>
               ${fichesPrat[1].contenu.p1}
               </p>
             </div>
             <div class="artfp3 lg-w-20 sm-w-full">
               <div class="imgfp3 "></div>
-              <a class="lien-fiches2" href=#><h5>${fichesPrat[2].titre}</h5></a>
+              <a class="lien-fiches2" href="./article-fiche2.html"><h5>${fichesPrat[2].titre}</h5></a>
               <p>
               ${fichesPrat[2].contenu.p1}
               </p>
@@ -116,7 +116,7 @@ export const contFiches = `
               <p>
               ${fichesPrat[3].contenu.p2}
               </p>
-              <a href="./article-simple.html" class="btnsuite-vert lien-fiches3"
+              <a href="./article-fiche3.html" class="btnsuite-vert lien-fiches3"
                 >lire la suite</a
               >
             </div>

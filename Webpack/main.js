@@ -1,16 +1,7 @@
 import './style.scss';
 import $ from 'jquery';
 import { header, footer } from './src/view/view';
-import {contentarticle} from './src/view/article';
 
-/*
-import {contFiches} from './src/view/fichespratiques';
-import {continfo} from './src/view/articlesinfos';
-import {contentLexique} from './src/view/lexique';
-import { lexiqueMat } from './src/articles'
-//import './src/view/marquebe';
-// import axios from 'axios';
-*/
 /* INCLUDE HEADER AND FOOTER */
 const headerHTML = document.querySelector('header');
 const footerHTML = document.querySelector('footer.footer');
@@ -27,20 +18,6 @@ burgerMenu.addEventListener('click', () => {
   navLinks.classList.toggle('open');
   burgerMenu.classList.toggle('toggle');
 });
-
-// inclus page article-generaux
-$('.main').html(contentartgeneraux);
-// include article
-$('.contentarticle').html(contentarticle);
-// inclus page fiches prtaiques
-//$('.content-fichespratiques').html(contfiches);
-// inclus page articles informatifs
-$('.continfo').html(continfo);
-// inclus page lexique des matiéres
-//$('.contentlexique').html(contentlexique);
-// inclus page marques belges
-$('.contentmarques').html(contentmarques);
-
 
 
 // NEWSLETTER INSCRIPTION
@@ -79,7 +56,6 @@ function closeModal() {
   overlay.style.display = 'none';
  // formulaire.style.display = 'none';
 };
-
 
 // HOVER ON NAV MENU
 

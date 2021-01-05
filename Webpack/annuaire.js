@@ -1,9 +1,10 @@
 import './style.scss';
 import L from 'leaflet';
 import $ from 'jquery';
-import { marques } from './src/data';
+import { marques } from './src/data/data';
 import { header, footer } from './src/view/view';
 import 'leaflet-defaulticon-compatibility';
+
 
 /* INCLUDE HEADER AND FOOTER */
 const headerHTML = document.querySelector('header');
@@ -81,14 +82,35 @@ const reshowAllMarques = () => {
   }
 };
 
-// SHOW ONLY WOMEN
+// FILTRES
+
+const filtresActifs = [];
+
+const applyFilters = () => {
+  console.log(filtresActifs);
+  for (const div of marquesDiv) {
+    let isFound = false;
+    if (filtresActifs.length === 0) {
+      isFound = true;
+    }
+    for (const filtre of filtresActifs) {
+      isFound = div.classList.contains(filtre);
+    }
+    if (isFound) {
+      div.style.display = 'block';
+    } else {
+      div.style.display = 'none';
+    }
+  }
+};
+
 
 const showOnlyFemme = () => {
   for (const div of marquesDiv) {
     const divFemme = div.classList.contains('Femmes');
     if (divFemme) {
       div.style.display = 'block';
-    } else if (!divFemme) {
+    } else {
       div.style.display = 'none';
     }
   }
@@ -97,10 +119,12 @@ const showOnlyFemme = () => {
 showFemme.addEventListener('click', () => {
   radioFilled = !radioFilled;
   if (radioFilled === true) {
-    showOnlyFemme();
-  } else if (radioFilled === false) {
-    reshowAllMarques();
+    filtresActifs.push('Femmes');
+  } else {
+    const index = filtresActifs.indexOf('Femmes');
+    filtresActifs.splice(index, 1);
   }
+  applyFilters();
 });
 
 // SHOW ONLY MEN
@@ -110,7 +134,7 @@ const showOnlyHomme = () => {
     const divHomme = div.classList.contains('Hommes');
     if (divHomme) {
       div.style.display = 'block';
-    } else if (!divHomme) {
+    } else {
       div.style.display = 'none';
     }
   }
@@ -119,10 +143,12 @@ const showOnlyHomme = () => {
 showHomme.addEventListener('click', () => {
   radioFilled = !radioFilled;
   if (radioFilled === true) {
-    showOnlyHomme();
-  } else if (radioFilled === false) {
-    reshowAllMarques();
+    filtresActifs.push('Hommes');
+  } else {
+    const index = filtresActifs.indexOf('Hommes');
+    filtresActifs.splice(index, 1);
   }
+  applyFilters();
 });
 
 // SHOW ONLY CHILDREN
@@ -132,7 +158,7 @@ const showOnlyEnfant = () => {
     const divEnfant = div.classList.contains('Enfants');
     if (divEnfant) {
       div.style.display = 'block';
-    } else if (!divEnfant) {
+    } else {
       div.style.display = 'none';
     }
   }
@@ -141,10 +167,12 @@ const showOnlyEnfant = () => {
 showEnfant.addEventListener('click', () => {
   radioFilled = !radioFilled;
   if (radioFilled === true) {
-    showOnlyEnfant();
-  } else if (radioFilled === false) {
-    reshowAllMarques();
+    filtresActifs.push('Enfants');
+  } else {
+    const index = filtresActifs.indexOf('Enfants');
+    filtresActifs.splice(index, 1);
   }
+  applyFilters();
 });
 
 // SHOW ONLY MARKS THAT HAVE A SHOP
@@ -154,7 +182,7 @@ const showOnlyMaga = () => {
     const divMaga = div.classList.contains('Marque');
     if (divMaga) {
       div.style.display = 'block';
-    } else if (!divMaga) {
+    } else {
       div.style.display = 'none';
     }
   }
@@ -163,10 +191,12 @@ const showOnlyMaga = () => {
 showMaga.addEventListener('click', () => {
   radioFilled = !radioFilled;
   if (radioFilled === true) {
-    showOnlyMaga();
-  } else if (radioFilled === false) {
-    reshowAllMarques();
+    filtresActifs.push('Marque');
+  } else {
+    const index = filtresActifs.indexOf('Marque');
+    filtresActifs.splice(index, 1);
   }
+  applyFilters();
 });
 
 // SHOW ONLY MULTIMARKS
@@ -176,7 +206,7 @@ const showOnlyMulti = () => {
     const divMulti = div.classList.contains('Multimarques');
     if (divMulti) {
       div.style.display = 'block';
-    } else if (!divMulti) {
+    } else {
       div.style.display = 'none';
     }
   }
@@ -186,7 +216,7 @@ showMulti.addEventListener('click', () => {
   radioFilled = !radioFilled;
   if (radioFilled === true) {
     showOnlyMulti();
-  } else if (radioFilled === false) {
+  } else {
     reshowAllMarques();
   }
 });
@@ -198,7 +228,7 @@ const showOnlySeconde = () => {
     const divSeconde = div.classList.contains('Seconde-main');
     if (divSeconde) {
       div.style.display = 'block';
-    } else if (!divSeconde) {
+    } else {
       div.style.display = 'none';
     }
   }
@@ -208,7 +238,7 @@ showSeconde.addEventListener('click', () => {
   radioFilled = !radioFilled;
   if (radioFilled === true) {
     showOnlySeconde();
-  } else if (radioFilled === false) {
+  } else  {
     reshowAllMarques();
   }
 });

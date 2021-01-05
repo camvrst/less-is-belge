@@ -81,14 +81,21 @@
 
 // tous les articles
 
-.petite-fichesPratiques {
-  .section-fp-1 {
-    margin-top: 100px;
-    margin-left: 100px;
+.petite-fichesPratiques,
+.petite-lexique,
+.petite-belge,
+.petite-infos {
+  .section-fp-1,
+  .section-lexique-1,
+  .section-belge-1,
+  .section-infos-1 {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 100px;
     .artfp1 {
-      width: 500px;
-      height: 500px;
+      margin-top: 20px;
+      min-height: 800px;
       background-color: white;
       .imgfp1 {
         background-image: url("./static/assets/img/ampoule.jpg");
@@ -97,7 +104,6 @@
         width: 100%;
         height: 50%;
       }
-
       h5 {
         font-style: $main-font;
         font-size: $titre-pc-moyen;
@@ -116,8 +122,8 @@
       }
     }
     .artfp2 {
-      width: 350px;
-      height: 500px;
+      margin-top: 20px;
+      min-height: 800px;
       background-color: white;
       .imgfp2 {
         background-image: url("./static/assets/img/ampoule.jpg");
@@ -144,8 +150,8 @@
       }
     }
     .artfp3 {
-      width: 350px;
-      height: 500px;
+      margin-top: 20px;
+      min-height: 800px;
       background-color: white;
       .imgfp3 {
         background-image: url("./static/assets/img/ampoule.jpg");
@@ -174,23 +180,36 @@
   }
 }
 @media screen and (max-width: 576px) {
-  .petite-fichesPratiques {
-    .section-fp-1 {
+  .petite-fichesPratiques,
+  .petite-lexique,
+  .petite-belge,
+  .petite-infos {
+    .section-fp-1,
+    .section-lexique-1,
+    .section-belge-1,
+    .section-infos-1 {
       align-items: center;
       margin-left: 5px;
     }
   }
 }
 // fiches articles principale
-.grande-fichesPratiques {
-  .section-fp-2 {
+.grande-fichesPratiques,
+.grande-lexique,
+.grande-belge,
+.grande-infos {
+  .section-fp-2,
+  .section-lexique-2,
+  .section-infos-2,
+  .section-belge-2 {
     margin-top: 60px;
     margin-left: 250px;
     .container-img {
       width: 450px;
       height: 700px;
-      .img-fp {
-        background-image: url("./static/assets/img/ampoule.jpg");
+      .img-fp,
+      .img-fp4,
+      .bg-img-art {
         background-size: cover;
         background-position: center center;
         width: 100%;
@@ -284,8 +303,14 @@
 }
 
 @media screen and (max-width: 576px) {
-  .grande-fichesPratiques {
-    .section-fp-2 {
+  .grande-fichesPratiques,
+  .grande-lexique,
+  .grande-belge,
+  .grande-infos {
+    .section-fp-2,
+    .section-lexique-2,
+    .section-belge-2,
+    .section-infos-2 {
       margin-top: 5px;
       margin-left: 5px;
       .container-img {
@@ -335,4 +360,97 @@
       }
     }
   }
+  .bg-img-art {
+    background-size: cover;
+    background-position: center center;
+    width: 100vw;
+    height: 350px;
+  }
+}
+
+.bg-img-art {
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 50%;
+}
+@media screen and (max-width: 576px) {
+  .bg-img-art {
+    background-size: cover;
+    background-position: center center;
+    width: 100vw;
+    height: 50vh;
+  }
+}
+
+// LEXIQUE MATIERE
+
+.img-lexique0 {
+  background-image: url("./static/assets/img/wool.jpg");
+}
+
+.img-lexique1 {
+  background-image: url("./static/assets/img/shirt.jpg");
+}
+
+.img-lexique2 {
+  background-image: url("./static/assets/img/tissu.jpg");
+}
+
+.img-lexique3 {
+  background-image: url("./static/assets/img/hang.jpg");
+}
+
+// FICHES PRAT
+
+.img-fiche0 {
+  background-image: url("./static/assets/img/buyless.jpg");
+}
+
+.img-fiche1 {
+  background-image: url("./static/assets/img/customize.jpg");
+}
+
+.img-fiche2 {
+  background-image: url("./static/assets/img/reasonable.jpg");
+}
+
+.img-fiche3 {
+  background-image: url("./static/assets/img/jewels.jpg");
+}
+
+// MARQUES BELGES
+
+.img-belge0 {
+  background-image: url("./static/assets/img/bluegirl.jpg");
+}
+
+.img-belge1 {
+  background-image: url("./static/assets/img/kids.jpg");
+}
+
+.img-belge2 {
+  background-image: url("./static/assets/img/shopping.jpg");
+}
+
+.img-belge3 {
+  background-image: url("./static/assets/img/shoes.jpg");
+}
+
+// ART INFOS
+
+.img-infos0 {
+  background-image: url("./static/assets/img/recycle.jpg");
+}
+
+.img-infos1 {
+  background-image: url("./static/assets/img/feuille.jpg");
+}
+
+.img-infos2 {
+  background-image: url("./static/assets/img/bw-women.jpg");
+}
+
+.img-infos3 {
+  background-image: url("./static/assets/img/plastic.jpg");
 }

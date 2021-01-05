@@ -4,8 +4,6 @@ import '../../style.scss';
 import { header, footer } from './view';
 import {showFiche} from '../services/articlesimple';
 
-
-
 /* INCLUDE HEADER AND FOOTER */
 const headerHTML = document.querySelector('header');
 const footerHTML = document.querySelector('footer.footer');

@@ -140,14 +140,14 @@ export const contentartgeneraux = `
        </div>
        <div class="art2 sm-w-full">
         <div class="img-lexique1 bg-img-art" ></div>
-        <a href=# class="lien-lexique1"><h5>${lexiqueMat[1].titre}</h5></a>
+        <a href="./article-lexique1.html" class="lien-lexique1"><h5>${lexiqueMat[1].titre}</h5></a>
          <p>
          ${lexiqueMat[1].contenu.p1}
          </p>
        </div>
        <div class="art3 sm-w-full">
         <div class="img-lexique2 bg-img-art" ></div>
-        <a href=# class="lien-lexique2"><h5>${lexiqueMat[2].titre}</h5></a>
+        <a href="./article-lexique2.html" class="lien-lexique2"><h5>${lexiqueMat[2].titre}</h5></a>
          <p>
          ${lexiqueMat[2].contenu.p1}
          </p>
@@ -188,7 +188,7 @@ export const contentartgeneraux = `
         <p>
         ${articlesInfos[3].contenu.p2}
         </p>
-        <a href="" class="btnsuite-rosefonce lien-infos3">lire la suite</a>
+        <a href="./article-infos3.html" class="btnsuite-rosefonce lien-infos3">lire la suite</a>
       </div>
     </section>
   </article>
@@ -196,21 +196,21 @@ export const contentartgeneraux = `
       <section class="deuxieme-section d-flex  justify-around">
         <div class="art1 sm-w-full ">
           <div class="img-infos0 bg-img-art" ></div>
-          <a href=# class="lien-infos0"><h5>${articlesInfos[0].titre}</h5></a>
+          <a href="./article-infos0.html" class="lien-infos0"><h5>${articlesInfos[0].titre}</h5></a>
           <p>
           ${articlesInfos[0].contenu.p1}
           </p>
         </div>
         <div class="art2 sm-w-full ">
           <div class="img-infos1 bg-img-art" ></div>
-          <a href=# class="lien-infos1"><h5>${articlesInfos[1].titre}</h5></a>
+          <a href="./article-infos1.html" class="lien-infos1"><h5>${articlesInfos[1].titre}</h5></a>
           <p>
           ${articlesInfos[1].contenu.p1}
           </p>
         </div>
         <div class="art3 sm-w-full ">
           <div class="img-infos2 bg-img-art" ></div>
-          <a href=# class="lien-infos2"><h5>${articlesInfos[2].titre}</h5></a>
+          <a href="./article-infos2.html" class="lien-infos2"><h5>${articlesInfos[2].titre}</h5></a>
           <p>
           ${articlesInfos[2].contenu.p1}
           </p>
@@ -249,7 +249,7 @@ export const contentartgeneraux = `
        <p>
        ${articlesMarques[3].contenu.p2}
        </p>
-       <a href="" class="btnsuite-vertmoyen lien-belge3">lire la suite</a>
+       <a href="./article-marque3.html" class="btnsuite-vertmoyen lien-belge3">lire la suite</a>
      </div>
    </section>
  </article>
@@ -257,21 +257,21 @@ export const contentartgeneraux = `
      <section class="deuxieme-section d-flex flex-wrap justify-around">
        <div class="art1 sm-w-full ">
         <div class="img-belge0 bg-img-art" ></div>
-        <a href=# class="lien-belge0"><h5>${articlesMarques[0].titre}</h5></a>
+        <a href="./article-marque0.html" class="lien-belge0"><h5>${articlesMarques[0].titre}</h5></a>
          <p>
          ${articlesMarques[0].contenu.p1}
          </p>
        </div>
        <div class="art2 sm-w-full ">
         <div class="img-belge1 bg-img-art" ></div>
-        <a href=# class="lien-belge1"><h5>${articlesMarques[1].titre}</h5></a>
+        <a href="./article-marque1.html" class="lien-belge1"><h5>${articlesMarques[1].titre}</h5></a>
          <p>
          ${articlesMarques[1].contenu.p1}
          </p>
        </div>
        <div class="art3 sm-w-full ">
         <div class="img-belge2 bg-img-art" ></div>
-        <a href=# class="lien-belge2"><h5>${articlesMarques[2].titre}</h5></a>
+        <a href="./article-marque2.html" class="lien-belge2"><h5>${articlesMarques[2].titre}</h5></a>
          <p>
          ${articlesMarques[2].contenu.p1}
          </p>

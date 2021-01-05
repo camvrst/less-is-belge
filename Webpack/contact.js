@@ -23,9 +23,6 @@ burgerMenu.addEventListener('click', () => {
 
 // CONTACT FORM
 
-
-  //const formulaire = document.getElementById('formulaire');
-
   // INPUTS FORM
   const nom = document.getElementById('nom');
   const prenom = document.getElementById('prenom');
@@ -46,19 +43,37 @@ burgerMenu.addEventListener('click', () => {
   // OVERLAY POP UP FOR MSG SENT
 
   const overlay = document.getElementById('overlay');
+
   btnEnvoyer.addEventListener('click', openMoadl);
   function openMoadl(e) {
     e.preventDefault();
     if (document.querySelector('form').checkValidity()) {
+      const overlayHTML = `
+        <div id="popup" class="popup">
+          <span id="btnClose" class="btnClose">&times;</span>
+          <h2>Merci pour votre message, ${prenom.value} !</h2>
+          <p class="popText">
+            Nous vous répondrons dans les plus bref délais.
+          </p>
+          <img
+            class="w-full"
+            src="../assets/img/msg-sent.png"
+            alt="Message envoyé"
+          />
+        </div>
+      `
+      overlay.innerHTML = overlayHTML;
       overlay.style.display = 'block';
+      const btnClose = document.getElementById('btnClose');
+      btnClose.addEventListener('click', closeModal);
+      function closeModal() {
+        overlay.style.display = 'none';
+      };
+      prenom.value = '';
+      nom.value = '';
+      email.value = '';
+      msg.value = '';
     }
   }
-  // faire disparaitre ma pop-up
-  const btnClose = document.getElementById('btnClose');
 
-  btnClose.addEventListener('click', closeModal);
 
-  function closeModal() {
-    overlay.style.display = 'none';
-   // formulaire.style.display = 'none';
-  };

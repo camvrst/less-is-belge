@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,9 +8,54 @@
   <header></header>
   <body>
     <main>
-      <h1>S'inscrire à la newsletter</h1>
+      <div class="container d-flex w-full">
+        <div class="lg-w-50 w-full">
+          <div class="img-contact w-full">
+            <img
+              src="../assets/img/newsletter.jpg"
+              alt="Newsletter"
+              class="w-80"
+            />
+          </div>
+        </div>
+        <div class="lg-w-50 contact-section w-full">
+          <div class="separation"></div>
+          <div class="h1-contact">
+            <h1>S'inscrire à la newsletter</h1>
+          </div>
+          <div class="p-contact">
+            <p>
+              Inscrivez-vous à notre newsletter et recevez une fois par mois
+              toutes nos nouveautés !
+            </p>
+          </div>
+          <form action="#" class="formulaire">
+            <div class="formulaire">
+              <label for="nom">Nom </label> <br />
+              <input type="text" name="nom" id="nom" required />
+            </div>
+            <br />
+            <div class="formulaire">
+              <label for="prenom">Prénom</label> <br />
+              <input type="text" name="prenom" id="prenom" required />
+            </div>
+            <br />
+            <div class="formulaire">
+              <label for="email">Adresse e-mail</label> <br />
+              <input type="email" name="email" id="email" required />
+            </div>
+            <br />
+            <div class="formulaire">
+              <button class="btn-contact" id="btnPopContact" type="submit">
+                s'inscrire
+              </button>
+            </div>
+            <div id="overlay" class="overlay-newsletter"></div>
+          </form>
+        </div>
+      </div>
     </main>
     <footer class="footer"></footer>
-    <script src="main.js"></script>
+    <script src="newsletter.js"></script>
   </body>
 </html>

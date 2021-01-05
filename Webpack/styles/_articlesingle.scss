@@ -1,32 +1,6 @@
 @use "variables" as *;
 @use "framework" as *;
 
-/*responsive
-.container-article {
-  width: 1140px;
-  margin: auto;
-}
-@media screen and (max-width: 1200px) {
-  .container-article {
-    width: 960px;
-  }
-}
-@media screen and (max-width: 992px) {
-  .container-article {
-    width: 720px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .container-article {
-    width: 540px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .container-article {
-    width: 100%;
-  }
-}*/
-
 // fil d'ariane page article
 .articlesingle {
   .page_article {
@@ -552,14 +526,14 @@
 
 .img-fiche3 {
   .droite {
-    background-image: url("./static/assets/img/beach.jpg");
+    background-image: url("./static/assets/img/bijou.jpg");
     margin-left: 0 !important;
   }
 }
 
 .img-fiche3 {
   .gauche {
-    background-image: url("./static/assets/img/reduce.jpg");
+    background-image: url("./static/assets/img/pierres.jpg");
     margin-left: 0 !important;
   }
 }
@@ -615,7 +589,7 @@
 
 .img-lexique0 {
   .gauche {
-    background-image: url("./static/assets/img/pinceillu.png");
+    background-image: url("./static/assets/img/laine.jpg");
     margin-left: 0 !important;
   }
 }
@@ -636,7 +610,7 @@
 
 .img-lexique2 {
   .droite {
-    background-image: url("./static/assets/img/silk.jpg");
+    background-image: url("./static/assets/img/modal.jpg");
     margin-left: 0 !important;
   }
 }
@@ -706,14 +680,14 @@
 
 .img-infos3 {
   .droite {
-    background-image: url("./static/assets/img/jeans.jpg");
+    background-image: url("./static/assets/img/revolte.jpg");
     margin-left: 0 !important;
   }
 }
 
 .img-infos3 {
   .gauche {
-    background-image: url("./static/assets/img/custom-pant.jpg");
+    background-image: url("./static/assets/img/truecost.jpg");
     margin-left: 0 !important;
   }
 }

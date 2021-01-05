@@ -25,6 +25,7 @@ burgerMenu.addEventListener('click', () => {
 // INPUTS FORM
 const nomNews = document.getElementById('nom-newsletter');
 const prenomNews = document.getElementById('prenom-newsletter');
+const emailNews = document.getElementById('email-newsletter');
 const btnEnvoyerNews = document.getElementById('btn-newsletter');
 
 btnEnvoyerNews.disabled = true;
@@ -54,9 +55,12 @@ btnClose.addEventListener('click', closeModal);
 
 function closeModal() {
   overlay.style.display = 'none';
- // formulaire.style.display = 'none';
+  prenomNews.value = '';
+  nomNews.value = '';
+  emailNews.value = '';
 };
 
+/* To be continued...
 // HOVER ON NAV MENU
 
 $(
@@ -64,5 +68,5 @@ $(
     $("dropdown-articles-pc").addClass("active")
   })
 )
-
+*/
 

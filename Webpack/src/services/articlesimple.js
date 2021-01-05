@@ -1,11 +1,10 @@
 import $ from 'jquery'; 
 import {lexiqueMat, fichesPrat, articlesMarques, articlesInfos} from '../data/articles'
 import '../../style.scss';
-import { header, footer } from '../view/view';
 
-// TEMPLATE ARTICLE
+// ONGLETS ARTICLES 
 
-let nombreArticles = fichesPrat.length + lexiqueMat.length + articlesMarques.length + articlesInfos.length;
+// let nombreArticles = fichesPrat.length + lexiqueMat.length + articlesMarques.length + articlesInfos.length;
 
 export const showFiche = (n) => {
   const articleInHtml = `
@@ -20,7 +19,7 @@ export const showFiche = (n) => {
             <ul class="w-90 d-flex">
               <a href="./index.html"><li class="first-li">Accueil</li></a>
               <a href="./articles-generaux.html"><li>Articles</li></a>
-              <a href="./fiches-pratiques.html"><li>Fiches techniques</li></a>
+              <a href="./fiches-pratiques.html"><li>Fiches pratiques</li></a>
             </ul>
             <h2>${fichesPrat[n].titre}</h2>
             <p>${fichesPrat[n].auteur}</p>
@@ -140,7 +139,7 @@ export const showFiche = (n) => {
       </div>
     </section>
     <section class="posted-comments w-full lg-w-80">
-      <h3>Commentaires</h3>
+      <h3>Commentaires (${fichesPrat[n].commentaires.length})</h3>
       <span class="hr-vert"></span>
       <div class="w-full d-flex items-center comment">
         <div>
@@ -310,7 +309,7 @@ export const showLexique = (n) => {
       </div>
     </section>
     <section class="posted-comments w-full lg-w-80">
-      <h3>Commentaires</h3>
+      <h3>Commentaires (${lexiqueMat[n].commentaires.length})</h3>
       <span class="hr-vert"></span>
       <div class="w-full d-flex items-center comment">
         <div>
@@ -478,7 +477,7 @@ export const showInfos = (n) => {
       </div>
     </section>
     <section class="posted-comments w-full lg-w-80">
-      <h3>Commentaires</h3>
+      <h3>Commentaires (${articlesInfos[n].commentaires.length})</h3>
       <span class="hr-vert"></span>
       <div class="w-full d-flex items-center comment">
         <div>
@@ -647,7 +646,7 @@ export const showMarques = (n) => {
       </div>
     </section>
     <section class="posted-comments w-full lg-w-80">
-      <h3>Commentaires</h3>
+      <h3>Commentaires (${articlesMarques[n].commentaires.length})</h3>
       <span class="hr-vert"></span>
       <div class="w-full d-flex items-center comment">
         <div>

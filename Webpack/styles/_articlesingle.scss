@@ -1,40 +1,17 @@
 @use "variables" as *;
 @use "framework" as *;
 
-/*responsive
-.container-article {
-  width: 1140px;
-  margin: auto;
-}
-@media screen and (max-width: 1200px) {
-  .container-article {
-    width: 960px;
-  }
-}
-@media screen and (max-width: 992px) {
-  .container-article {
-    width: 720px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .container-article {
-    width: 540px;
-  }
-}
-@media screen and (max-width: 576px) {
-  .container-article {
-    width: 100%;
-  }
-}*/
-
 // fil d'ariane page article
 .articlesingle {
   .page_article {
     margin-top: 50px;
-    height: 250px;
+    height: auto;
     background-color: $vert-clair;
     nav {
+      z-index: 25;
       width: 100%;
+      margin-bottom: 20px;
+      padding: 15px;
       ul {
         margin-left: 80px;
         a {
@@ -57,13 +34,14 @@
       h2 {
         font-size: $titre-pc-moyen;
         font-family: $secondary-font;
-        margin-left: 45%;
+        text-align: center;
         padding-top: 30px;
       }
       p {
         font-size: $mini-texte-pc;
         font-family: $main-font;
-        margin-left: 65%;
+        text-align: center;
+        margin: 20px 0;
       }
     }
   }
@@ -119,7 +97,9 @@
       }
     }
   }
+
   //article
+
   article {
     padding: 0;
     margin: O;
@@ -129,7 +109,6 @@
       width: 90%;
       height: 900px;
       .grande-img {
-        background-image: url("./static/assets/img/testphoto.jpg");
         background-size: cover;
         background-position: center center;
         width: 100%;
@@ -185,15 +164,13 @@
     }
     div {
       width: 90%;
-
       margin-left: 5%;
       .image-droite {
         padding: 0;
         margin: 0;
         width: 45%;
-        height: 750px;
+        height: 650px;
         .droite {
-          background-image: url("./static/assets/img/testphoto.jpg");
           background-size: cover;
           background-position: center center;
           width: 100%;
@@ -204,9 +181,8 @@
         padding: 0;
         margin: 0;
         width: 45%;
-        height: 750px;
+        height: 650px;
         .gauche {
-          background-image: url("./static/assets/img/testphoto.jpg");
           background-size: cover;
           background-position: center center;
           width: 100%;
@@ -217,7 +193,6 @@
   }
   @media screen and (max-width: 992px) {
     article {
-      width: 720px;
       .container-image {
         height: 700px;
         width: 100%;
@@ -251,13 +226,13 @@
         width: 100%;
         margin-left: 10%;
         .gauche {
-          width: 50%;
+          width: 45%;
           padding: 10px;
           z-index: -50;
           transform: translateY(0%);
         }
         .droite {
-          width: 50%;
+          width: 45%;
           padding: 10px;
           z-index: 0;
           z-index: -50;
@@ -542,5 +517,231 @@
     p {
       font-size: 16px;
     }
+  }
+}
+
+.grande-img .img-fiche3 {
+  background-image: url("./static/assets/img/jewels.jpg");
+}
+
+.img-fiche3 {
+  .droite {
+    background-image: url("./static/assets/img/bijou.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-fiche3 {
+  .gauche {
+    background-image: url("./static/assets/img/pierres.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-fiche0 {
+  .droite {
+    background-image: url("./static/assets/img/feuille2.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-fiche0 {
+  .gauche {
+    background-image: url("./static/assets/img/custom-vest.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-fiche1 {
+  .droite {
+    background-image: url("./static/assets/img/jeans2.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-fiche1 {
+  .gauche {
+    background-image: url("./static/assets/img/seewhat.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-fiche2 {
+  .droite {
+    background-image: url("./static/assets/img/rental.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-fiche2 {
+  .gauche {
+    background-image: url("./static/assets/img/pink-girl.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-lexique0 {
+  .droite {
+    background-image: url("./static/assets/img/sweat.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-lexique0 {
+  .gauche {
+    background-image: url("./static/assets/img/laine.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-lexique1 {
+  .droite {
+    background-image: url("./static/assets/img/jeans.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-lexique1 {
+  .gauche {
+    background-image: url("./static/assets/img/coton.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-lexique2 {
+  .droite {
+    background-image: url("./static/assets/img/modal.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-lexique2 {
+  .gauche {
+    background-image: url("./static/assets/img/silk2.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-lexique3 {
+  .droite {
+    background-image: url("./static/assets/img/lin.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-lexique3 {
+  .gauche {
+    background-image: url("./static/assets/img/lin2.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-infos0 {
+  .droite {
+    background-image: url("./static/assets/img/buyless.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-infos0 {
+  .gauche {
+    background-image: url("./static/assets/img/feuille2.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-infos1 {
+  .droite {
+    background-image: url("./static/assets/img/plastic.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-infos1 {
+  .gauche {
+    background-image: url("./static/assets/img/seewhat.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-infos2 {
+  .droite {
+    background-image: url("./static/assets/img/black-girl.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-infos2 {
+  .gauche {
+    background-image: url("./static/assets/img/consumeless.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-infos3 {
+  .droite {
+    background-image: url("./static/assets/img/revolte.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-infos3 {
+  .gauche {
+    background-image: url("./static/assets/img/truecost.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-belge0 {
+  .droite {
+    background-image: url("./static/assets/img/bag.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-belge0 {
+  .gauche {
+    background-image: url("./static/assets/img/polaroid.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-belge1 {
+  .droite {
+    background-image: url("./static/assets/img/pinceillu.png");
+    margin-left: 0 !important;
+  }
+}
+
+.img-belge1 {
+  .gauche {
+    background-image: url("./static/assets/img/order.jpg");
+    margin-left: 0 !important;
+  }
+}
+.img-belge2 {
+  .droite {
+    background-image: url("./static/assets/img/dressing.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-belge2 {
+  .gauche {
+    background-image: url("./static/assets/img/custom-vest.jpg");
+    margin-left: 0 !important;
+  }
+}
+.img-belge3 {
+  .droite {
+    background-image: url("./static/assets/img/reduce.jpg");
+    margin-left: 0 !important;
+  }
+}
+
+.img-belge3 {
+  .gauche {
+    background-image: url("./static/assets/img/beach.jpg");
+    margin-left: 0 !important;
   }
 }

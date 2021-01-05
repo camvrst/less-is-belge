@@ -1,23 +1,32 @@
 import './style.scss';
 import L from 'leaflet';
 import $ from 'jquery';
-import { marques } from './src/data';
+import { marques } from './src/data/data';
 import { header, footer } from './src/view/view';
 import 'leaflet-defaulticon-compatibility';
+
 
 /* INCLUDE HEADER AND FOOTER */
 const headerHTML = document.querySelector('header');
 const footerHTML = document.querySelector('footer.footer');
-console.log(headerHTML);
 
 headerHTML.innerHTML = header;
 footerHTML.innerHTML = footer;
+
+// ***** NAV BAR ANIMATION ON CLICK RESPONSIVE ***** //
+
+const burgerMenu = document.querySelector('.burger-menu');
+const navLinks = document.querySelector('.nav-links');
+
+burgerMenu.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  burgerMenu.classList.toggle('toggle');
+});
 
 /* RADIO BUTTONS AND FILTERS */
 
 const radioBtns = document.querySelectorAll('.radio-btn');
 const sectionAnnuaire = document.querySelector('section.all-marques');
-console.log(sectionAnnuaire);
 
 for (let i = 0; i < radioBtns.length; i++) {
   radioBtns[i].addEventListener('click', () => {
@@ -50,7 +59,6 @@ const showAllMarques = () => {
 showAllMarques();
 
 // FILTERS ON MARKS
-/** *********** DEBUG A FAIRE : pas de multi-selections possibles */
 
 const showFemme = document.querySelector('button.show-femme');
 const showHomme = document.querySelector('button.show-homme');
@@ -60,147 +68,111 @@ const showMulti = document.querySelector('button.show-multi');
 const showSeconde = document.querySelector('button.show-seconde');
 const marquesDiv = document.querySelectorAll('.all-marques > div.w-40');
 
-// FUNCTION FOR SHOWING ALL MARKS
 let radioFilled = false;
-const reshowAllMarques = () => {
+let radioFilledFe = false;
+let radioFilledHo = false;
+let radioFilledEn = false;
+let radioFilledSe = false;
+let radioFilledMa = false;
+let radioFilledMu = false;
+
+// FILTRES
+
+let filtresActifs = [];
+
+const applyFilters = () => {
+  console.log(filtresActifs);
   for (const div of marquesDiv) {
-    const reshowMarques = div.classList.contains('w-40');
-    if (reshowMarques) {
-      div.style.display = 'block';
+    let isFound = false;
+    if (filtresActifs.length === 0) {
+      isFound = true;
     }
-  }
-};
-
-// SHOW ONLY WOMEN
-
-const showOnlyFemme = () => {
-  for (const div of marquesDiv) {
-    const divFemme = div.classList.contains('Femmes');
-    if (divFemme) {
-      div.style.display = 'block';
-    } else if (!divFemme) {
-      div.style.display = 'none';
+    for (const filtre of filtresActifs) {
+      isFound = div.classList.contains(filtre);
+      if (isFound) {
+        div.style.display = 'block';
+        break;
+      } else {
+        div.style.display = 'none';
+      }
     }
   }
 };
 
 showFemme.addEventListener('click', () => {
-  radioFilled = !radioFilled;
-  if (radioFilled === true) {
-    showOnlyFemme();
-  } else if (radioFilled === false) {
-    reshowAllMarques();
+  radioFilledFe = !radioFilledFe;
+  if (radioFilledFe === true) {
+    filtresActifs.push('Femmes');
+  } else {
+    const index = filtresActifs.indexOf('Femmes');
+    filtresActifs.splice(index, 1);
   }
+  applyFilters();
 });
 
 // SHOW ONLY MEN
 
-const showOnlyHomme = () => {
-  for (const div of marquesDiv) {
-    const divHomme = div.classList.contains('Hommes');
-    if (divHomme) {
-      div.style.display = 'block';
-    } else if (!divHomme) {
-      div.style.display = 'none';
-    }
-  }
-};
-
 showHomme.addEventListener('click', () => {
-  radioFilled = !radioFilled;
-  if (radioFilled === true) {
-    showOnlyHomme();
-  } else if (radioFilled === false) {
-    reshowAllMarques();
+  radioFilledHo = !radioFilledHo;
+  if (radioFilledHo === true) {
+    filtresActifs.push('Hommes');
+  } else {
+    const index = filtresActifs.indexOf('Hommes');
+    filtresActifs.splice(index, 1);
   }
+  applyFilters();
 });
 
 // SHOW ONLY CHILDREN
 
-const showOnlyEnfant = () => {
-  for (const div of marquesDiv) {
-    const divEnfant = div.classList.contains('Enfants');
-    if (divEnfant) {
-      div.style.display = 'block';
-    } else if (!divEnfant) {
-      div.style.display = 'none';
-    }
-  }
-};
-
 showEnfant.addEventListener('click', () => {
-  radioFilled = !radioFilled;
-  if (radioFilled === true) {
-    showOnlyEnfant();
-  } else if (radioFilled === false) {
-    reshowAllMarques();
+  radioFilledEn = !radioFilledEn;
+  if (radioFilledEn === true) {
+    filtresActifs.push('Enfants');
+  } else {
+    const index = filtresActifs.indexOf('Enfants');
+    filtresActifs.splice(index, 1);
   }
+  applyFilters();
 });
 
 // SHOW ONLY MARKS THAT HAVE A SHOP
 
-const showOnlyMaga = () => {
-  for (const div of marquesDiv) {
-    const divMaga = div.classList.contains('Marque');
-    if (divMaga) {
-      div.style.display = 'block';
-    } else if (!divMaga) {
-      div.style.display = 'none';
-    }
-  }
-};
-
 showMaga.addEventListener('click', () => {
-  radioFilled = !radioFilled;
-  if (radioFilled === true) {
-    showOnlyMaga();
-  } else if (radioFilled === false) {
-    reshowAllMarques();
+  radioFilledMa = !radioFilledMa;
+  if (radioFilledMa === true) {
+    filtresActifs.push('Marque');
+  } else {
+    const index = filtresActifs.indexOf('Marque');
+    filtresActifs.splice(index, 1);
   }
+  applyFilters();
 });
 
 // SHOW ONLY MULTIMARKS
 
-const showOnlyMulti = () => {
-  for (const div of marquesDiv) {
-    const divMulti = div.classList.contains('Multimarques');
-    if (divMulti) {
-      div.style.display = 'block';
-    } else if (!divMulti) {
-      div.style.display = 'none';
-    }
-  }
-};
-
 showMulti.addEventListener('click', () => {
-  radioFilled = !radioFilled;
-  if (radioFilled === true) {
-    showOnlyMulti();
-  } else if (radioFilled === false) {
-    reshowAllMarques();
+  radioFilledMu = !radioFilledMu;
+  if (radioFilledMu === true) {
+    filtresActifs.push('Multimarques');
+    } else {
+      const index = filtresActifs.indexOf('Mutlimarques');
+      filtresActifs.splice(index, 1);
   }
+  applyFilters();
 });
 
 // SHOW ONLY SECONDE MAIN
 
-const showOnlySeconde = () => {
-  for (const div of marquesDiv) {
-    const divSeconde = div.classList.contains('Seconde-main');
-    if (divSeconde) {
-      div.style.display = 'block';
-    } else if (!divSeconde) {
-      div.style.display = 'none';
-    }
-  }
-};
-
 showSeconde.addEventListener('click', () => {
-  radioFilled = !radioFilled;
-  if (radioFilled === true) {
-    showOnlySeconde();
-  } else if (radioFilled === false) {
-    reshowAllMarques();
+  radioFilledSe = !radioFilledSe;
+  if (radioFilledSe === true) {
+    filtresActifs.push('Seconde-main');
+  } else  {
+    const index = filtresActifs.indexOf('Seconde-main');
+    filtresActifs.splice(index, 1);
   }
+  applyFilters();
 });
 
 /* SEARCH BAR */
@@ -291,26 +263,10 @@ const myLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 });
 myMap.addLayer(myLayer);
 
-// INDIVUDAL MARKERS
-/*
-for (const marker of markers) {
-  const pin = L.marker(marker.coord);
-  pin.addTo(myMap);
-  pin.bindPopup(`${marker.nom}`);
-}
-*/
-// GROUPED MARKERS
-/*
-const markerGroup = [];
-for (const marker of marques) {
-  const pin = L.marker(marker.coord, { icon: eyeIconFe });
-  pin.bindPopup(`${marker.nom}`);
-  markerGroup.push(pin);
-}
-*/
+
 const markerMarque = [];
 for (const marker of marques) {
-  if (marker.categorie.includes('Marque')) {
+  if (marker.categorie.includes('Marque')  && marker.coord.length > 0) {
     const pinMarque = L.marker(marker.coord, { icon: eyeIconMa });
     pinMarque.bindPopup(`${marker.nom}`);
     markerMarque.push(pinMarque);
@@ -319,7 +275,7 @@ for (const marker of marques) {
 
 const markerSeconde = [];
 for (const marker of marques) {
-  if (marker.categorie.includes('Seconde-main')) {
+  if (marker.categorie.includes('Seconde-main')  && marker.coord.length > 0) {
     const pinSeconde = L.marker(marker.coord, { icon: eyeIconSe });
     pinSeconde.bindPopup(`${marker.nom}`);
     markerSeconde.push(pinSeconde);
@@ -328,15 +284,12 @@ for (const marker of marques) {
 
 const markerMulti = [];
 for (const marker of marques) {
-  if (marker.categorie.includes('Multimarques')) {
+  if (marker.categorie.includes('Multimarques') && marker.coord.length > 0) {
     const pinMulti = L.marker(marker.coord, { icon: eyeIconMu });
     pinMulti.bindPopup(`${marker.nom}`);
     markerMulti.push(pinMulti);
   }
 }
-
-// const pinGroup = L.layerGroup(markerGroup);
-// myMap.addLayer(pinGroup);
 
 const pinGroupMa = L.layerGroup(markerMarque);
 myMap.addLayer(pinGroupMa);

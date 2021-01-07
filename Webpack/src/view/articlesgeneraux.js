@@ -97,7 +97,7 @@ export const contentartgeneraux = `
           <p>
           ${truncateStr(
             fichesPrat[1].contenu.p1,
-            200
+            150
           )} <br/> <a class="lire-suite" href="./article-fiche1.html">Lire la suite</a>
           </p>
         </div>
@@ -326,7 +326,7 @@ export const contentartgeneraux = `
          <p>
          ${truncateStr(
            articlesMarques[0].contenu.p1,
-           200
+           150
          )} <br/> <a class="lire-suite" href="./article-marque0.html">Lire la suite</a>
          </p>
        </div>
@@ -338,7 +338,7 @@ export const contentartgeneraux = `
          <p>
          ${truncateStr(
            articlesMarques[1].contenu.p1,
-           200
+           150
          )} <br/> <a class="lire-suite" href="./article-marque1.html">Lire la suite</a>
          </p>
        </div>

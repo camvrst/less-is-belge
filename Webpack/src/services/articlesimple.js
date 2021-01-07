@@ -116,6 +116,7 @@ export const showFiche = (n) => {
           <button class="btn-pages" type="submit" id="btn-comments">
             ajouter
           </button>
+          <div id="overlay" class="overlay-comments"></div>
         </form>
       </div>
       <div class="lg-w-20 w-full">
@@ -284,6 +285,7 @@ export const showLexique = (n) => {
           <button class="btn-pages" type="submit" id="btn-comments">
             ajouter
           </button>
+          <div id="overlay" class="overlay-comments"></div>
         </form>
       </div>
       <div class="lg-w-20 w-full">
@@ -452,6 +454,7 @@ export const showInfos = (n) => {
           <button class="btn-pages" type="submit" id="btn-comments">
             ajouter
           </button>
+          <div id="overlay" class="overlay-comments"></div>
         </form>
       </div>
       <div class="lg-w-20 w-full">
@@ -620,6 +623,7 @@ export const showMarques = (n) => {
           <button class="btn-pages" type="submit" id="btn-comments">
             ajouter
           </button>
+          <div id="overlay" class="overlay-comments"></div>
         </form>
       </div>
       <div class="lg-w-20 w-full">

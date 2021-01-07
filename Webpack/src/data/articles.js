@@ -1,21 +1,20 @@
 export const fichesPrat = [
   {
-    titre: "Comment acheter intelligemment en friperie",
-    auteur: "Camille Verriest",
+    titre: "S'amuser avec ses propres vêtements",
+    auteur: "Fanny Wastelin",
     date: "23 décembre 2020",
     contenu: {
       p1:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sint ea est eaque animi veritatis placeat assumenda nobis reiciendis quod quos porro illum, aperiam recusandae voluptatem alias rerum perspiciatis praesentium!",
+        "Garder ses vêtements longtemps c’est aussi s’amuser avec eux ! Nous avons souvent tendance à mettre le même pull avec le même pantalon, tel chemisier avec telle jupe, etc.",
       p2:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sint ea est eaque animi veritatis placeat assumenda nobis reiciendis quod quos porro illum, aperiam recusandae voluptatem alias rerum perspiciatis praesentium!",
+        "Variez, amusez-vous devant votre miroir à changer vos combinaisons habituelles, marier des autres couleurs mais aussi des imprimés ensemble, n’hésitez pas à superposer des matières ! Par exemple, une petite robe légère avec un sous-pull en dessous pour l’hiver. <br/><br/> Dépareillez vos tailleurs « costumes », mélangez vos pièces chics avec des pièces sportswear pour les porter en journée, accessoirisez vos tenues : ceinturez vos vestes, ajoutez un foulard, etc.",
       p3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sint ea est eaque animi veritatis placeat assumenda nobis reiciendis quod quos porro illum, aperiam recusandae voluptatem alias rerum perspiciatis praesentium!",
-      p4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sint ea est eaque animi veritatis placeat assumenda nobis reiciendis quod quos porro illum, aperiam recusandae voluptatem alias rerum perspiciatis praesentium!",
+        " <b>En manque d’idées ? Inspirez-vous de ce qui vous entoure : </b> <br/><br/> -	Regarder dans la rue les looks des personnes que vous croisez, le choix des couleurs qu’elles portent, un accessoire en plus qui twiste leur look. <br/> - Trouvez sur les réseaux sociaux les « influenceuses/influenceurs » qui vous correspondent. On est tous différents et nous aimons tous des choses différentes alors ne suivez pas ceux dont tout le monde parle mais ceux qui vous correspondent réellement. Trouvez aussi ceux qui avec les mêmes habits créent des looks différents. <br/> - Puisez aussi les idées dans les shootings photos des magazines de mode (actuels mais aussi anciens), les séries télé, les films… et si ça vous amuse faites un petit collage de toutes ces inspirations pour ne pas les oublier et vous en servir devant votre dressing !",
+      p4: "N’oubliez pas, rester vous-même et AMUSEZ-VOUS !",
     },
     commentaires: [
       {
-        nom: "Fanny",
+        nom: "Camille",
         commentaire: "Super article !",
       },
       {
@@ -177,19 +176,18 @@ export const articlesInfos = [
     ],
   },
   {
-    titre:
-      "Le futur de la mode écologique : sur quoi doit se porter notre attention",
+    titre: "L'upcycling : quand le recyclage prend un nouveau visage",
     auteur: "Camille Verriest",
     date: "12 décembre 2020",
     contenu: {
       p1:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sint ea est eaque animi veritatis placeat assumenda nobis reiciendis quod quos porro illum, aperiam recusandae voluptatem alias rerum perspiciatis praesentium!",
+        " <b> Tout le monde c'est ce qu'est le recyclage, pas besoin de le rappeler. Mais avez-vous déjà entendu parler de l'upcycling, aka le super-recyclage ? </b> <br/> <br/>  L'upcycling consiste à récupérer des matériaux/objets usagés, dont on ne se sert plus pour leur donner une nouvelle vie. Contrairement au recyclage, dont le but est de détruire, ici, l'enjeu est de recréer à partir de ce que l'on possède. Customiser, assembler, détourner, utiliser des parties d'un tissu pour les ajouter à un t-shirt sont autant de façons de pratiquer l'upcycling. ",
       p2:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sint ea est eaque animi veritatis placeat assumenda nobis reiciendis quod quos porro illum, aperiam recusandae voluptatem alias rerum perspiciatis praesentium!",
+        "En gros, l'upcycling, c'est réutiliser des choses que l'on a déjà pour en faire des meilleures, qui n'ont parfois plus rien à voir avec l'objet d'origine. Sympa, non? <br/>Certes, cela demande un peu de créativité et d'imagination, mais voici un de nos articles qui pourra déjà vous donner quelques idées pour réparer ses vêtements au lieu de les jeter : <a class='lire-suite' href='./article-fiche1.html' target='blank'> voir l'article.</a> <br/><br/>",
       p3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sint ea est eaque animi veritatis placeat assumenda nobis reiciendis quod quos porro illum, aperiam recusandae voluptatem alias rerum perspiciatis praesentium!",
+        "Vous l'aurez deviner, l'upcycling n'a pas seulement comme enjeu principal la création, il a surtout des impacts positifs sur la planète, en termes d'écologie et de durabilité et de dépenses réduites en énergie. Et oui : fini le gaspillage et les déchets en abondance, grâce à cette pratique, nul besoin de produire des matières premières, d'utiliser de nouvelles ressources : tout commence avec ce que l'on a déjà. <b>Rien ne se perd, rien ne se crée : tout se transforme !</b>  ",
       p4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sint ea est eaque animi veritatis placeat assumenda nobis reiciendis quod quos porro illum, aperiam recusandae voluptatem alias rerum perspiciatis praesentium!",
+        "Un autre super pouvoir de l'upcycling est que tout le monde peut s'y mettre. Pas besoin de disposer de telle ou telle matière, tout est possible depuis notre propre garde-robe ! N'hésitez pas à repenser à vos vieux vêtements : si vous n'avez pas la possibilité de les donner (trop troués/tâchés), essayer de récupérer ce qui est convenable pour ensuite créer de nouvelles pièces !",
     },
     commentaires: [
       {

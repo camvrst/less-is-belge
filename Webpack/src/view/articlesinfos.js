@@ -1,24 +1,24 @@
-import $ from 'jquery'; 
-import {articlesInfos} from '../data/articles'
-import '../../style.scss';
-import { header, footer } from './view';
-
+import $ from "jquery";
+import { articlesInfos } from "../data/articles";
+import "../../style.scss";
+import { header, footer } from "./view";
+import { truncateStr } from "../helpers/truncate";
 
 /* INCLUDE HEADER AND FOOTER */
-const headerHTML = document.querySelector('header');
-const footerHTML = document.querySelector('footer.footer');
+const headerHTML = document.querySelector("header");
+const footerHTML = document.querySelector("footer.footer");
 
 headerHTML.innerHTML = header;
 footerHTML.innerHTML = footer;
 
 // ***** NAV BAR ANIMATION ON CLICK RESPONSIVE ***** //
 
-const burgerMenu = document.querySelector('.burger-menu');
-const navLinks = document.querySelector('.nav-links');
+const burgerMenu = document.querySelector(".burger-menu");
+const navLinks = document.querySelector(".nav-links");
 
-burgerMenu.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-  burgerMenu.classList.toggle('toggle');
+burgerMenu.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+  burgerMenu.classList.toggle("toggle");
 });
 
 // ARTICLES INFOS
@@ -26,18 +26,23 @@ burgerMenu.addEventListener('click', () => {
 // MARQUES BELGES
 
 // first 3 articles
-let firstContentInfos = '';
-for (let i = 0; i < 3; i ++) {
+let firstContentInfos = "";
+for (let i = 0; i < 3; i++) {
   firstContentInfos += `
   <div class="artfp1 w-full lg-w-30">
       <div class="img-infos${i} bg-img-art"></div>
-      <a href="./article-infos${i}.html" class="lien-infos${i}"> <h5>${articlesInfos[i].titre}</h5></a>
+      <a href="./article-infos${i}.html" class="lien-infos${i}"> <h5>${
+    articlesInfos[i].titre
+  }</h5></a>
       <p>
-        ${articlesInfos[i].contenu.p1}
+        ${truncateStr(
+          articlesInfos[i].contenu.p1,
+          200
+        )} <br/>  <a href="./article-infos${i}.html" class="lire-suite">Lire la suite</a>
       </p>
   </div>
-  `
-  $('.section-infos-1').html(firstContentInfos);
+  `;
+  $(".section-infos-1").html(firstContentInfos);
 }
 
 // 4th big article
@@ -66,9 +71,5 @@ const secondContentInfos = `
                 >lire la suite</a
               >
             </div>
-`
-$('.section-infos-2').html(secondContentInfos);
-
-
-
-   
+`;
+$(".section-infos-2").html(secondContentInfos);

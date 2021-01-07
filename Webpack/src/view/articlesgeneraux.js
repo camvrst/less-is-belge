@@ -1,29 +1,35 @@
-import $ from 'jquery'; 
-import {lexiqueMat, fichesPrat, articlesInfos, articlesMarques} from '../data/articles'
-import '../../style.scss';
-import { header, footer } from './view';
+import $ from "jquery";
+import {
+  lexiqueMat,
+  fichesPrat,
+  articlesInfos,
+  articlesMarques,
+} from "../data/articles";
+import "../../style.scss";
+import { header, footer } from "./view";
+import { truncateStr } from "../helpers/truncate";
 
 /* INCLUDE HEADER AND FOOTER */
-const headerHTML = document.querySelector('header');
-const footerHTML = document.querySelector('footer.footer');
+const headerHTML = document.querySelector("header");
+const footerHTML = document.querySelector("footer.footer");
 
 headerHTML.innerHTML = header;
 footerHTML.innerHTML = footer;
 
 // ***** NAV BAR ANIMATION ON CLICK RESPONSIVE ***** //
 
-const burgerMenu = document.querySelector('.burger-menu');
-const navLinks = document.querySelector('.nav-links');
+const burgerMenu = document.querySelector(".burger-menu");
+const navLinks = document.querySelector(".nav-links");
 
-burgerMenu.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-  burgerMenu.classList.toggle('toggle');
+burgerMenu.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+  burgerMenu.classList.toggle("toggle");
 });
 
 export const selectFiche = (n) => {
   let selectedFiche = n;
   return selectedFiche;
-}
+};
 
 export const contentartgeneraux = `
 <div>
@@ -53,7 +59,9 @@ export const contentartgeneraux = `
           <p class="date"><i class="far fa-clock"></i>${fichesPrat[3].date}</p>
           <div class="petit-hr-vert"></div>
           <p class="comments">
-            <i class="fas fa-comment"></i>${fichesPrat[3].commentaires.length} commentaires
+            <i class="fas fa-comment"></i>${
+              fichesPrat[3].commentaires.length
+            } commentaires
           </p>
         </div>
         <h4>${fichesPrat[3].titre}</h4>
@@ -71,23 +79,38 @@ export const contentartgeneraux = `
       <section class="deuxieme-section d-flex justify-around">
         <div class="art1 sm-w-full">
           <div class="img-fiche0 bg-img-art"></div>
-          <a href="./article-fiche0.html" class="lien-fiche0" onclick="selectFiche(0)"> <h5>${fichesPrat[0].titre}</h5></a>
+          <a href="./article-fiche0.html" class="lien-fiche0""> <h5>${
+            fichesPrat[0].titre
+          }</h5></a>
           <p>
-          ${fichesPrat[0].contenu.p1}
+          ${truncateStr(
+            fichesPrat[0].contenu.p1,
+            200
+          )} <br/> <a class="lire-suite" href="./article-fiche0.html">Lire la suite</a>
           </p>
         </div>
         <div class="art2 sm-w-full">
           <div class="img-fiche1 bg-img-art"></div>
-          <a href="./article-fiche1.html" class="lien-fiche1"> <h5>${fichesPrat[1].titre}</h5></a>
+          <a href="./article-fiche1.html" class="lien-fiche1"> <h5>${
+            fichesPrat[1].titre
+          }</h5></a>
           <p>
-          ${fichesPrat[1].contenu.p1}
+          ${truncateStr(
+            fichesPrat[1].contenu.p1,
+            150
+          )} <br/> <a class="lire-suite" href="./article-fiche1.html">Lire la suite</a>
           </p>
         </div>
         <div class="art3 sm-w-full">
           <div class="img-fiche2 bg-img-art"></div>
-          <a href="./article-fiche2.html" class="lien-fiche2"> <h5>${fichesPrat[2].titre}</h5></a>
+          <a href="./article-fiche2.html" class="lien-fiche2"> <h5>${
+            fichesPrat[2].titre
+          }</h5></a>
           <p>
-          ${fichesPrat[2].contenu.p1}
+          ${truncateStr(
+            fichesPrat[2].contenu.p1,
+            200
+          )} <br/> <a class="lire-suite" href="./article-fiche2.html">Lire la suite</a>
           </p>
         </div>
       </section>
@@ -115,7 +138,9 @@ export const contentartgeneraux = `
          <p class="date"><i class="far fa-clock"></i>${lexiqueMat[3].date}</p>
          <div class="petit-hr-roseclair"></div>
          <p class="comments">
-           <i class="fas fa-comment"></i>${lexiqueMat[3].commentaires.length} commentaires
+           <i class="fas fa-comment"></i>${
+             lexiqueMat[3].commentaires.length
+           } commentaires
          </p>
        </div>
        <h4>${lexiqueMat[3].titre}</h4>
@@ -133,23 +158,38 @@ export const contentartgeneraux = `
      <section class="deuxieme-section d-flex justify-around">
        <div class="art1 sm-w-full">
         <div class="img-lexique0 bg-img-art" ></div>
-         <a href="./article-lexique0.html" class="lien-lexique0"><h5>${lexiqueMat[0].titre}</h5></a>
+         <a href="./article-lexique0.html" class="lien-lexique0"><h5>${
+           lexiqueMat[0].titre
+         }</h5></a>
          <p>
-         ${lexiqueMat[0].contenu.p1}
+         ${truncateStr(
+           lexiqueMat[0].contenu.p1,
+           200
+         )} <br/> <a class="lire-suite" href="./article-lexique0.html">Lire la suite</a>
          </p>
        </div>
        <div class="art2 sm-w-full">
         <div class="img-lexique1 bg-img-art" ></div>
-        <a href="./article-lexique1.html" class="lien-lexique1"><h5>${lexiqueMat[1].titre}</h5></a>
+        <a href="./article-lexique1.html" class="lien-lexique1"><h5>${
+          lexiqueMat[1].titre
+        }</h5></a>
          <p>
-         ${lexiqueMat[1].contenu.p1}
+         ${truncateStr(
+           lexiqueMat[1].contenu.p1,
+           200
+         )} <br/> <a class="lire-suite" href="./article-lexique1.html">Lire la suite</a>
          </p>
        </div>
        <div class="art3 sm-w-full">
         <div class="img-lexique2 bg-img-art" ></div>
-        <a href="./article-lexique2.html" class="lien-lexique2"><h5>${lexiqueMat[2].titre}</h5></a>
+        <a href="./article-lexique2.html" class="lien-lexique2"><h5>${
+          lexiqueMat[2].titre
+        }</h5></a>
          <p>
-         ${lexiqueMat[2].contenu.p1}
+         ${truncateStr(
+           lexiqueMat[2].contenu.p1,
+           200
+         )} <br/> <a class="lire-suite" href="./article-lexique2.html">Lire la suite</a>
          </p>
        </div>
      </section>
@@ -175,10 +215,14 @@ export const contentartgeneraux = `
       <div class="para" >
         <div class="hr-rosefonce"></div>
         <div class="d-flex items-end">
-          <p class="date"><i class="far fa-clock"></i>${articlesInfos[3].date}</p>
+          <p class="date"><i class="far fa-clock"></i>${
+            articlesInfos[3].date
+          }</p>
           <div class="petit-hr-rosefonce"></div>
           <p class="comments">
-            <i class="fas fa-comment"></i>${articlesInfos[3].commentaires.length} commentaires
+            <i class="fas fa-comment"></i>${
+              articlesInfos[3].commentaires.length
+            } commentaires
           </p>
         </div>
         <h4>${articlesInfos[3].titre}</h4>
@@ -196,23 +240,38 @@ export const contentartgeneraux = `
       <section class="deuxieme-section d-flex  justify-around">
         <div class="art1 sm-w-full ">
           <div class="img-infos0 bg-img-art" ></div>
-          <a href="./article-infos0.html" class="lien-infos0"><h5>${articlesInfos[0].titre}</h5></a>
+          <a href="./article-infos0.html" class="lien-infos0"><h5>${
+            articlesInfos[0].titre
+          }</h5></a>
           <p>
-          ${articlesInfos[0].contenu.p1}
+          ${truncateStr(
+            articlesInfos[0].contenu.p1,
+            200
+          )} <br/> <a class="lire-suite" href="./article-infos0.html">Lire la suite</a>
           </p>
         </div>
         <div class="art2 sm-w-full ">
           <div class="img-infos1 bg-img-art" ></div>
-          <a href="./article-infos1.html" class="lien-infos1"><h5>${articlesInfos[1].titre}</h5></a>
+          <a href="./article-infos1.html" class="lien-infos1"><h5>${
+            articlesInfos[1].titre
+          }</h5></a>
           <p>
-          ${articlesInfos[1].contenu.p1}
+          ${truncateStr(
+            articlesInfos[1].contenu.p1,
+            200
+          )} <br/> <a class="lire-suite" href="./article-infos1.html">Lire la suite</a>
           </p>
         </div>
         <div class="art3 sm-w-full ">
           <div class="img-infos2 bg-img-art" ></div>
-          <a href="./article-infos2.html" class="lien-infos2"><h5>${articlesInfos[2].titre}</h5></a>
+          <a href="./article-infos2.html" class="lien-infos2"><h5>${
+            articlesInfos[2].titre
+          }</h5></a>
           <p>
-          ${articlesInfos[2].contenu.p1}
+          ${truncateStr(
+            articlesInfos[2].contenu.p1,
+            200
+          )} <br/> <a class="lire-suite" href="./article-infos2.html">Lire la suite</a>
           </p>
         </div>
       </section>
@@ -236,10 +295,14 @@ export const contentartgeneraux = `
      <div class="para" >
        <div class="hr-vertmoyen"></div>
        <div class="d-flex items-end">
-         <p class="date"><i class="far fa-clock"></i>${articlesMarques[3].date}</p>
+         <p class="date"><i class="far fa-clock"></i>${
+           articlesMarques[3].date
+         }</p>
          <div class="petit-hr-vertmoyen"></div>
          <p class="comments">
-           <i class="fas fa-comment"></i>${articlesMarques[3].commentaires.length} commentaires
+           <i class="fas fa-comment"></i>${
+             articlesMarques[3].commentaires.length
+           } commentaires
          </p>
        </div>
        <h4>${articlesMarques[3].titre}</h4>
@@ -257,23 +320,38 @@ export const contentartgeneraux = `
      <section class="deuxieme-section d-flex flex-wrap justify-around">
        <div class="art1 sm-w-full ">
         <div class="img-belge0 bg-img-art" ></div>
-        <a href="./article-marque0.html" class="lien-belge0"><h5>${articlesMarques[0].titre}</h5></a>
+        <a href="./article-marque0.html" class="lien-belge0"><h5>${
+          articlesMarques[0].titre
+        }</h5></a>
          <p>
-         ${articlesMarques[0].contenu.p1}
+         ${truncateStr(
+           articlesMarques[0].contenu.p1,
+           150
+         )} <br/> <a class="lire-suite" href="./article-marque0.html">Lire la suite</a>
          </p>
        </div>
        <div class="art2 sm-w-full ">
         <div class="img-belge1 bg-img-art" ></div>
-        <a href="./article-marque1.html" class="lien-belge1"><h5>${articlesMarques[1].titre}</h5></a>
+        <a href="./article-marque1.html" class="lien-belge1"><h5>${
+          articlesMarques[1].titre
+        }</h5></a>
          <p>
-         ${articlesMarques[1].contenu.p1}
+         ${truncateStr(
+           articlesMarques[1].contenu.p1,
+           150
+         )} <br/> <a class="lire-suite" href="./article-marque1.html">Lire la suite</a>
          </p>
        </div>
        <div class="art3 sm-w-full ">
         <div class="img-belge2 bg-img-art" ></div>
-        <a href="./article-marque2.html" class="lien-belge2"><h5>${articlesMarques[2].titre}</h5></a>
+        <a href="./article-marque2.html" class="lien-belge2"><h5>${
+          articlesMarques[2].titre
+        }</h5></a>
          <p>
-         ${articlesMarques[2].contenu.p1}
+         ${truncateStr(
+           articlesMarques[2].contenu.p1,
+           200
+         )} <br/> <a class="lire-suite" href="./article-marque0.html">Lire la suite</a>
          </p>
        </div>
      </section>
@@ -283,7 +361,7 @@ export const contentartgeneraux = `
 </div>
 `;
 
-$('.main').html(contentartgeneraux);
+$(".main").html(contentartgeneraux);
 
 // CLICK -> LEAD TO ARTICLES
 
@@ -325,7 +403,6 @@ $('.lien-fiche3 > h5').on('click', () => {
 },showFiche(3));
 */
 
-
 /*
 $('.lien-fiche3 > h5').on('click', () => {
   location.href = './article-simple.html';
@@ -344,7 +421,6 @@ $('.lien-fiche3 > h5').on('click', () => {
 */
 // CLICK ON LEXIQUE
 
-
 /*
 $('.lien-fiche0 > h5').on('click', () => {
   console.log('click');
@@ -356,4 +432,3 @@ $('.lien-fiche0 > h5').on('click', () => {
 })
 */
 //$('.contentarticle').html(articleInHtml);
-

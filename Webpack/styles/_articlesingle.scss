@@ -6,7 +6,6 @@
   .page_article {
     margin-top: 50px;
     height: auto;
-    background-color: $vert-clair;
     nav {
       z-index: 25;
       width: 100%;
@@ -372,7 +371,16 @@
 }
 // page article fiche technique
 .vert-claire {
-  background-color: $vert-clair;
+  background-color: $vert-clair !important;
+}
+.rose-clair {
+  background-color: $rose-clair !important;
+}
+.rose-fonce {
+  background-color: $rose-fonce !important;
+}
+.vert-moyen {
+  background-color: $vert-moyen !important;
 }
 
 .txt-divide-right,
@@ -554,7 +562,7 @@
 
 .img-fiche1 {
   .droite {
-    background-image: url("./static/assets/img/jeans2.jpg");
+    background-image: url("./static/assets/img/custom-pant.jpg");
     margin-left: 0 !important;
   }
 }

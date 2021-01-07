@@ -1,8 +1,13 @@
-import $ from 'jquery'; 
-import {lexiqueMat, fichesPrat, articlesMarques, articlesInfos} from '../data/articles'
-import '../../style.scss';
+import $ from "jquery";
+import {
+  lexiqueMat,
+  fichesPrat,
+  articlesMarques,
+  articlesInfos,
+} from "../data/articles";
+import "../../style.scss";
 
-// ONGLETS ARTICLES 
+// ONGLETS ARTICLES
 
 // let nombreArticles = fichesPrat.length + lexiqueMat.length + articlesMarques.length + articlesInfos.length;
 
@@ -12,9 +17,7 @@ export const showFiche = (n) => {
       <!-- BTN GO UP-->
       <div class="btn-up txt-only-stroke sticky"><a href="#">UP</a></div>
       <div class="articlesingle">
-        <section
-          class="page_article vert-claire nav-fiches nav-bar d-flex justify-around items-center w-full"
-        >
+        <section class="page_article vert-claire nav-fiches nav-bar d-flex justify-around items-center w-full">
           <nav>
             <ul class="w-90 d-flex">
               <a href="./index.html"><li class="first-li">Accueil</li></a>
@@ -64,9 +67,7 @@ export const showFiche = (n) => {
       </div>
     </section>
     <!-- COMMENTAIRES -->
-    <section
-      class="comments-section w-full lg-w-80 d-flex flex-wrap justify-around"
-    >
+    <section class="comments-section w-full lg-w-80 d-flex flex-wrap justify-around">
       <div class="lg-w-40 w-full">
         <h3 class="title-comment">Laisser un commentaire</h3>
         <form action="#" method="POST">
@@ -170,21 +171,19 @@ export const showFiche = (n) => {
       </div>
     </section>
     <section class="main-articleSingle"></section>
-  `
-  $('.contentarticle').html(articleInHtml);
-}
+  `;
+  $(".contentarticle").html(articleInHtml);
+};
 
 showFiche(3);
-  
+
 export const showLexique = (n) => {
   let articleInHtml = `
   <section>
       <!-- BTN GO UP-->
       <div class="btn-up txt-only-stroke sticky"><a href="#">UP</a></div>
       <div class="articlesingle">
-        <section
-          class="page_article vert-claire nav-fiches nav-bar d-flex justify-around items-center w-full"
-        >
+        <section class="page_article rose-clair nav-fiches nav-bar d-flex justify-around items-center w-full">
           <nav>
             <ul class="w-90 d-flex">
               <a href="./index.html"><li class="first-li">Accueil</li></a>
@@ -340,9 +339,9 @@ export const showLexique = (n) => {
       </div>
     </section>
     <section class="main-articleSingle"></section>
-  `
-  $('.contentarticle').html(articleInHtml);
-}
+  `;
+  $(".contentarticle").html(articleInHtml);
+};
 
 export const showInfos = (n) => {
   let articleInHtml = `
@@ -351,7 +350,7 @@ export const showInfos = (n) => {
       <div class="btn-up txt-only-stroke sticky"><a href="#">UP</a></div>
       <div class="articlesingle">
         <section
-          class="page_article vert-claire nav-fiches nav-bar d-flex justify-around items-center w-full"
+          class="page_article rose-fonce nav-fiches nav-bar d-flex justify-around items-center w-full"
         >
           <nav>
             <ul class="w-90 d-flex">
@@ -508,10 +507,9 @@ export const showInfos = (n) => {
       </div>
     </section>
     <section class="main-articleSingle"></section>
-  `
-  $('.contentarticle').html(articleInHtml);
-}
-
+  `;
+  $(".contentarticle").html(articleInHtml);
+};
 
 export const showMarques = (n) => {
   let articleInHtml = `
@@ -520,7 +518,7 @@ export const showMarques = (n) => {
       <div class="btn-up txt-only-stroke sticky"><a href="#">UP</a></div>
       <div class="articlesingle">
         <section
-          class="page_article vert-claire nav-fiches nav-bar d-flex justify-around items-center w-full"
+          class="page_article vert-moyen nav-fiches nav-bar d-flex justify-around items-center w-full"
         >
           <nav>
             <ul class="w-90 d-flex">
@@ -677,6 +675,6 @@ export const showMarques = (n) => {
       </div>
     </section>
     <section class="main-articleSingle"></section>
-  `
-  $('.contentarticle').html(articleInHtml);
-}
+  `;
+  $(".contentarticle").html(articleInHtml);
+};

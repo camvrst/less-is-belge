@@ -1,40 +1,46 @@
-import $ from 'jquery'; 
-import {articlesMarques} from '../data/articles'
-import '../../style.scss';
-import { header, footer } from './view';
+import $ from "jquery";
+import { articlesMarques } from "../data/articles";
+import "../../style.scss";
+import { header, footer } from "./view";
+import { truncateStr } from "../helpers/truncate";
 
 /* INCLUDE HEADER AND FOOTER */
-const headerHTML = document.querySelector('header');
-const footerHTML = document.querySelector('footer.footer');
+const headerHTML = document.querySelector("header");
+const footerHTML = document.querySelector("footer.footer");
 
 headerHTML.innerHTML = header;
 footerHTML.innerHTML = footer;
 
 // ***** NAV BAR ANIMATION ON CLICK RESPONSIVE ***** //
 
-const burgerMenu = document.querySelector('.burger-menu');
-const navLinks = document.querySelector('.nav-links');
+const burgerMenu = document.querySelector(".burger-menu");
+const navLinks = document.querySelector(".nav-links");
 
-burgerMenu.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-  burgerMenu.classList.toggle('toggle');
+burgerMenu.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+  burgerMenu.classList.toggle("toggle");
 });
 
 // MARQUES BELGES
 
 // first 3 articles
-let firstContentBelge = '';
-for (let i = 0; i < 3; i ++) {
+let firstContentBelge = "";
+for (let i = 0; i < 3; i++) {
   firstContentBelge += `
   <div class="artfp1 w-full lg-w-30">
       <div class="img-belge${i} bg-img-art"></div>
-      <a href="./article-marque${i}.html" class="lien-belge${i}"> <h5>${articlesMarques[i].titre}</h5></a>
+      <a href="./article-marque${i}.html" class="lien-belge${i}"> <h5>${
+    articlesMarques[i].titre
+  }</h5></a>
       <p>
-        ${articlesMarques[i].contenu.p1}
+        ${truncateStr(
+          articlesMarques[i].contenu.p1,
+          200
+        )} <br/> <a href="./article-marque${i}.html" class="lire-suite">Lire la suite</a>
       </p>
   </div>
-  `
-  $('.section-belge-1').html(firstContentBelge);
+  `;
+  $(".section-belge-1").html(firstContentBelge);
 }
 
 // 4th big article
@@ -63,7 +69,5 @@ const secondContentBelge = `
                 >lire la suite</a
               >
             </div>
-`
-$('.section-belge-2').html(secondContentBelge);
-
-
+`;
+$(".section-belge-2").html(secondContentBelge);

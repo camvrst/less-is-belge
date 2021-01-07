@@ -1,41 +1,46 @@
-import $ from 'jquery'; 
-import {lexiqueMat} from '../data/articles'
-import '../../style.scss';
-import { header, footer } from './view';
-
+import $ from "jquery";
+import { lexiqueMat } from "../data/articles";
+import "../../style.scss";
+import { header, footer } from "./view";
+import { truncateStr } from "../helpers/truncate";
 
 /* INCLUDE HEADER AND FOOTER */
-const headerHTML = document.querySelector('header');
-const footerHTML = document.querySelector('footer.footer');
+const headerHTML = document.querySelector("header");
+const footerHTML = document.querySelector("footer.footer");
 
 headerHTML.innerHTML = header;
 footerHTML.innerHTML = footer;
 
 // ***** NAV BAR ANIMATION ON CLICK RESPONSIVE ***** //
 
-const burgerMenu = document.querySelector('.burger-menu');
-const navLinks = document.querySelector('.nav-links');
+const burgerMenu = document.querySelector(".burger-menu");
+const navLinks = document.querySelector(".nav-links");
 
-burgerMenu.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-  burgerMenu.classList.toggle('toggle');
+burgerMenu.addEventListener("click", () => {
+  navLinks.classList.toggle("open");
+  burgerMenu.classList.toggle("toggle");
 });
 
-// LEXIQUE 
+// LEXIQUE
 
 // first 3 articles
-let firstContentLexique = '';
-for (let i = 0; i < 3; i ++) {
+let firstContentLexique = "";
+for (let i = 0; i < 3; i++) {
   firstContentLexique += `
   <div class="artfp1 w-full lg-w-30">
       <div class="img-lexique${i} bg-img-art"></div>
-      <a href="./article-lexique${i}.html""./article-lexique0.html" class="lien-lexique${i}"> <h5>${lexiqueMat[i].titre}</h5></a>
+      <a href="./article-lexique${i}.html" class="lien-lexique${i}"> <h5>${
+    lexiqueMat[i].titre
+  }</h5></a>
       <p>
-        ${lexiqueMat[i].contenu.p1}
+        ${truncateStr(
+          lexiqueMat[i].contenu.p1,
+          200
+        )} <br/> <a href="./article-lexique${i}.html"class="lire-suite">Lire la suite</a>
       </p>
   </div>
-  `
-  $('.section-lexique-1').html(firstContentLexique);
+  `;
+  $(".section-lexique-1").html(firstContentLexique);
 }
 
 // 4th big article
@@ -64,6 +69,5 @@ const secondContentLexique = `
                 >lire la suite</a
               >
             </div>
-`
-$('.section-lexique-2').html(secondContentLexique);
-
+`;
+$(".section-lexique-2").html(secondContentLexique);

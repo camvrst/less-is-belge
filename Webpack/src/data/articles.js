@@ -352,18 +352,18 @@ export const lexiqueMat = [
 
 export const articlesMarques = [
   {
-    titre: "La nouvelle marque qui affole les belges férus de mode",
-    auteur: "Camille Verriest",
+    titre: "Valentine Witmeur, créatrice belge ",
+    auteur: "Ayaan AbdirashidAli",
     date: "29 décembre 2020",
     contenu: {
       p1:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sint ea est eaque animi veritatis placeat assumenda nobis reiciendis quod quos porro illum, aperiam recusandae voluptatem alias rerum perspiciatis praesentium!",
+        "Valentine Witmeur est une créatrice dans la mode 100% belge. Elle a toujours baigné dans le textile. Dans une interview pour le blog beartybechic qui date de 2015, elle dit qu’elle porte une réelle passion pour la mode depuis toute petite. Avec en plus son diplôme en communication et gestion de marchandises de luxe, c’est un domaine dans lequel elle a grandi. ",
       p2:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sint ea est eaque animi veritatis placeat assumenda nobis reiciendis quod quos porro illum, aperiam recusandae voluptatem alias rerum perspiciatis praesentium!",
+        "Née à Bruxelles, elle s’est fait connaître comme influenceuse avant de se pencher sur la conception de pulls en maille. Elle a tenu longtemps un blog à côté de ses projets dans la création de vêtements mais n’a pas tenu à le continuer. La tenue du blog lui a permis de construire une communauté de femmes appréciant la marque qu’elle montait et lançait à l’époque. Depuis que sa marque a été développé, elle compte sur le soutien presse que ses contacts lui ont bénéficié.  ",
       p3:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sint ea est eaque animi veritatis placeat assumenda nobis reiciendis quod quos porro illum, aperiam recusandae voluptatem alias rerum perspiciatis praesentium!",
+        "Pour ne pas être un “autre influenceur qui lance une marque”, elle a opté pour une façon de travailler plutôt organique. Elle a pensé à développer une série de 6 pulls sans se mettre la pression, “je voulais juste créer un beau produit identifiable” a-t-elle confié lors de son entretien pour le WBDM (Wallonie Bruxelles Design Mode). Après ça, elle a continué l’aventure en se basant sur les retours qui lui étaient faits. D’autres modèles et d’autres styles ont suivi les premières créations.  ",
       p4:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero sint ea est eaque animi veritatis placeat assumenda nobis reiciendis quod quos porro illum, aperiam recusandae voluptatem alias rerum perspiciatis praesentium!",
+        "La marque de Valentine est spéciale parce que ce qu’on voit c’est un produit revisité : le pull. D’après la créatrice, le pull permet de nombreuses variations selon ses formes et ses couleurs. Cependant, c’est la maille qui reste au cœur de son concept. D’ailleurs, pour l’été 2021 elle a pris l’initiative de composer quelques pièces en satin qui peuvent se mettre sous un pull, telles que des robes. En tout cas, elle se sent très belge et très proche de tout ce qui touche la Belgique.  <b>“Aujourd’hui plus que jamais, le monde nous regarde. Et avec une très bonne raison.”</b>",
     },
     commentaires: [
       {
@@ -371,8 +371,8 @@ export const articlesMarques = [
         commentaire: "Je veux !",
       },
       {
-        nom: "Ayaan",
-        commentaire: "Canon !",
+        nom: "Camille",
+        commentaire: "Top !",
       },
       {
         nom: "Loic",
@@ -382,7 +382,7 @@ export const articlesMarques = [
   },
   {
     titre: "Les marques belges pour enfants les plus cools",
-    auteur: "Fanny Wastelin",
+    auteur: "Camille Verriest",
     date: "15 décembre 2020",
     contenu: {
       p1:
